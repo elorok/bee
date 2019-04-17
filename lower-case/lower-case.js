@@ -3,7 +3,7 @@ module.exports = function(RED) {
         RED.nodes.createNode(this,config);
         var node = this;
         node.on('input', function(msg) {
-            msg.payload = msg.payload.toLowerCase() + "how're you?";
+            msg.payload = msg.payload.toLowerCase() + "was?";
             node.send(msg);
         });
     }
