@@ -1,0 +1,295 @@
+[
+    {
+        "id": "179496b7.4615c9",
+        "type": "tab",
+        "label": "Elektroniker",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7490308b.dc12",
+        "type": "tab",
+        "label": "Informatiker",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "37cf5942.513c86",
+        "type": "tab",
+        "label": "Laborant",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8d54ea0.1cceb18",
+        "type": "tab",
+        "label": "Konstrukteur",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1d9efcfb.065233",
+        "type": "tab",
+        "label": "Kaufmann / Kauffrau",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5aa3dc24.0bdef4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0066cc",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#0066cc",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Roche",
+                "default": "#4B7930",
+                "baseColor": "#0066cc",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0066cc",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0066cc",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#1a8cff",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#0066cc",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Roche Berufsbildung",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "19b00c64.28f114",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Elektroniker",
+        "icon": "fa-microchip",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ac89c8d9.fc04f8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Informatiker",
+        "icon": "fa-code ",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "888d072a.b35c88",
+        "type": "ui_group",
+        "z": "",
+        "name": "-",
+        "tab": "ac89c8d9.fc04f8",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4e51695c.ed0528",
+        "type": "ui_link",
+        "z": "",
+        "name": "Roche Berufsbildung",
+        "link": "https://lehre.roche.com",
+        "icon": "fa-graduation-cap",
+        "target": "iframe",
+        "order": 6
+    },
+    {
+        "id": "37dbfa5c.9f3916",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Laborant",
+        "icon": "fa-thermometer-three-quarters",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d79b478a.0237a8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Konstrukteur",
+        "icon": "fa-pencil",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "cccf3ee5.fb3fd",
+        "type": "ui_group",
+        "z": "",
+        "name": "-",
+        "tab": "37dbfa5c.9f3916",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fdf747d0.4fc068",
+        "type": "ui_group",
+        "z": "",
+        "name": "-",
+        "tab": "d79b478a.0237a8",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "3a5e1164.aa1e7e",
+        "type": "ui_group",
+        "z": "",
+        "name": "-",
+        "tab": "19b00c64.28f114",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "950f1c2.33db2e",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Kaufmann / Kauffrau",
+        "icon": "fa-paperclip ",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d9e6e166.7a19d",
+        "type": "ui_group",
+        "z": "",
+        "name": "-",
+        "tab": "950f1c2.33db2e",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9b12b9e9.69c5a8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "3a5e1164.aa1e7e",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2edd9fac.2d57d",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "888d072a.b35c88",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a13223df.7c82d",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "cccf3ee5.fb3fd",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "78f9d5ee.b362ac",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "fdf747d0.4fc068",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a7fb66fc.b9fcf8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "d9e6e166.7a19d",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    }
+]
