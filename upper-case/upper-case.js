@@ -3,7 +3,7 @@ module.exports = function(RED) {
         RED.nodes.createNode(this,config);
         var node = this;
         node.on('input', function(msg) {
-            msg.payload = msg.payload.toUpperCase() + "BIG";
+            msg.payload = msg.payload.toUpperCase();
             node.send(msg);
         });
     }
