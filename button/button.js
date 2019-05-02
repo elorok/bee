@@ -1,5 +1,5 @@
 module.exports = function (RED) {
-    function Button(config) {
+    function ButtonNode(config) {
         RED.nodes.createNode(this, config);
         var node = this;
         node.on('input', function (msg) {
