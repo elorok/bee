@@ -9,12 +9,9 @@ module.exports = function (RED) {
         node.on('input', function (msg) {
             var address = parseInt(10);
 
-            var exec = require('child-process').exec;
-            exec('/home/pi/bee/_tools/i2c/readByte.py', function callback(error, stdout, stderr) {
-                msg = Object.assign({}, msg);
-
-                msg.payload = stdout;
-                node.send(msg);
+            var exec = require('child_process').exec;
+            exec('/home/pi/bee/_tools/i2c/readByte.py ' + address, function callback(error, stdout, stderr) {
+                node.send(stdout);
             });
         });
 
