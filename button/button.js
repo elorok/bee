@@ -12,7 +12,7 @@ module.exports = function (RED) {
 
             var exec = require('child_process').exec;
             exec('/home/pi/bee/_tools/i2c/readByte.py ' + address, function callback(error, stdout, stderr) {
-                msg.payload = node.readFrequency + stdout;
+                msg.payload = stdout;
                 node.send(msg);
             });
         });
