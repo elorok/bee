@@ -3,8 +3,8 @@
         category: 'Bee',
         color: '#a6bbcf',
         defaults: {
-            name: { value: "" }
-            readFrequency: { value: "" }
+            name: { value: "" },
+            readFrequency: { value: "200" }
         },
         inputs:1,
         outputs:1,
@@ -19,6 +19,10 @@
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-readFrequency"><i class="icon-tag"></i> Lesefrequenz [ms]</label>
+        <input type="number" id="node-input-readFrequency" placeholder="200">
     </div>
 </script>
 
