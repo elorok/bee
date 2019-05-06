@@ -4,6 +4,7 @@ module.exports = function (RED) {
     function ButtonNode(config) {
         RED.nodes.createNode(this, config);
 
+        this.readFrequency = config.readFrequency; 
         var node = this;
 
         node.on('input', function (msg) {
@@ -11,7 +12,7 @@ module.exports = function (RED) {
 
             var exec = require('child_process').exec;
             exec('/home/pi/bee/_tools/i2c/readByte.py ' + address, function callback(error, stdout, stderr) {
-                msg.payload = stdout;
+                msg.payload = node.readFrequency + stdout;
                 node.send(msg);
             });
         });
