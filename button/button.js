@@ -11,8 +11,15 @@ module.exports = function (RED) {
 
             var exec = require('child_process').exec;
             exec('/home/pi/bee/_tools/i2c/readByte.py ' + address, function callback(error, stdout, stderr) {
-                msg.payload = stdout;
-                node.send(msg);
+                if (error == null) {
+                    node.status({ fill: "green", shape: "dot", text: "connected" });
+                    msg.payload = stdout;
+                    node.send(msg);
+                }
+                else {
+                    node.status({ fille: "red", shape: "dot", text: "disconnected" });
+                    node.error(stderr);
+                }
             });
         });
     }
