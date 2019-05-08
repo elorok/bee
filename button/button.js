@@ -17,7 +17,7 @@ module.exports = function (RED) {
                     node.send(msg);
                 }
                 else {
-                    node.status({ fille: "red", shape: "dot", text: "disconnected" });
+                    node.status({ fill: "red", shape: "dot", text: "disconnected" });
                     node.error(stderr);
                 }
             });
