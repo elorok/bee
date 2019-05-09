@@ -15,7 +15,8 @@ module.exports = function (RED) {
         exec('/home/pi/bee/_tools/i2c/writeCommandWord.py ' + address + ' 4 1888');    //
 
         node.on('input', function (msg) {
-            exec('/home/pi/bee/_tools/i2c/readCommandWord.py ' + address + ' 8', function callback(error, stdout, stderr) {   // Read Register Proximity
+            node.log("Hi");
+/*            exec('/home/pi/bee/_tools/i2c/readCommandWord.py ' + address + ' 8', function callback(error, stdout, stderr) {   // Read Register Proximity
                 if (error == null) {
                     node.status({ fill: "green", shape: "dot", text: "connected" });
                     msg.payload = stdout;
@@ -35,7 +36,7 @@ module.exports = function (RED) {
                 else {
                     node.error(stderr);
                 }
-            });
+            });*/
         });
     }
     RED.nodes.registerType("proximity", ProximityNode);
