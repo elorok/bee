@@ -12,7 +12,7 @@ module.exports = function (RED) {
         // Init Sensor
         exec('/home/pi/bee/_tools/i2c/writeCommandWord.py ' + address + ' 0 0');    // Enable Ambilight Sensor
         exec('/home/pi/bee/_tools/i2c/writeCommandWord.py ' + address + ' 3 2250');    // Setup Proximity Sensor
-        exec('/home/pi/bee/_tools/i2c/writeCommandWord.py ' + address + ' 4 1888');    // 
+        exec('/home/pi/bee/_tools/i2c/writeCommandWord.py ' + address + ' 4 1888');    //
 
         node.on('input', function (msg) {
             exec('/home/pi/bee/_tools/i2c/readCommandWord.py ' + address + ' 8', function callback(error, stdout, stderr) {   // Read Register Proximity
