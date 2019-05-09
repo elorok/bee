@@ -32,9 +32,6 @@ module.exports = function (RED) {
                     msg.payload = stdout;
                     node.send([null,msg]);
                 }
-                else {
-                    node.error(stderr);
-                }
             });
         });
     }
