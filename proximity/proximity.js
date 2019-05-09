@@ -38,5 +38,5 @@ module.exports = function (RED) {
             });
         });
     }
-    RED.nodes.registerType("button", ButtonNode);
+    RED.nodes.registerType("proximity", ProximityNode);
 }
