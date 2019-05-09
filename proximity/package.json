@@ -1,0 +1,16 @@
+{
+  "name": "bee-proximity",
+  "version": "0.0.1",
+  "description": "proximity and ambilight module",
+  "main": "proximity.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sl",
+  "license": "ISC",
+  "node-red": {
+    "nodes": {
+      "proximity": "proximity.js"
+    }
+  }
+}
