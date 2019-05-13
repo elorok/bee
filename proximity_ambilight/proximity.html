@@ -1,7 +1,7 @@
 <script type="text/javascript">
     RED.nodes.registerType('proximity',{
         category: 'Bee',
-        color: '#acffa8',
+        color: '#bbffbb',
         defaults: {
             name: { value: "" }
         },
@@ -9,7 +9,7 @@
         outputs:2,
         icon: "feed.png",
         label: function() {
-            return this.name||"proximity";
+            return this.name||"Proximity / Ambilight";
         },
         outputLabels:["Proximity", "Ambilight"]
     });
