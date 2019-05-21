@@ -12,6 +12,7 @@
 
  // *** INCLUDES ***
 #include "i2c_writeBuffer.h"
+#include "i2c_scan.h"
 #include <stdio.h>
 
 
@@ -21,12 +22,6 @@
  * Main-Routine
  */
 void main(void) {
-	unsigned char dataLED[3]; 
-	dataLED[0] = 0xff; 
-	dataLED[1] = 0x55;
-	dataLED[2] = 0x21;
-
-
-	i2c_writeBuffer(ADDR_LED, &dataLED, 3);
+	i2c_scan();
 }
 
