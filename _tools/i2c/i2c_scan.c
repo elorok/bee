@@ -22,13 +22,19 @@
  */
 int i2c_scan(void) {
 	int fp_i2c;
-	
+	FILE *fp; 
+
 	// Open I2C Bus
 	char *filename = (char*)"/dev/i2c-1";
 	if ((fp_i2c = open(filename, O_RDWR)) < 0) {
 		fprintf(stderr, "Failed to open the i2c bus.\n");
 		return -1;
 	}
+
+
+	fp = fopen("/tmp/online", "w+");
+	fprintf(fp, "Hallo\n");
+	fclose(fp);
 
 	for (unsigned char address = 4; address <= 127; address++) {
 		if (ioctl(fp_i2c, I2C_SLAVE, address) < 0) {
