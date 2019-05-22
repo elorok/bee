@@ -14,6 +14,7 @@
 #include "i2c_writeBuffer.h"
 #include "i2c_scan.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 
 #define ADDR_LED	0x09
@@ -23,5 +24,10 @@
  */
 void main(void) {
 	i2c_scan();
-}
 
+	for (unsigned char address = 4; address <= 127; address++) {
+		if (i2c_device[address].online) {
+			printf("%i\n", address);
+		}
+	}
+}

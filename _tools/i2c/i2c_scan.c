@@ -15,12 +15,13 @@
 #include <linux/i2c-dev.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "i2c_scan.h"
 
 
 /**
  * Scan Devices
  */
-int i2c_scan(void) {
+void i2c_scan(void) {
 	int fp_i2c;
 	FILE *fp; 
 
@@ -28,26 +29,31 @@ int i2c_scan(void) {
 	char *filename = (char*)"/dev/i2c-1";
 	if ((fp_i2c = open(filename, O_RDWR)) < 0) {
 		fprintf(stderr, "Failed to open the i2c bus.\n");
-		return -1;
 	}
 
 
+	// Open File
 	fp = fopen("/tmp/online", "w+");
-	fprintf(fp, "Hallo\n");
-	fclose(fp);
 
+
+	// Write to File
 	for (unsigned char address = 4; address <= 127; address++) {
 		if (ioctl(fp_i2c, I2C_SLAVE, address) < 0) {
 			fprintf(stderr, "Failed to address slave. Address: %i\n", address);
 		}
 
-		if (i2c_smbus_read_byte(fp_i2c) < 0) {
-			printf("offline\n");
+		if (i2c_smbus_read_byte(fp_i2c) >= 0) {
+			fprintf(fp, "%i\n", address);
+			i2c_device[address].online = 1;
 		}
 		else {
-			printf("online\n");
+			i2c_device[address].online = 0;
 		}
 	}
 
-	return 0;
+
+	// Close File
+	fclose(fp);
+
+	return;
 }
