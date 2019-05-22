@@ -13,7 +13,7 @@
 
 // GLOBAL VARIABLE
 typedef struct {
-	online : 1;		// 1= Slave is online
+	unsigned online : 1;		// 1= Slave is online
 } i2c_device_t;
 
 i2c_device_t i2c_device[128];	// Address-Range 0..127
