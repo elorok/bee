@@ -14,6 +14,8 @@
 // GLOBAL VARIABLE
 typedef struct {
 	unsigned online : 1;		// 1= Slave is online
+	void(*dataSync)(void);		// Read/Write Data
+	void(*init)(void);			// Init Slave Device
 } i2c_device_t;
 
 i2c_device_t i2c_device[128];	// Address-Range 0..127

@@ -11,8 +11,14 @@
  */
 
  // *** INCLUDES ***
+// I2C
 #include "i2c_writeBuffer.h"
 #include "i2c_scan.h"
+
+// SLAVES
+#include "slave/module_button.h"
+
+// GENERAL
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -23,6 +29,9 @@
  * Main-Routine
  */
 void main(void) {
+	i2c_device->init = module_button_init;
+	i2c_device->dataSync = module_button_dataSync; 
+
 	i2c_scan();
 
 	for (unsigned char address = 4; address <= 127; address++) {
