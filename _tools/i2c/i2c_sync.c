@@ -13,6 +13,7 @@
  // *** INCLUDES ***
 // I2C
 #include "i2c_writeBuffer.h"
+#include "i2c_readBuffer.h"
 #include "i2c_scan.h"
 
 // SLAVES
@@ -34,9 +35,13 @@ void main(void) {
 
 	i2c_scan();
 
+	unsigned char buffer[127];
+
 	for (unsigned char address = 4; address <= 127; address++) {
 		if (i2c_device[address].online) {
-			printf("%i\n", address);
+			printf("%i\t", address);
+			i2c_readBuffer(address, buffer[address], 1);
+			printf("%i\n", buffer[address]);
 		}
 	}
 }
