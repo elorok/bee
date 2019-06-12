@@ -35,4 +35,20 @@ void module_button_dataSync(void) {
 	unsigned char data;
 	i2c_readBuffer(I2C_ADDR, &data, 1);
 	printf("Button: %i\n", data);
+
+
+
+
+	FILE *fp;
+
+	// Open File
+	fp = fopen("/tmp/10", "w+");
+
+
+	// Write to File
+	fprintf(fp, "%i\n", data);
+
+
+	// Close File
+	fclose(fp);
 }
