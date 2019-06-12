@@ -43,5 +43,9 @@ int i2c_writeBuffer(unsigned char address, unsigned char *buffer, unsigned int l
 		return -3;
 	}
 
+
+	// Close File
+	fclose(fp_i2c);
+
 	return 0;
 }

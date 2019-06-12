@@ -24,14 +24,12 @@
 #include <stdlib.h>
 
 
-#define ADDR_LED	0x09
-
 /**
  * Main-Routine
  */
 void main(void) {
-	i2c_device->init = module_button_init;
-	i2c_device->dataSync = module_button_dataSync; 
+	module_button_init();
+
 
 	i2c_scan();
 

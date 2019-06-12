@@ -24,7 +24,8 @@
  * Scan Devices
  */
 void module_button_init(void) {
-	
+	i2c_device[I2C_ADDR].init = module_button_init;
+	i2c_device[I2C_ADDR].dataSync = module_button_dataSync;
 }
 
 /**
@@ -32,6 +33,6 @@ void module_button_init(void) {
  */
 void module_button_dataSync(void) {
 	unsigned char data;
-	i2c_readBuffer(I2C_ADDR, data, 1);
+	i2c_readBuffer(I2C_ADDR, &data, 1);
 	printf("Button: %i\n", data);
 }
