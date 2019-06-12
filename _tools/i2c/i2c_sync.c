@@ -40,8 +40,7 @@ void main(void) {
 	for (unsigned char address = 4; address <= 127; address++) {
 		if (i2c_device[address].online) {
 			printf("%i\t", address);
-			i2c_readBuffer(address, buffer[address], 1);
-			printf("%i\n", buffer[address]);
+			i2c_device[address].dataSync();
 		}
 	}
 }
