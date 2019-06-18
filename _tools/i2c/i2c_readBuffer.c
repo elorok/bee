@@ -44,5 +44,7 @@ int i2c_readBuffer(unsigned char address, unsigned char *buffer, unsigned int le
 		return -3;
 	}
 
+	close(fp_i2c);
+
 	return 0;
 }

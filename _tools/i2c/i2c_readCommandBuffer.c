@@ -40,7 +40,7 @@ int i2c_readCommandBuffer(unsigned char address, unsigned char command, unsigned
 	}
 
 	// Send Command
-	if (write(fp_i2c, command, 1) != 1) {
+	if (write(fp_i2c, &command, 1) != 1) {
 		fprintf(stderr, "Failed to write to i2c bus.\n");
 		return -3;
 	}
@@ -50,6 +50,8 @@ int i2c_readCommandBuffer(unsigned char address, unsigned char command, unsigned
 		fprintf(stderr, "Failed to read from i2c bus.\n");
 		return -4;
 	}
+
+	close(fp_i2c);
 
 	return 0;
 }
