@@ -1,5 +1,5 @@
 /**
- * Read Buffer to I2C
+ * Read Buffer from I2C
  *
  * @Autor: Stefan Lagger
  * @Version: 1.0

@@ -1,11 +1,11 @@
 /**
- * Read Buffer from I2C
+ * Send Command and Read Buffer from I2C
  *
  * @Autor: Stefan Lagger
  * @Version: 1.0
  * ******************************
  * Date		Vers.	Name			Comment / Change
- * 12.06.19 1.0		Stefan Lagger	First Edition
+ * 18.06.19 1.0		Stefan Lagger	First Edition
  */
 
  // *** INCLUDES ***
@@ -20,10 +20,11 @@
 /**
  * Receive Buffer
  * param address: I2C Slave address
+ * param command: Command to I2C Slave
  * param buffer: Buffer for received data
  * param length: Number of Bytes to receive
  */
-int i2c_readBuffer(unsigned char address, unsigned char *buffer, unsigned int length) {
+int i2c_readCommandBuffer(unsigned char address, unsigned char command, unsigned char *buffer, unsigned int length) {
 	int fp_i2c;
 
 	// Open I2C Bus
@@ -38,10 +39,16 @@ int i2c_readBuffer(unsigned char address, unsigned char *buffer, unsigned int le
 		return -2;
 	}
 
+	// Send Command
+	if (write(fp_i2c, command, 1) != 1) {
+		fprintf(stderr, "Failed to write to i2c bus.\n");
+		return -3;
+	}
+
 	// Read Bytes
 	if (read(fp_i2c, buffer, length) != length) {
 		fprintf(stderr, "Failed to read from i2c bus.\n");
-		return -3;
+		return -4;
 	}
 
 	return 0;

@@ -12,12 +12,11 @@
 
  // *** INCLUDES ***
 // I2C
-#include "i2c_writeBuffer.h"
-#include "i2c_readBuffer.h"
 #include "i2c_scan.h"
 
 // SLAVES
 #include "slave/module_button.h"
+#include "slave/module_proximity.h"
 
 // GENERAL
 #include <stdio.h>
@@ -29,6 +28,7 @@
  */
 void main(void) {
 	module_button_init();
+	module_proximity_init();
 
 
 	i2c_scan();
@@ -36,9 +36,9 @@ void main(void) {
 	unsigned char buffer[127];
 
 	for (unsigned char address = 4; address <= 127; address++) {
-		if (i2c_device[address].online) {
+		if (i2c_device[address].online && i2c_device[address].dataSync != 0) {
 			printf("%i\t", address);
 			i2c_device[address].dataSync();
 		}
-	}
+	}*/
 }

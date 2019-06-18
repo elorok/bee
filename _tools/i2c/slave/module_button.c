@@ -13,7 +13,6 @@
 #include <stdio.h>
 #include "module_button.h"
 #include "../i2c_readBuffer.h"
-#include "../i2c_scan.h"
 
 
 // *** DEFINES ***
@@ -38,15 +37,15 @@ void module_button_dataSync(void) {
 
 
 
-
 	FILE *fp;
 
 	// Open File
-	fp = fopen("/tmp/10", "w+");
+	fp = fopen("/tmp/i2c/10", "w+");
 
 
 	// Write to File
-	fprintf(fp, "%i\n", data);
+	if (fp != NULL)
+		fprintf(fp, "%i\n", data);
 
 
 	// Close File
