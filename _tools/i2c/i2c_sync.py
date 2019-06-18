@@ -1,5 +1,10 @@
 #!/usr/bin/python
-import slave/module_button
+from slave.module_button import Button
+from slave.module_proximity import Proximity
 
 
-module_button.init()
+bttn = Button()
+bttn.sync()
+
+prox = Proximity()
+prox.sync()
