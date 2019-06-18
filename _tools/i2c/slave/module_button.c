@@ -41,7 +41,7 @@ void module_button_dataSync(void) {
 	FILE *fp;
 
 	// Open File
-	fp = fopen("/tmp/i2c/10", "w+");
+	fp = fopen("/tmp/i2c_10", "w+");
 
 
 	// Write to File

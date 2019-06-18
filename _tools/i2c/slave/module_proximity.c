@@ -33,7 +33,7 @@ void module_proximity_init(void) {
  */
 void module_proximity_dataSync(void) {
 	unsigned char data[DATA_SIZE];
-	i2c_readCommandBuffer(I2C_ADDR, 0, data, DATA_SIZE);
+	i2c_readCommandBuffer(I2C_ADDR, 8, data, DATA_SIZE);
 	for(unsigned int i = 0; i <= DATA_SIZE -1; i++)
 		printf("Proximity: %i\n", data[i]);
 
@@ -41,7 +41,7 @@ void module_proximity_dataSync(void) {
 	FILE *fp;
 
 	// Open File
-	fp = fopen("/tmp/i2c/81", "w+");
+	fp = fopen("/tmp/i2c_81", "w+");
 
 
 	// Write to File

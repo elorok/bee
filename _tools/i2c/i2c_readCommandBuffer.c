@@ -40,7 +40,9 @@ int i2c_readCommandBuffer(unsigned char address, unsigned char command, unsigned
 	}
 
 	// Send Command
-	if (write(fp_i2c, &command, 1) != 1) {
+	i2c_smbus_read_byte_data(address, command, buffer, length);
+
+	/*if (write(fp_i2c, &command, 1) != 1) {
 		fprintf(stderr, "Failed to write to i2c bus.\n");
 		return -3;
 	}
@@ -49,7 +51,7 @@ int i2c_readCommandBuffer(unsigned char address, unsigned char command, unsigned
 	if (read(fp_i2c, buffer, length) != length) {
 		fprintf(stderr, "Failed to read from i2c bus.\n");
 		return -4;
-	}
+	}*/
 
 	close(fp_i2c);
 
