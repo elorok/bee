@@ -13,7 +13,7 @@ class Proximity:
 		def sync(self):
 			i2c = smbus.SMBus(1)
 			proxy = i2c.read_word_data(self.ADDR, 8)
-			proxy = i2c.read_word_data(self.ADDR, 9)
+			ambi = i2c.read_word_data(self.ADDR, 9)
 
 			file = open("/tmp/i2c_" + str(self.ADDR), "w")
 			file.write(str(proxy) + "\n" + str(ambi))
