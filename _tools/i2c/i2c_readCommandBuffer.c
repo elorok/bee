@@ -53,7 +53,5 @@ int i2c_readCommandBuffer(unsigned char address, unsigned char command, unsigned
 		return -4;
 	}*/
 
-	close(fp_i2c);
-
 	return 0;
 }

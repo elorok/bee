@@ -13,6 +13,6 @@
 
 
  // FUNCTION PROTOTYPE
-void i2c_readBuffer(unsigned char, unsigned char *, unsigned int);
+int i2c_readBuffer(unsigned char, unsigned char *, unsigned int);
 
 #endif /* I2C_READBUFFER_H_ */
