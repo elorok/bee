@@ -40,5 +40,5 @@ void main(void) {
 			printf("%i\t", address);
 			i2c_device[address].dataSync();
 		}
-	}*/
+	}
 }

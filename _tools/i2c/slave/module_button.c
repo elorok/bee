@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "module_button.h"
+#include "../i2c_scan.h"
 #include "../i2c_readBuffer.h"
 
 
