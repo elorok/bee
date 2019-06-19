@@ -6,7 +6,7 @@ from slave.module import Module
 
 
 modules = Module(["a","b","c"])
-print("laenge: " + len(modules))
+print("laenge: " + str(len(modules)))
 
 bttn = Button()
 bttn.sync()
