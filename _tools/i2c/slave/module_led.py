@@ -6,11 +6,11 @@ class Led:
 			self.ADDR = 9
 
 		def sync(self):
-			i2c = smbus.SMBus(1)
 			file = open("/tmp/i2c_" + str(self.ADDR), "r")
-			red = file.readLine()
-			green = file.readLine()
-			blue = file.readLine()
+			red = int(file.readline())
+			green = int(file.readline())
+			blue = int(file.readline())
 			file.close()
 
-			print(red + "\n" + green + "\n" + blue)
+			i2c = smbus.SMBus(1)
+			i2c.write_word_data(self.ADDR, red, (green + blue * 256))

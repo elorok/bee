@@ -1,7 +1,8 @@
 import smbus
 import sys
+import 
 
-class Button:
+class Button(Module):
 		def __init__(self):
 			self.ADDR = 10
 
