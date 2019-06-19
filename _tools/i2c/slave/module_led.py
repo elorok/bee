@@ -1,7 +1,7 @@
 import smbus
 import sys
 
-class Led:
+class Led(Module):
 		def __init__(self):
 			self.ADDR = 9
 

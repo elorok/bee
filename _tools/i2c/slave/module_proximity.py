@@ -1,7 +1,7 @@
 import smbus
 import sys
 
-class Proximity:
+class Proximity(Module):
 		def __init__(self):
 			self.ADDR = 81
 			i2c = smbus.SMBus(1)

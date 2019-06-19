@@ -5,7 +5,7 @@ from slave.module_led import Led
 from slave.module import Module
 
 
-modules = Module([,,])
+modules = Module(["a","b","c"])
 print("laenge: " + len(modules))
 
 bttn = Button()

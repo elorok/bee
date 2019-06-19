@@ -1,6 +1,6 @@
 import smbus
 import sys
-import 
+from module import Module
 
 class Button(Module):
 		def __init__(self):
