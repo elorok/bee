@@ -12,7 +12,7 @@ class Button(Module):
 				result = i2c.read_byte(self.ADDR)
 
 			except IOError:
-				print("No Communication with I2C Slave " + self.ADDR + ".")
+				print("No Communication with I2C Slave " + str(self.ADDR) + ".")
 				return
 
 			file = open("/tmp/i2c_" + str(self.ADDR), "w")

@@ -32,4 +32,4 @@ class Led(Module):
 				i2c.write_word_data(self.ADDR, red, (green + blue * 256))
 
 			except IOError:
-				print("No Communication with I2C Slave " + self.ADDR + ".")
+				print("No Communication with I2C Slave " + str(self.ADDR) + ".")

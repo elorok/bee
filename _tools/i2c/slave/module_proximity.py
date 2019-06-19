@@ -18,7 +18,7 @@ class Proximity(Module):
 				ambi = i2c.read_word_data(self.ADDR, 9)
 
 			except IOError:
-				print("No Communication with I2C Slave " + self.ADDR + ".")
+				print("No Communication with I2C Slave " + str(self.ADDR) + ".")
 				return
 
 
