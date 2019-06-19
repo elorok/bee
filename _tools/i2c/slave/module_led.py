@@ -8,15 +8,24 @@ class Led(Module):
 
 		def sync(self):
 			try:
-				file = open("/tmp/i2c_" + str(self.ADDR), "r")
-				red = int(file.readline())
-				green = int(file.readline())
-				blue = int(file.readline())
-				file.close()
+				with open("/tmp/i2c_" + str(self.ADDR), "r") as file:
+					try:
+						red = int(file.readline())
+						green = int(file.readline())
+						blue = int(file.readline())
+					except ValueError:
+						print("Invalid Values in File /tmp/i2c_" + str(self.ADDR))
+						red = 0
+						green = 0
+						blue = 0
+					file.close()
 
 			except FileNotFoundError:
 				print("File /tmp/i2c_" + str(self.ADDR) + " not found.")
-				break
+				red = 0
+				green = 0
+				blue = 0
+
 
 			i2c = smbus.SMBus(1)
 			i2c.write_word_data(self.ADDR, red, (green + blue * 256))
