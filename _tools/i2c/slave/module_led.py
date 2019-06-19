@@ -6,6 +6,10 @@ class Led(Module):
 		def __init__(self):
 			self.ADDR = 9
 
+
+		def setup(self):
+
+
 		def sync(self):
 			try:
 				with open("/tmp/i2c_" + str(self.ADDR), "r") as file:

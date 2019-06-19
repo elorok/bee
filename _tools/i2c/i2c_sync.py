@@ -5,18 +5,23 @@ from slave.module_led import Led
 from slave.module import Module
 
 
-modules = Module(["a","b","c"])
-print("laenge: " + str(len(modules)))
+modules = []
+modules.append(Button())
+modules.append(Proximity())
+modules.append(Led())
 
-bttn = Button()
-bttn.sync()
+for module in modules:
+	print(str(module.online))
 
-prox = Proximity()
-try:
-	prox.setup()
-except: 
-	print("Cannot Setup Proximity")
-prox.sync()
+#bttn = Button()
+#bttn.sync()
 
-led = Led()
-led.sync()
+#prox = Proximity()
+#try:
+#	prox.setup()
+#except: 
+#	print("Cannot Setup Proximity")
+#prox.sync()
+
+#led = Led()
+#led.sync()

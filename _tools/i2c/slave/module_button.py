@@ -6,6 +6,10 @@ class Button(Module):
 		def __init__(self):
 			self.ADDR = 10
 
+
+		def setup(self):
+
+
 		def sync(self):
 			try: 
 				i2c = smbus.SMBus(1)
