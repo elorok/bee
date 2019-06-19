@@ -1,5 +1,6 @@
 import smbus
 import sys
+from module import Module
 
 class Proximity(Module):
 		def __init__(self):

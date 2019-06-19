@@ -4,3 +4,6 @@ class Module:
 
 	def sync(self):
 		print("Ich bin vererbt")
+
+	def __len__(self):
+		return len(self.name)
