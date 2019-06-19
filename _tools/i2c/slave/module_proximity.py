@@ -5,10 +5,16 @@ from module import Module
 class Proximity(Module):
 		def __init__(self):
 			self.ADDR = 81
-			i2c = smbus.SMBus(1)
-			i2c.write_word_data(self.ADDR, 0, 0)	# Enable Ambilight Sensor
-			i2c.write_word_data(self.ADDR, 3, 2250)	# Setup Proximity Sensor
-			i2c.write_word_data(self.ADDR, 4, 1888) #
+
+
+		def setup(self):
+			try:
+				i2c = smbus.SMBus(1)
+				i2c.write_word_data(self.ADDR, 0, 0)	# Enable Ambilight Sensor
+				i2c.write_word_data(self.ADDR, 3, 2250)	# Setup Proximity Sensor
+				i2c.write_word_data(self.ADDR, 4, 1888) #
+			except:
+				raise
 
 
 		def sync(self):

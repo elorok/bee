@@ -12,6 +12,10 @@ bttn = Button()
 bttn.sync()
 
 prox = Proximity()
+try:
+	prox.setup()
+except: 
+	print("Cannot Setup Proximity")
 prox.sync()
 
 led = Led()
