@@ -20,12 +20,16 @@ class Led(Module):
 						blue = 0
 					file.close()
 
-			except FileNotFoundError:
+			except IOError:
 				print("File /tmp/i2c_" + str(self.ADDR) + " not found.")
 				red = 0
 				green = 0
 				blue = 0
 
+			
+			try:
+				i2c = smbus.SMBus(1)
+				i2c.write_word_data(self.ADDR, red, (green + blue * 256))
 
-			i2c = smbus.SMBus(1)
-			i2c.write_word_data(self.ADDR, red, (green + blue * 256))
+			except IOError:
+				print("No Communication with I2C Slave " + self.ADDR + ".")
