@@ -12,9 +12,15 @@ class Proximity(Module):
 
 
 		def sync(self):
-			i2c = smbus.SMBus(1)
-			proxy = i2c.read_word_data(self.ADDR, 8)
-			ambi = i2c.read_word_data(self.ADDR, 9)
+			try:
+				i2c = smbus.SMBus(1)
+				proxy = i2c.read_word_data(self.ADDR, 8)
+				ambi = i2c.read_word_data(self.ADDR, 9)
+
+			except IOError:
+				print("No Communication with I2C Slave " + self.ADDR + ".")
+				return
+
 
 			file = open("/tmp/i2c_" + str(self.ADDR), "w")
 			file.write(str(proxy) + "\n" + str(ambi))
