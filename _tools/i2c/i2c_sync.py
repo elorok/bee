@@ -14,7 +14,7 @@ for module in modules:
 	try:
 		module.setup()
 	except:
-		print("Cannot setup Module " + module)
+		module.setup = False
 	print(str(module.online))
 
 #bttn = Button()

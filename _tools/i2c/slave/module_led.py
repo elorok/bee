@@ -6,8 +6,8 @@ class Led(Module):
 		__ADDR = 9
 
 
-		def setup(self):
-			pass
+		def __init__(self):
+			self.setup = True
 
 
 		def sync(self):

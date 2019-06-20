@@ -6,8 +6,8 @@ class Button(Module):
 		__ADDR = 10
 
 
-		def setup(self):
-			pass
+		def __init__(self):
+			self.setup = True
 
 
 		def sync(self):
