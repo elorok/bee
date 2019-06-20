@@ -11,12 +11,21 @@ modules.append(Proximity())
 modules.append(Led())
 
 for module in modules:
-	try:
-		module.setup()
-	except:
-		pass
+	# Module is offline
+	if(!module.getOnline())
+		module.setSetup(False)
 
-	print(str(module) + "\nonline: " + str(module.getOnline()) + "\tsetup: " + str(module.getSetup()))
+	# Module is not initialized
+	if(module.getOnline() && !module.getSetup())
+		try:
+			module.setup()
+		except: 
+			pass
+
+	# Module is ready
+	if(module.getOnline() && module.getSetup())
+		print(str(module) + " is ready to sync.")
+
 
 #bttn = Button()
 #bttn.sync()

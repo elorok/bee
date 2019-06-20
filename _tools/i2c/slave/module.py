@@ -4,7 +4,7 @@ class Module:
 		self.setup = False
 
 	def setup(self):
-		pass
+		self.setup = True
 
 	def setSetup(self, val):
 		self.setup = val
