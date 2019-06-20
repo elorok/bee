@@ -7,7 +7,7 @@ class Button(Module):
 
 
 		def __init__(self):
-			setSetup()
+			super().setSetup()
 
 
 		def sync(self):
