@@ -12,18 +12,18 @@ modules.append(Led())
 
 for module in modules:
 	# Module is offline
-	if(not module.getOnline())
+	if not module.getOnline()
 		module.setSetup(False)
 
 	# Module is not initialized
-	if(module.getOnline() and not module.getSetup())
+	if module.getOnline() and not module.getSetup()
 		try:
 			module.setup()
 		except: 
 			pass
 
 	# Module is ready
-	if(module.getOnline() and module.getSetup())
+	if module.getOnline() and module.getSetup()
 		print(str(module) + " is ready to sync.")
 
 
