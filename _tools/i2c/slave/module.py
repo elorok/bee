@@ -12,13 +12,13 @@ class Module:
 
 
 	def setSetup(self, val):
-		setup = val
+		self.setup = val
 
 	def getSetup(self):
-		return setup
+		return self.setup
 
 	def setOnline(self, val):
-		online = val
+		self.online = val
 		
 	def getOnline(self):
-		return online
+		return self.online
