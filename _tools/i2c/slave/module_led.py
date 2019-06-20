@@ -1,6 +1,6 @@
 import smbus
 import sys
-from module import Module
+from .module import Module
 
 class Led(Module):
 		__ADDR = 9

@@ -1,6 +1,6 @@
 import smbus
 import sys
-from module import Module
+from .module import Module
 
 class Button(Module):
 		__ADDR = 10

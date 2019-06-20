@@ -1,6 +1,6 @@
 import smbus
 import sys
-from module import Module
+from .module import Module
 
 class Proximity(Module):
 		__ADDR = 81
