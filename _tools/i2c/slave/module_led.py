@@ -8,6 +8,7 @@ class Led(Module):
 
 
 		def setup(self):
+			return
 
 
 		def sync(self):

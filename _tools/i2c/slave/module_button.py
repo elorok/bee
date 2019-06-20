@@ -8,6 +8,7 @@ class Button(Module):
 
 
 		def setup(self):
+			return
 
 
 		def sync(self):
