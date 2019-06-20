@@ -9,3 +9,10 @@ class Module:
 
 	def setup(self):
 		pass
+
+
+	def setSetup(self):
+		setup = True
+
+	def resetSetup(self):
+		setup = False
