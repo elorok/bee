@@ -11,6 +11,10 @@ modules.append(Proximity())
 modules.append(Led())
 
 for module in modules:
+	try:
+		module.setup()
+	except:
+		print("Cannot setup Module " + module)
 	print(str(module.online))
 
 #bttn = Button()
