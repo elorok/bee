@@ -12,9 +12,9 @@ class Proximity(Module):
 				i2c.write_word_data(__ADDR, 0, 0)	# Enable Ambilight Sensor
 				i2c.write_word_data(__ADDR, 3, 2250)	# Setup Proximity Sensor
 				i2c.write_word_data(__ADDR, 4, 1888) #
-				super().setSetup()
+				super().setSetup(True)
 			except:
-				super().resetSetup()
+				super().setSetup(False)
 				raise
 
 

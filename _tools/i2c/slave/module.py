@@ -11,14 +11,14 @@ class Module:
 		pass
 
 
-	def setSetup(self):
-		setup = True
+	def setSetup(self, val):
+		setup = val
 
-	def resetSetup(self):
-		setup = False
+	def getSetup(self):
+		return setup
 
-	def setOnline(self):
-		online = True
-
-	def reset Online(self):
-		online = False
+	def setOnline(self, val):
+		online = val
+		
+	def getOnline(self):
+		return online
