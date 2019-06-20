@@ -7,7 +7,7 @@ class Led(Module):
 
 
 		def __init__(self):
-			super().setup = True
+			super().setSetup()
 
 
 		def sync(self):

@@ -16,3 +16,9 @@ class Module:
 
 	def resetSetup(self):
 		setup = False
+
+	def setOnline(self):
+		online = True
+
+	def reset Online(self):
+		online = False
