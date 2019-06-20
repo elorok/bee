@@ -14,7 +14,7 @@ for module in modules:
 	try:
 		module.setup()
 	except:
-		module.setup = False
+		module.setSetup(False)
 
 	print(str(module) + "\nonline: " + str(module.getOnline()) + "\tsetup: " + str(module.getSetup()))
 

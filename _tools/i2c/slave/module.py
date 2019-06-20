@@ -1,15 +1,10 @@
 class Module:
-	online = False
-	setup = False
-
-	
 	def __init__(self):
-		pass
-
+		self.online = False
+		self.setup = False
 
 	def setup(self):
 		pass
-
 
 	def setSetup(self, val):
 		self.setup = val

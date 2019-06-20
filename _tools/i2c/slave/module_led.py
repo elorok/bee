@@ -7,6 +7,7 @@ class Led(Module):
 
 
 		def __init__(self):
+			super().__init__()
 			super().setSetup(True)
 
 
