@@ -15,7 +15,8 @@ for module in modules:
 		module.setup()
 	except:
 		module.setup = False
-	print(str(module.online))
+
+	print(str(module) + "\nonline: " + str(module.online) + "\tsetup: " + str(module.setup))
 
 #bttn = Button()
 #bttn.sync()
