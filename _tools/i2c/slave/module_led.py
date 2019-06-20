@@ -5,12 +5,9 @@ from module import Module
 class Led(Module):
 		__ADDR = 9
 
-		def __init__(self):
-			pass
-
 
 		def setup(self):
-			return
+			pass
 
 
 		def sync(self):

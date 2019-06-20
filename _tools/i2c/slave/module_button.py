@@ -3,23 +3,22 @@ import sys
 from module import Module
 
 class Button(Module):
-		def __init__(self):
-			self.ADDR = 10
+		__ADDR = 10
 
 
 		def setup(self):
-			return
+			pass
 
 
 		def sync(self):
 			try: 
 				i2c = smbus.SMBus(1)
-				result = i2c.read_byte(self.ADDR)
+				result = i2c.read_byte(__ADDR)
 
 			except IOError:
-				print("No Communication with I2C Slave " + str(self.ADDR) + ".")
+				print("No Communication with I2C Slave " + str(__ADDR) + ".")
 				return
 
-			file = open("/tmp/i2c_" + str(self.ADDR), "w")
+			file = open("/tmp/i2c_" + str(__ADDR), "w")
 			file.write(str(result))
 			file.close()
