@@ -37,4 +37,5 @@ class Led(Module):
 				i2c.write_word_data(__ADDR, red, (green + blue * 256))
 
 			except IOError:
-				print("No Communication with I2C Slave " + str(__ADDR) + ".")
+				setOnline(False)
+				setSetup(False)

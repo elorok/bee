@@ -11,6 +11,8 @@ modules.append(Proximity())
 modules.append(Led())
 
 for module in modules:
+	module.checkOnline()
+
 	# Module is offline
 	if not module.getOnline():
 		module.setSetup(False)
