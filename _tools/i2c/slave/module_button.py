@@ -9,7 +9,6 @@ class Button(Module):
 		def __init__(self):
 			super().__init__()
 			super().setSetup(True)
-			print("Button: " + str(super().getSetup()))
 
 
 		def sync(self):
