@@ -2,26 +2,26 @@ import smbus
 
 class Module:
 	def __init__(self):
-		self.online = False
-		self.setup = False
+		self.setOnline(False)
+		self.setSetup(False)
 
 	def setup(self):
-		self.setup = True
+		self.setSetup(True)
 
 	def __checkOnline(self, addr):
 		try:
 			i2c = smbus.SMBus(1)
 			result = i2c.read_byte(addr)
-			module.setOnline(True)
+			self.setOnline(True)
 		except:
-			module.setOnline(False)
-			module.setSetup(False)
+			self.setOnline(False)
+			self.setSetup(False)
 			pass
 
 	def setAddress(self, val):
 		self.address = val
 
-	def getAddress(self, val): 
+	def getAddress(self): 
 		return self.address
 
 	def setSetup(self, val):
