@@ -11,10 +11,6 @@ class Led(Module):
 		def setup(self):
 			super().setup()
 
-						
-		def checkOnline(self):
-			super().checkOnline(super().getAddress())
-
 
 		def sync(self):
 			try:

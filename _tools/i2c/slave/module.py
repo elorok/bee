@@ -8,15 +8,17 @@ class Module:
 	def setup(self):
 		self.setSetup(True)
 
-	def checkOnline(self, addr):
+	def checkOnline(self):
 		try:
 			i2c = smbus.SMBus(1)
-			result = i2c.read_byte(addr)
+			result = i2c.read_byte(self.getAddress())
 			self.setOnline(True)
 		except:
 			self.setOnline(False)
 			self.setSetup(False)
-			pass
+			file = open("/tmp/i2c_" + str(self.getAddress()), "w")
+			file.write("<offline>")
+			file.close()
 
 	def setAddress(self, val):
 		self.__address = val

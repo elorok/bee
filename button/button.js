@@ -25,22 +25,6 @@ module.exports = function (RED) {
                 node.status({ fill: "red", shape: "dot", text: "disconnected" });
                 node.message(error);
             }
-
-
-            /*var address = 10;
-
-            var exec = require('child_process').exec;
-            exec('/home/pi/bee/_tools/i2c/readByte.py ' + address, function callback(error, stdout, stderr) {
-                if (error == null) {
-                    node.status({ fill: "green", shape: "dot", text: "connected" });
-                    msg.payload = stdout;
-                    node.send(msg);
-                }
-                else {
-                    node.status({ fill: "red", shape: "dot", text: "disconnected" });
-                    node.error(stderr);
-                }
-            });*/
         });
     }
     RED.nodes.registerType("button", ButtonNode);

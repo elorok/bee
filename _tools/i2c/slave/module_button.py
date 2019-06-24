@@ -12,10 +12,6 @@ class Button(Module):
 			super().setup()
 
 
-		def checkOnline(self):
-			super().checkOnline(super().getAddress())
-
-
 		def sync(self):
 			try: 
 				i2c = smbus.SMBus(1)

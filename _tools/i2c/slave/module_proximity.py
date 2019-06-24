@@ -19,10 +19,6 @@ class Proximity(Module):
 				super().setSetup(False)
 				raise
 
-				
-		def checkOnline(self):
-			super().checkOnline(super().getAddress())
-
 
 		def sync(self):
 			try:
