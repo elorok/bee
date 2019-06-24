@@ -12,9 +12,13 @@ module.exports = function (RED) {
             try {
                 fs.readFile('/tmp/i2c_10', 'utf8', function (error, contents) {
                     if (error == null) {
-                        node.status({ fill: "green", shape: "dot", text: "connected" });
-                        msg.payload = contents;
-                        node.send(msg);
+                        if (contents != "<offline>") {
+                            node.status({ fill: "green", shape: "dot", text: "connected" });
+                            msg.payload = contents;
+                            node.send(msg);
+                        } else {
+                            node.status({ fill: "red", shape: "dot", text: "disconnected" });
+                        }
                     }
                     else {
                         node.status({ fill: "red", shape: "dot", text: "disconnected" });
@@ -23,7 +27,7 @@ module.exports = function (RED) {
                 })
             } catch (error) {
                 node.status({ fill: "red", shape: "dot", text: "disconnected" });
-                node.message(error);
+                node.error(error);
             }
         });
     }
