@@ -9,9 +9,9 @@ class Proximity(Module):
 		def setup(self):
 			try:
 				i2c = smbus.SMBus(1)
-				i2c.write_word_data(__ADDR, 0, 0)	# Enable Ambilight Sensor
+				i2c.write_word_data(__ADDR, 0, 0)		# Enable Ambilight Sensor
 				i2c.write_word_data(__ADDR, 3, 2250)	# Setup Proximity Sensor
-				i2c.write_word_data(__ADDR, 4, 1888) #
+				i2c.write_word_data(__ADDR, 4, 1888)	#
 				super().setSetup(True)
 			except:
 				super().setSetup(False)

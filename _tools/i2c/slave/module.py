@@ -10,7 +10,10 @@ class Module:
 		try:
 			i2c = smbus.SMBus(1)
 			result = i2c.read_byte(__ADDR)
+			module.setOnline(True)
 		except:
+			module.setOnline(False)
+			module.setSetup(False)
 			pass
 
 	def setSetup(self, val):
