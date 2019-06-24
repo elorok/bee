@@ -7,7 +7,14 @@ module.exports = function (RED) {
         var node = this;
 
         node.on('input', function (msg) {
-            var address = 10;
+            var fs = require('fs');
+            fs.readFile('/tmp/i2c_10', 'utf8', function (err, contents) {
+                msg.payload = contents;
+                node.send(msg);
+            })
+
+
+            /*var address = 10;
 
             var exec = require('child_process').exec;
             exec('/home/pi/bee/_tools/i2c/readByte.py ' + address, function callback(error, stdout, stderr) {
@@ -20,7 +27,7 @@ module.exports = function (RED) {
                     node.status({ fill: "red", shape: "dot", text: "disconnected" });
                     node.error(stderr);
                 }
-            });
+            });*/
         });
     }
     RED.nodes.registerType("button", ButtonNode);
