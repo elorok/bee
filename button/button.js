@@ -8,7 +8,7 @@ module.exports = function (RED) {
 
         node.on('input', function (msg) {
             var fs = require('fs');
-            fs.readFile('/tmp/i2c_10', 'utf8', function (err, contents) {
+            fs.readFile('/tmp/i2c_10', 'utf8', function (error, contents) {
                 if (error == null) {
                     node.status({ fill: "green", shape: "dot", text: "connected" });
                     msg.payload = contents;
