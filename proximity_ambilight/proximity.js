@@ -6,10 +6,6 @@ module.exports = function (RED) {
 
         var node = this;
 
-        var address = 81;
-        var exec = require('child_process').exec;
-
-
         node.on('input', function (msg) {
             var fs = require('fs');
 
@@ -18,7 +14,7 @@ module.exports = function (RED) {
                     if (error == null) {
                         if (contents != "<offline>") {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
-                            msg.payload = contents; 
+                            msg.payload = contents;
                             node.send([msg, null]);
                             msg.payload = contents;
                             node.send([null, msg]);
@@ -30,6 +26,9 @@ module.exports = function (RED) {
                         node.error(stderr);
                     }
                 })
+            } catch (error) {
+                node.status({ fill: "red", shape: "dot", text: "disconnected" });
+                node.error(error);
             }
 
             /*
