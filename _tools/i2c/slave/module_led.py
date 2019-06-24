@@ -10,6 +10,10 @@ class Led(Module):
 			super().__init__()
 			super().setSetup(True)
 
+						
+		def checkOnline(self):
+			super().checkOnline(__ADDR)
+
 
 		def sync(self):
 			try:

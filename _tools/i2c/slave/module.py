@@ -1,3 +1,5 @@
+import smbus
+
 class Module:
 	def __init__(self):
 		self.online = False
@@ -6,10 +8,10 @@ class Module:
 	def setup(self):
 		self.setup = True
 
-	def checkOnline(self):
+	def checkOnline(self, addr):
 		try:
 			i2c = smbus.SMBus(1)
-			result = i2c.read_byte(__ADDR)
+			result = i2c.read_byte(addr)
 			module.setOnline(True)
 		except:
 			module.setOnline(False)
