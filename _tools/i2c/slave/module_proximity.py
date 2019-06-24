@@ -21,7 +21,7 @@ class Proximity(Module):
 
 				
 		def checkOnline(self):
-			super().__checkOnline(super().getAddress())
+			super().checkOnline(super().getAddress())
 
 
 		def sync(self):
