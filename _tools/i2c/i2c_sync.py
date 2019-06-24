@@ -13,6 +13,8 @@ modules.append(Proximity())
 modules.append(Led())
 
 GPIO.setmode(GPIO.BCM)
+GPIO.setup(2, GPIO.IN)	# SDA
+GPIO.setup(3, GPIO.IN)	# SCL
 
 tBusBlocked = 0
 
@@ -38,7 +40,7 @@ while(True):
 				module.sync()
 
 	else:	# I2C bus blocked
-		tBusBlocked++
+		tBusBlocked += 1
 		print("Blocked: " + str(tBusBlocked * 100) + "ms")
 
 	sleep(0.1)	# 100ms
