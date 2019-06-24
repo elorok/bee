@@ -6,11 +6,15 @@ class Button(Module):
 		def __init__(self):
 			super().__init__()
 			super().setAddress(10)
-			super().setSetup(True)
+			super().setInit(True)
 
 
 		def checkOnline(self):
 			super().checkOnline(super().getAddress())
+
+			
+		def setup(self):
+			super().setup()
 
 
 		def sync(self):
@@ -20,7 +24,7 @@ class Button(Module):
 
 			except IOError:
 				setOnline(False)
-				setSetup(False)
+				setInit(False)
 				return
 
 			file = open("/tmp/i2c_" + str(super().getAddress()), "w")

@@ -15,19 +15,18 @@ while(True):
 	for module in modules:
 		# Module is offline
 		if not module.getOnline():
-			print("Offline: " + str(module))
 			module.checkOnline()
-			module.setSetup(False)
+			module.setInit(False)
 
 		# Module is not initialized
-		if module.getOnline() and not module.getSetup():
+		if module.getOnline() and not module.getInit():
 			try:
 				module.setup()
 			except: 
 				pass
 
 		# Module is ready
-		if module.getOnline() and module.getSetup():
+		if module.getOnline() and module.getInit():
 			print(str(module) + " is ready to sync.")
 
 		sleep(0.1)	# 100ms

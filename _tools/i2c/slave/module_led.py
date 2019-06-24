@@ -6,7 +6,7 @@ class Led(Module):
 		def __init__(self):
 			super().__init__()
 			super().setAddress(9)
-			super().setSetup(True)
+			super().setInit(True)
 
 						
 		def checkOnline(self):
@@ -40,4 +40,4 @@ class Led(Module):
 
 			except IOError:
 				setOnline(False)
-				setSetup(False)
+				setInit(False)

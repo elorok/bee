@@ -3,10 +3,10 @@ import smbus
 class Module:
 	def __init__(self):
 		self.setOnline(False)
-		self.setSetup(False)
+		self.setInit(False)
 
 	def setup(self):
-		self.setSetup(True)
+		pass
 
 	def checkOnline(self, addr):
 		try:
@@ -15,7 +15,7 @@ class Module:
 			self.setOnline(True)
 		except:
 			self.setOnline(False)
-			self.setSetup(False)
+			self.setInit(False)
 			pass
 
 	def setAddress(self, val):
@@ -24,11 +24,11 @@ class Module:
 	def getAddress(self): 
 		return self.address
 
-	def setSetup(self, val):
-		self.setup = val
+	def setInit(self, val):
+		self.init = val
 
-	def getSetup(self):
-		return self.setup
+	def getInit(self):
+		return self.init
 
 	def setOnline(self, val):
 		self.online = val
