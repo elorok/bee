@@ -8,17 +8,23 @@ module.exports = function (RED) {
 
         node.on('input', function (msg) {
             var fs = require('fs');
-            fs.readFile('/tmp/i2c_10', 'utf8', function (error, contents) {
-                if (error == null) {
-                    node.status({ fill: "green", shape: "dot", text: "connected" });
-                    msg.payload = contents;
-                    node.send(msg);
-                }
-                else {
-                    node.status({ fill: "red", shape: "dot", text: "disconnected" });
-                    node.error(stderr);
-                }
-            })
+
+            try {
+                fs.readFile('/tmp/i2c_10', 'utf8', function (error, contents) {
+                    if (error == null) {
+                        node.status({ fill: "green", shape: "dot", text: "connected" });
+                        msg.payload = contents;
+                        node.send(msg);
+                    }
+                    else {
+                        node.status({ fill: "red", shape: "dot", text: "disconnected" });
+                        node.error(stderr);
+                    }
+                })
+            } catch (error) {
+                node.status({ fill: "red", shape: "dot", text: "disconnected" });
+                node.error(error);
+            }
 
 
             /*var address = 10;
