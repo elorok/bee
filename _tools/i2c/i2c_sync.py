@@ -21,7 +21,7 @@ while(True):
 		# Module is not initialized
 		if module.getOnline() and not module.getInit():
 			try:
-				module.init()
+				module.setup()
 			except: 
 				pass
 

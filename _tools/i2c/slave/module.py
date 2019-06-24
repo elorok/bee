@@ -6,7 +6,7 @@ class Module:
 		self.setInit(False)
 
 	def setup(self):
-		pass
+		self.setInit(True)
 
 	def checkOnline(self, addr):
 		try:
