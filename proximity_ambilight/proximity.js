@@ -14,10 +14,11 @@ module.exports = function (RED) {
                     if (error == null) {
                         if (contents != "<offline>") {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
-                            msg.payload = contents;
-                            node.send([msg, null]);
-                            msg.payload = contents;
-                            node.send([null, msg]);
+
+                            msg.payload = contents.split(/\r?\n/);
+                            node.send(msg);
+                            /*msg.payload = contents;
+                            node.send([null, msg]);*/
                         } else {
                             node.status({ fill: "red", shape: "dot", text: "disconnected" });
                         }
