@@ -22,8 +22,8 @@ class Button(Module):
 				result = i2c.read_byte(super().getAddress())
 
 			except IOError:
-				setOnline(False)
-				setSetup(False)
+				super().setOnline(False)
+				super().setSetup(False)
 				return
 
 			file = open("/tmp/i2c_" + str(super().getAddress()), "w")

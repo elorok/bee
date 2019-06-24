@@ -31,8 +31,8 @@ class Proximity(Module):
 				ambi = i2c.read_word_data(super().getAddress(), 9)
 
 			except IOError:
-				setOnline(False)
-				setSetup(False)
+				super().setOnline(False)
+				super().setSetup(False)
 				return
 
 

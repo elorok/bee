@@ -42,5 +42,5 @@ class Led(Module):
 				i2c.write_word_data(super().getAddress(), red, (green + blue * 256))
 
 			except IOError:
-				setOnline(False)
-				setSetup(False)
+				super().setOnline(False)
+				super().setSetup(False)
