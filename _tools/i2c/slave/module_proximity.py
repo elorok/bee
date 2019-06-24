@@ -19,7 +19,7 @@ class Proximity(Module):
 
 				
 		def checkOnline(self):
-			super().checkOnline(__ADDR)
+			super().__checkOnline(__ADDR)
 
 
 		def sync(self):

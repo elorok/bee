@@ -8,7 +8,7 @@ class Module:
 	def setup(self):
 		self.setup = True
 
-	def checkOnline(self, addr):
+	def __checkOnline(self, addr):
 		try:
 			i2c = smbus.SMBus(1)
 			result = i2c.read_byte(addr)
