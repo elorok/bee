@@ -9,8 +9,15 @@ module.exports = function (RED) {
         node.on('input', function (msg) {
             var fs = require('fs');
             fs.readFile('/tmp/i2c_10', 'utf8', function (err, contents) {
-                msg.payload = contents;
-                node.send(msg);
+                if (error == null) {
+                    node.status({ fill: "green", shape: "dot", text: "connected" });
+                    msg.payload = contents;
+                    node.send(msg);
+                }
+                else {
+                    node.status({ fill: "red", shape: "dot", text: "disconnected" });
+                    node.error(stderr);
+                }
             })
 
 
