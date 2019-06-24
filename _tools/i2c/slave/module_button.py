@@ -15,10 +15,6 @@ class Button(Module):
 		def checkOnline(self):
 			super().checkOnline(super().getAddress())
 
-			
-		def setup(self):
-			super().setup()
-
 
 		def sync(self):
 			try: 
@@ -27,7 +23,7 @@ class Button(Module):
 
 			except IOError:
 				setOnline(False)
-				setInit(False)
+				setSetup(False)
 				return
 
 			file = open("/tmp/i2c_" + str(super().getAddress()), "w")

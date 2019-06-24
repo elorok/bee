@@ -14,9 +14,9 @@ class Proximity(Module):
 				i2c.write_word_data(super().getAddress(), 0, 0)		# Enable Ambilight Sensor
 				i2c.write_word_data(super().getAddress(), 3, 2250)	# Setup Proximity Sensor
 				i2c.write_word_data(super().getAddress(), 4, 1888)	#
-				super().setInit(True)
+				super().setSetup(True)
 			except:
-				super().setInit(False)
+				super().setSetup(False)
 				raise
 
 				
@@ -32,7 +32,7 @@ class Proximity(Module):
 
 			except IOError:
 				setOnline(False)
-				setInit(False)
+				setSetup(False)
 				return
 
 

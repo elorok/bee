@@ -43,4 +43,4 @@ class Led(Module):
 
 			except IOError:
 				setOnline(False)
-				setInit(False)
+				setSetup(False)
