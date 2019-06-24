@@ -29,4 +29,6 @@ while(True):
 		if module.getOnline() and module.getSetup():
 			print(str(module) + " is ready to sync.")
 
+		print("Online: " + str(module.getOnline()) + " Setup: " + str(module.getSetup()) + " " + str(module))
+
 		sleep(0.1)	# 100ms
