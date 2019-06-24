@@ -18,6 +18,12 @@ class Module:
 			module.setSetup(False)
 			pass
 
+	def setAddress(self, val):
+		self.address = val
+
+	def getAddress(self, val): 
+		return self.address
+
 	def setSetup(self, val):
 		self.setup = val
 
