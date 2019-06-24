@@ -6,7 +6,10 @@ class Button(Module):
 		def __init__(self):
 			super().__init__()
 			super().setAddress(10)
-			super().setInit(True)
+
+
+		def setup(self):
+			super().setup()
 
 
 		def checkOnline(self):
