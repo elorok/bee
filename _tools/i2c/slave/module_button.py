@@ -10,8 +10,11 @@ class Button(Module):
 
 		def sync(self):
 			try: 
+				msg = smbus.i2c_msg(); 
+				msg.read(super().getAddress(), 1);
 				i2c = smbus.SMBus(1)
-				state = i2c.read_byte(super().getAddress())
+				i2c.i2c_rdwr(msg);
+				#state = i2c.read_byte(super().getAddress())
 
 			except IOError:
 				super().setOnline(False)
