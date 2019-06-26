@@ -31,8 +31,8 @@ module.exports = function (RED) {
 
             // *** Write Data ***
             try {
-                fs.writeFile('/tmp/i2c_9_out', 'utf8', function (error) {
-                    if (err) throw err;
+                fs.writeFile('/tmp/i2c_9_out', msg, function (error) {
+                    if (error) throw error;
                 })
             } catch (error) {
                 node.error(error);
