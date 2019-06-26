@@ -8,10 +8,6 @@ class Button(Module):
 			super().setAddress(10)
 
 
-		def setup(self):
-			super().setup()
-
-
 		def sync(self):
 			try: 
 				i2c = smbus.SMBus(1)

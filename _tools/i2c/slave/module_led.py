@@ -6,10 +6,6 @@ class Led(Module):
 		def __init__(self):
 			super().__init__()
 			super().setAddress(9)
-			
-
-		def setup(self):
-			super().setup()
 
 
 		def sync(self):
