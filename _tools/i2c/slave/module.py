@@ -13,6 +13,9 @@ class Module:
 			i2c = smbus.SMBus(1)
 			result = i2c.read_byte(self.getAddress())
 			self.setOnline(True)
+			file = open("/tmp/i2c_" + str(self.getAddress()) + "_in", "w")
+			file.write("<online>")
+			file.close()
 		except:
 			self.setOnline(False)
 			self.setSetup(False)
