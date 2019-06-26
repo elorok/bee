@@ -15,9 +15,9 @@ module.exports = function (RED) {
                         if (contents != "<offline>") {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
 
-                            msg.payload = contents.split("\n"[0]);
+                            msg.payload = contents.split("\n")[0];
                             node.send([msg, null]);
-                            msg.payload = contents.split("\n"[1]);
+                            msg.payload = contents.split("\n")[1];
                             node.send([null, msg]);
                         } else {
                             node.status({ fill: "red", shape: "dot", text: "disconnected" });
