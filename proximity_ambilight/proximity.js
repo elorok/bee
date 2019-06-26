@@ -15,10 +15,10 @@ module.exports = function (RED) {
                         if (contents != "<offline>") {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
 
-                            msg.payload = contents.split(" ");
-                            node.send(msg);
-                            /*msg.payload = contents;
-                            node.send([null, msg]);*/
+                            msg.payload = contents.split("\n"[0]);
+                            node.send([msg, null]);
+                            msg.payload = contents.split("\n"[1]);
+                            node.send([null, msg]);
                         } else {
                             node.status({ fill: "red", shape: "dot", text: "disconnected" });
                         }
@@ -31,26 +31,6 @@ module.exports = function (RED) {
                 node.status({ fill: "red", shape: "dot", text: "disconnected" });
                 node.error(error);
             }
-
-            /*
-            exec('/home/pi/bee/_tools/i2c/readCommandWord.py ' + address + ' 8', function callback(error, stdout, stderr) {   // Read Register Proximity
-                if (error == null) {
-                    node.status({ fill: "green", shape: "dot", text: "connected" });
-                    msg.payload = stdout;
-                    node.send([msg,null]);
-                }
-                else {
-                    node.status({ fill: "red", shape: "dot", text: "disconnected" });
-                    node.error(stderr);
-                }
-            });
-
-            exec('/home/pi/bee/_tools/i2c/readCommandWord.py ' + address + ' 9', function callback(error, stdout, stderr) {   // Read Register Ambilight
-                if (error == null) {
-                    msg.payload = stdout;
-                    node.send([null,msg]);
-                }
-            });*/
         });
     }
     RED.nodes.registerType("proximity", ProximityNode);
