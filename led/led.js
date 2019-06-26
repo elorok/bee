@@ -31,7 +31,12 @@ module.exports = function (RED) {
 
             // *** Write Data ***
             try {
-                fs.writeFile('/tmp/i2c_9_out', BigNumber(msg.payload.substring(0,2), 16) + "\n" + BigNumber(msg.payload.substring(2,4), 16) + "\n" + BigNumber(msg.payload.substring(4,6), 16), function (error) {
+                red = new BigNumber(msg.payload.substring(0, 2), 16);
+                green = new BigNumber(msg.payload.substring(2, 4), 16);
+                blue = new BigNumber(msg.payload.substring(4, 6), 16);
+
+
+                fs.writeFile('/tmp/i2c_9_out', str(red) + "\n" + str(green) + "\n" + str(blue), function (error) {
                     if (error) throw error;
                 })
             } catch (error) {
