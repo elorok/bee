@@ -11,13 +11,13 @@ class Button(Module):
 		def sync(self):
 			try: 
 				i2c = smbus.SMBus(1)
-				result = i2c.read_byte(super().getAddress())
+				state = i2c.read_byte(super().getAddress())
 
 			except IOError:
 				super().setOnline(False)
 				super().setSetup(False)
 				return
 
-			file = open("/tmp/i2c_" + str(super().getAddress()), "w")
-			file.write(str(result))
+			file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
+			file.write(str(state))
 			file.close()

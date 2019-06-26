@@ -32,6 +32,6 @@ class Proximity(Module):
 				return
 
 
-			file = open("/tmp/i2c_" + str(super().getAddress()), "w")
+			file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
 			file.write(str(proxy) + "\n" + str(ambi))
 			file.close()

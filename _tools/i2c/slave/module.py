@@ -16,7 +16,7 @@ class Module:
 		except:
 			self.setOnline(False)
 			self.setSetup(False)
-			file = open("/tmp/i2c_" + str(self.getAddress()), "w")
+			file = open("/tmp/i2c_" + str(self.getAddress()) + "_in", "w")
 			file.write("<offline>")
 			file.close()
 

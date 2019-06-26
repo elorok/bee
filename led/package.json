@@ -1,0 +1,16 @@
+{
+  "name": "bee-led",
+  "version": "0.0.1",
+  "description": "LED module",
+  "main": "led.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sl",
+  "license": "ISC",
+  "node-red": {
+    "nodes": {
+      "led": "led.js"
+    }
+  }
+}

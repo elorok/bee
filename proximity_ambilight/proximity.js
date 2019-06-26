@@ -10,7 +10,7 @@ module.exports = function (RED) {
             var fs = require('fs');
 
             try {
-                fs.readFile('/tmp/i2c_81', 'utf8', function (error, contents) {
+                fs.readFile('/tmp/i2c_81_in', 'utf8', function (error, contents) {
                     if (error == null) {
                         if (contents != "<offline>") {
                             node.status({ fill: "green", shape: "dot", text: "connected" });

@@ -10,20 +10,20 @@ class Led(Module):
 
 		def sync(self):
 			try:
-				with open("/tmp/i2c_" + str(super().getAddress()), "r") as file:
+				with open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r") as file:
 					try:
 						red = int(file.readline())
 						green = int(file.readline())
 						blue = int(file.readline())
 					except ValueError:
-						print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()))
+						print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()) + "_out")
 						red = 0
 						green = 0
 						blue = 0
 					file.close()
 
 			except IOError:
-				print("File /tmp/i2c_" + str(super().getAddress()) + " not found.")
+				print("File /tmp/i2c_" + str(super().getAddress()) + "_out not found.")
 				red = 0
 				green = 0
 				blue = 0
