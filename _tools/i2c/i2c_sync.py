@@ -7,8 +7,6 @@ from slave.module_led import Led
 from slave.module import Module
 
 
-GPIO.setmode(GPIO.BCM)
-
 modules = []
 modules.append(Button())
 modules.append(Proximity())
@@ -16,15 +14,6 @@ modules.append(Led())
 
 
 while(True):
-	GPIO.setmode(2, GPIO.IN)	# SDA
-	GPIO.setmode(3, GPIO.IN)	# SCL
-
-	print("SDA: " + str(GPIO.input(2)) + " SCL: " + str(GPIO.input(3)))
-
-	GPIO.setmode(2, GPIO.ALT0)	# SDA
-	GPIO.setmode(3, GPIO.ALT0)	# SCL
-
-
 	for module in modules:
 		# Module is offline
 		if not module.getOnline():
@@ -42,6 +31,6 @@ while(True):
 		if module.getOnline() and module.getSetup():
 			module.sync()
 
-		print("O: " + str(module.getOnline()) + " S: " + str(module.getSetup()) + " " + str(module))
+		#print("O: " + str(module.getOnline()) + " S: " + str(module.getSetup()) + " " + str(module))
 
 	sleep(0.1)	# 100ms
