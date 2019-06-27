@@ -19,7 +19,11 @@ while(True):
 	GPIO.setmode(2, GPIO.IN)	# SDA
 	GPIO.setmode(3, GPIO.IN)	# SCL
 
-	print("SDA: " + str(GPIO.input(2) + " SCL: " + str(GPIO.input(3)))
+	print("SDA: " + str(GPIO.input(2)) + " SCL: " + str(GPIO.input(3)))
+
+	GPIO.setmode(2, GPIO.ALT0)	# SDA
+	GPIO.setmode(3, GPIO.ALT0)	# SCL
+
 
 	for module in modules:
 		# Module is offline
