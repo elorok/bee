@@ -14,9 +14,10 @@ modules.append(Led())
 
 while(True):
 	for module in modules:
+		module.checkOnline()
+
 		# Module is offline
 		if not module.getOnline():
-			module.checkOnline()
 			module.setSetup(False)
 
 		# Module is not initialized
@@ -29,5 +30,7 @@ while(True):
 		# Module is ready
 		if module.getOnline() and module.getSetup():
 			module.sync()
+
+		print("O: " + str(module.getOnline()) + " S: " + str(module.getSetup()) + " " + str(module))
 
 	sleep(0.1)	# 100ms
