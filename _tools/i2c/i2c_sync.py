@@ -14,10 +14,9 @@ modules.append(Led())
 
 while(True):
 	for module in modules:
-		module.checkOnline()
-
 		# Module is offline
 		if not module.getOnline():
+			module.checkOnline()
 			module.setSetup(False)
 
 		# Module is not initialized
