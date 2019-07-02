@@ -12,12 +12,14 @@ module.exports = function (RED) {
             try {
                 fs.readFile('/tmp/i2c_10_in', 'utf8', function (error, contents) {
                     if (error == null) {
-                        if (contents != "<offline>") {
+                        if (contents == "<offline>") {
+                            node.status({ fill: "red", shape: "dot", text: "disconnected" });
+                        } else if (contents == "<online>") {
+                            node.status({ fill: "green", shape: "dot", text: "connected" });
+                        } else {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
                             msg.payload = contents;
                             node.send(msg);
-                        } else {
-                            node.status({ fill: "red", shape: "dot", text: "disconnected" });
                         }
                     }
                     else {
