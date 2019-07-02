@@ -11,7 +11,7 @@ class Led(Module):
 		def sync(self):
 			super().checkOnline()
 
-			if(super.getOnline()):
+			if(super().getOnline()):
 				try:
 					with open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r") as file:
 						try:

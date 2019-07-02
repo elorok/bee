@@ -1,6 +1,5 @@
 #!/usr/bin/python
 from time import sleep
-import RPi.GPIO as GPIO
 from slave.module_button import Button
 from slave.module_proximity import Proximity
 from slave.module_led import Led
