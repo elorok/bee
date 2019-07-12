@@ -20,9 +20,7 @@ class Led(Module):
 							blue = int(file.readline())
 						except ValueError:
 							print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()) + "_out")
-							red = 0
-							green = 0
-							blue = 0
+							return
 						file.close()
 
 				except IOError:
