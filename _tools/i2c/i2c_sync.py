@@ -30,6 +30,5 @@ while(True):
 		if module.getOnline() and module.getSetup():
 			module.sync()
 
-		#print("O: " + str(module.getOnline()) + " S: " + str(module.getSetup()) + " " + str(module))
 
 	sleep(0.1)	# 100ms
