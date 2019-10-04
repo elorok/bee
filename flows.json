@@ -1,295 +1,323 @@
 [
     {
-        "id": "179496b7.4615c9",
+        "id": "7676309c.b164e",
         "type": "tab",
-        "label": "Elektroniker",
+        "label": "Einstellungen",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "7490308b.dc12",
-        "type": "tab",
-        "label": "Informatiker",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "37cf5942.513c86",
-        "type": "tab",
-        "label": "Laborant",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "8d54ea0.1cceb18",
-        "type": "tab",
-        "label": "Konstrukteur",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "1d9efcfb.065233",
-        "type": "tab",
-        "label": "Kaufmann / Kauffrau",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "5aa3dc24.0bdef4",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0066cc",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#0066cc",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "Roche",
-                "default": "#4B7930",
-                "baseColor": "#0066cc",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "reset": false
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0066cc",
-                    "edited": true
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0066cc",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": true
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#000000",
-                    "edited": true
-                },
-                "group-textColor": {
-                    "value": "#1a8cff",
-                    "edited": true
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": true
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": true
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": true
-                },
-                "widget-backgroundColor": {
-                    "value": "#0066cc",
-                    "edited": true
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": true
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey"
-            }
-        },
-        "site": {
-            "name": "Roche Berufsbildung",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "true",
-            "allowTempTheme": "true",
-            "dateFormat": "DD.MM.YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "19b00c64.28f114",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Elektroniker",
-        "icon": "fa-microchip",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "ac89c8d9.fc04f8",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Informatiker",
-        "icon": "fa-code ",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "888d072a.b35c88",
-        "type": "ui_group",
-        "z": "",
-        "name": "-",
-        "tab": "ac89c8d9.fc04f8",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "4e51695c.ed0528",
-        "type": "ui_link",
-        "z": "",
-        "name": "Roche Berufsbildung",
-        "link": "https://lehre.roche.com",
-        "icon": "fa-graduation-cap",
-        "target": "iframe",
-        "order": 6
-    },
-    {
-        "id": "37dbfa5c.9f3916",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Laborant",
-        "icon": "fa-thermometer-three-quarters",
-        "order": 3,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "d79b478a.0237a8",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Konstrukteur",
-        "icon": "fa-pencil",
+        "id": "d0b9c4d3.de0438",
+        "type": "ui_button",
+        "z": "7676309c.b164e",
+        "name": "",
+        "group": "703dd755.a21938",
         "order": 4,
-        "disabled": false,
-        "hidden": false
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Neustart",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "autorenew",
+        "payload": "System wird neu gestartet",
+        "payloadType": "str",
+        "topic": "",
+        "x": 240,
+        "y": 560,
+        "wires": [
+            [
+                "1b57d16.7c1772f",
+                "f8046e38.edb7"
+            ]
+        ]
     },
     {
-        "id": "cccf3ee5.fb3fd",
+        "id": "1b57d16.7c1772f",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "sudo reboot #",
+        "addpay": false,
+        "append": "now",
+        "useSpawn": "",
+        "timer": "1",
+        "oldrc": false,
+        "name": "Reboot",
+        "x": 480,
+        "y": 560,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "86759384.8e199",
+        "type": "ui_button",
+        "z": "7676309c.b164e",
+        "name": "",
+        "group": "703dd755.a21938",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Update System",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "system_update_alt",
+        "payload": "Gestartet",
+        "payloadType": "str",
+        "topic": "",
+        "x": 200,
+        "y": 720,
+        "wires": [
+            [
+                "d54316a6.d2be98",
+                "77dfebb7.d6aa64"
+            ]
+        ]
+    },
+    {
+        "id": "d54316a6.d2be98",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "oldrc": false,
+        "name": "Update System",
+        "x": 460,
+        "y": 720,
+        "wires": [
+            [
+                "622dc4c7.c3e6dc"
+            ],
+            [
+                "2473c4ad.05a1ec"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6821d895.1d3af8",
+        "type": "inject",
+        "z": "7676309c.b164e",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 250,
+        "y": 380,
+        "wires": [
+            [
+                "364d056.4db7ffa"
+            ]
+        ]
+    },
+    {
+        "id": "364d056.4db7ffa",
+        "type": "function",
+        "z": "7676309c.b164e",
+        "name": "Datum / Uhrzeit",
+        "func": "var now = new Date();\nvar year = now.getFullYear();\nvar month = now.getMonth()+1;\nvar day = now.getDate();\nvar hour = now.getHours();\nvar minute = now.getMinutes();\nvar second = now.getSeconds();\nif(month.toString().length == 1) {\nvar month = '0'+month;\n}\nif(day.toString().length == 1) {\nvar day = '0'+day;\n}\nif(hour.toString().length == 1) {\nvar hour = '0'+hour;\n}\nif(minute.toString().length == 1) {\nvar minute = '0'+minute;\n}\nif(second.toString().length == 1) {\nvar second = '0'+second;\n}\nmsg.payload = year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "e573df65.04e1c"
+            ]
+        ]
+    },
+    {
+        "id": "e573df65.04e1c",
+        "type": "ui_text",
+        "z": "7676309c.b164e",
+        "group": "703dd755.a21938",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Datum / Uhrzeit",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 680,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d4ee0234.726e4",
+        "type": "ui_button",
+        "z": "7676309c.b164e",
+        "name": "",
+        "group": "703dd755.a21938",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Synchronisiere Datum / Zeit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "access_time",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 240,
+        "y": 480,
+        "wires": [
+            [
+                "ce122b8f.34df88"
+            ]
+        ]
+    },
+    {
+        "id": "ce122b8f.34df88",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "sudo date -s \"$(curl -s --head http://google.ch | grep ^Date: | sed 's/Date: //g')\"",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "oldrc": false,
+        "name": "Synchronisiere Zeit",
+        "x": 490,
+        "y": 480,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "77dfebb7.d6aa64",
+        "type": "ui_toast",
+        "z": "7676309c.b164e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "Update System",
+        "name": "",
+        "x": 450,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "195813.aa0eb7ed",
+        "type": "ui_toast",
+        "z": "7676309c.b164e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "Update System",
+        "name": "",
+        "x": 810,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "c72fd3ac.114df",
+        "type": "ui_toast",
+        "z": "7676309c.b164e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "Update System",
+        "name": "",
+        "x": 810,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "622dc4c7.c3e6dc",
+        "type": "function",
+        "z": "7676309c.b164e",
+        "name": "",
+        "func": "msg.payload = \"Abgeschlossen\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 630,
+        "y": 700,
+        "wires": [
+            [
+                "c72fd3ac.114df"
+            ]
+        ]
+    },
+    {
+        "id": "2473c4ad.05a1ec",
+        "type": "function",
+        "z": "7676309c.b164e",
+        "name": "",
+        "func": "msg.payload = \"Fehler\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 630,
+        "y": 740,
+        "wires": [
+            [
+                "195813.aa0eb7ed"
+            ]
+        ]
+    },
+  {
+    "id": "f8046e38.edb7",
+    "type": "ui_toast",
+    "z": "7676309c.b164e",
+    "position": "top right",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": true,
+    "outputs": 0,
+    "ok": "OK",
+    "cancel": "",
+    "topic": "Neustart",
+    "name": "",
+    "x": 490,
+    "y": 620,
+    "wires": []
+  },
+    {
+        "id": "703dd755.a21938",
         "type": "ui_group",
         "z": "",
-        "name": "-",
-        "tab": "37dbfa5c.9f3916",
+        "name": "System",
+        "tab": "220e217.eaaf1de",
         "order": 1,
-        "disp": false,
+        "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": true
     },
     {
-        "id": "fdf747d0.4fc068",
-        "type": "ui_group",
-        "z": "",
-        "name": "-",
-        "tab": "d79b478a.0237a8",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "3a5e1164.aa1e7e",
-        "type": "ui_group",
-        "z": "",
-        "name": "-",
-        "tab": "19b00c64.28f114",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "950f1c2.33db2e",
+        "id": "220e217.eaaf1de",
         "type": "ui_tab",
         "z": "",
-        "name": "Kaufmann / Kauffrau",
-        "icon": "fa-paperclip ",
-        "order": 5,
+        "name": "Einstellungen",
+        "icon": "settings",
+        "order": 7,
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "d9e6e166.7a19d",
-        "type": "ui_group",
-        "z": "",
-        "name": "-",
-        "tab": "950f1c2.33db2e",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "9b12b9e9.69c5a8",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "3a5e1164.aa1e7e",
-        "order": 1,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "2edd9fac.2d57d",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "888d072a.b35c88",
-        "order": 1,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "a13223df.7c82d",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "cccf3ee5.fb3fd",
-        "order": 1,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "78f9d5ee.b362ac",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "fdf747d0.4fc068",
-        "order": 1,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "a7fb66fc.b9fcf8",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "d9e6e166.7a19d",
-        "order": 1,
-        "width": 1,
-        "height": 1
     }
 ]
