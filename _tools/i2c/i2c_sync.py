@@ -10,6 +10,7 @@ modules = []
 modules.append(Button())
 modules.append(Proximity())
 modules.append(Led())
+modules.append(io())
 
 
 while(True):
