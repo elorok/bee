@@ -1,459 +1,504 @@
 [
-  {
-    "id": "179496b7.4615c9",
-    "type": "tab",
-    "label": "Elektroniker",
-    "disabled": false,
-    "info": ""
-  },
-  {
-    "id": "7490308b.dc12",
-    "type": "tab",
-    "label": "Informatiker",
-    "disabled": false,
-    "info": ""
-  },
-  {
-    "id": "37cf5942.513c86",
-    "type": "tab",
-    "label": "Laborant",
-    "disabled": false,
-    "info": ""
-  },
-  {
-    "id": "8d54ea0.1cceb18",
-    "type": "tab",
-    "label": "Konstrukteur",
-    "disabled": false,
-    "info": ""
-  },
-  {
-    "id": "1d9efcfb.065233",
-    "type": "tab",
-    "label": "Kaufmann / Kauffrau",
-    "disabled": false,
-    "info": ""
-  },
-  {
-    "id": "5aa3dc24.0bdef4",
-    "type": "ui_base",
-    "theme": {
-      "name": "theme-light",
-      "lightTheme": {
-        "default": "#0094CE",
-        "baseColor": "#0066cc",
-        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-        "edited": true,
-        "reset": false
-      },
-      "darkTheme": {
-        "default": "#097479",
-        "baseColor": "#0066cc",
-        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-        "edited": true,
-        "reset": false
-      },
-      "customTheme": {
-        "name": "Roche",
-        "default": "#4B7930",
-        "baseColor": "#0066cc",
-        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-        "reset": false
-      },
-      "themeState": {
-        "base-color": {
-          "default": "#0094CE",
-          "value": "#0066cc",
-          "edited": true
-        },
-        "page-titlebar-backgroundColor": {
-          "value": "#0066cc",
-          "edited": false
-        },
-        "page-backgroundColor": {
-          "value": "#fafafa",
-          "edited": true
-        },
-        "page-sidebar-backgroundColor": {
-          "value": "#000000",
-          "edited": true
-        },
-        "group-textColor": {
-          "value": "#1a8cff",
-          "edited": true
-        },
-        "group-borderColor": {
-          "value": "#ffffff",
-          "edited": true
-        },
-        "group-backgroundColor": {
-          "value": "#ffffff",
-          "edited": true
-        },
-        "widget-textColor": {
-          "value": "#111111",
-          "edited": true
-        },
-        "widget-backgroundColor": {
-          "value": "#0066cc",
-          "edited": true
-        },
-        "widget-borderColor": {
-          "value": "#ffffff",
-          "edited": true
-        },
-        "base-font": {
-          "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-        }
-      },
-      "angularTheme": {
-        "primary": "indigo",
-        "accents": "blue",
-        "warn": "red",
-        "background": "grey"
-      }
+    {
+        "id": "179496b7.4615c9",
+        "type": "tab",
+        "label": "Elektroniker",
+        "disabled": false,
+        "info": ""
     },
-    "site": {
-      "name": "Roche Berufsbildung",
-      "hideToolbar": "false",
-      "allowSwipe": "false",
-      "lockMenu": "true",
-      "allowTempTheme": "true",
-      "dateFormat": "DD.MM.YYYY",
-      "sizes": {
-        "sx": 48,
-        "sy": 48,
-        "gx": 6,
-        "gy": 6,
-        "cx": 6,
-        "cy": 6,
-        "px": 0,
-        "py": 0
-      }
-    }
-  },
-  {
-    "id": "19b00c64.28f114",
-    "type": "ui_tab",
-    "z": "",
-    "name": "Elektroniker",
-    "icon": "fa-microchip",
-    "order": 1,
-    "disabled": false,
-    "hidden": false
-  },
-  {
-    "id": "ac89c8d9.fc04f8",
-    "type": "ui_tab",
-    "z": "",
-    "name": "Informatiker",
-    "icon": "fa-code ",
-    "order": 2,
-    "disabled": false,
-    "hidden": false
-  },
-  {
-    "id": "888d072a.b35c88",
-    "type": "ui_group",
-    "z": "",
-    "name": "-",
-    "tab": "ac89c8d9.fc04f8",
-    "order": 1,
-    "disp": false,
-    "width": "6",
-    "collapse": false
-  },
-  {
-    "id": "4e51695c.ed0528",
-    "type": "ui_link",
-    "z": "",
-    "name": "Roche Berufsbildung",
-    "link": "https://lehre.roche.com",
-    "icon": "fa-graduation-cap",
-    "target": "iframe",
-    "order": 6
-  },
-  {
-    "id": "37dbfa5c.9f3916",
-    "type": "ui_tab",
-    "z": "",
-    "name": "Laborant",
-    "icon": "fa-thermometer-three-quarters",
-    "order": 3,
-    "disabled": false,
-    "hidden": false
-  },
-  {
-    "id": "d79b478a.0237a8",
-    "type": "ui_tab",
-    "z": "",
-    "name": "Konstrukteur",
-    "icon": "fa-pencil",
-    "order": 4,
-    "disabled": false,
-    "hidden": false
-  },
-  {
-    "id": "cccf3ee5.fb3fd",
-    "type": "ui_group",
-    "z": "",
-    "name": "-",
-    "tab": "37dbfa5c.9f3916",
-    "order": 1,
-    "disp": false,
-    "width": "6",
-    "collapse": false
-  },
-  {
-    "id": "fdf747d0.4fc068",
-    "type": "ui_group",
-    "z": "",
-    "name": "-",
-    "tab": "d79b478a.0237a8",
-    "order": 1,
-    "disp": false,
-    "width": "6",
-    "collapse": false
-  },
-  {
-    "id": "3a5e1164.aa1e7e",
-    "type": "ui_group",
-    "z": "",
-    "name": "-",
-    "tab": "19b00c64.28f114",
-    "order": 1,
-    "disp": false,
-    "width": "6",
-    "collapse": false
-  },
-  {
-    "id": "950f1c2.33db2e",
-    "type": "ui_tab",
-    "z": "",
-    "name": "Kaufmann / Kauffrau",
-    "icon": "fa-paperclip ",
-    "order": 5,
-    "disabled": false,
-    "hidden": false
-  },
-  {
-    "id": "d9e6e166.7a19d",
-    "type": "ui_group",
-    "z": "",
-    "name": "-",
-    "tab": "950f1c2.33db2e",
-    "order": 1,
-    "disp": false,
-    "width": "6",
-    "collapse": false
-  },
-  {
-    "id": "9b12b9e9.69c5a8",
-    "type": "ui_spacer",
-    "name": "spacer",
-    "group": "3a5e1164.aa1e7e",
-    "order": 1,
-    "width": 1,
-    "height": 1
-  },
-  {
-    "id": "2edd9fac.2d57d",
-    "type": "ui_spacer",
-    "name": "spacer",
-    "group": "888d072a.b35c88",
-    "order": 1,
-    "width": 1,
-    "height": 1
-  },
-  {
-    "id": "a13223df.7c82d",
-    "type": "ui_spacer",
-    "name": "spacer",
-    "group": "cccf3ee5.fb3fd",
-    "order": 1,
-    "width": 1,
-    "height": 1
-  },
-  {
-    "id": "78f9d5ee.b362ac",
-    "type": "ui_spacer",
-    "name": "spacer",
-    "group": "fdf747d0.4fc068",
-    "order": 1,
-    "width": 1,
-    "height": 1
-  },
-  {
-    "id": "a7fb66fc.b9fcf8",
-    "type": "ui_spacer",
-    "name": "spacer",
-    "group": "d9e6e166.7a19d",
-    "order": 1,
-    "width": 1,
-    "height": 1
-  },
-  {
-    "id": "7676309c.b164e",
-    "type": "tab",
-    "label": "Einstellungen",
-    "disabled": false,
-    "info": ""
-  },
-  {
-    "id": "d0b9c4d3.de0438",
-    "type": "ui_button",
-    "z": "7676309c.b164e",
-    "name": "",
-    "group": "703dd755.a21938",
-    "order": 4,
-    "width": 0,
-    "height": 0,
-    "passthru": false,
-    "label": "Neustart",
-    "tooltip": "",
-    "color": "",
-    "bgcolor": "",
-    "icon": "autorenew",
-    "payload": "System wird neu gestartet",
-    "payloadType": "str",
-    "topic": "",
-    "x": 240,
-    "y": 560,
-    "wires": [
-      [
-        "1b57d16.7c1772f",
-        "f8046e38.edb7"
-      ]
-    ]
-  },
-  {
-    "id": "1b57d16.7c1772f",
-    "type": "exec",
-    "z": "7676309c.b164e",
-    "command": "sudo reboot #",
-    "addpay": false,
-    "append": "now",
-    "useSpawn": "",
-    "timer": "1",
-    "oldrc": false,
-    "name": "Reboot",
-    "x": 480,
-    "y": 560,
-    "wires": [
-      [],
-      [],
-      []
-    ]
-  },
-  {
-    "id": "86759384.8e199",
-    "type": "ui_button",
-    "z": "7676309c.b164e",
-    "name": "",
-    "group": "703dd755.a21938",
-    "order": 3,
-    "width": 0,
-    "height": 0,
-    "passthru": false,
-    "label": "Update System",
-    "tooltip": "",
-    "color": "",
-    "bgcolor": "",
-    "icon": "system_update_alt",
-    "payload": "Gestartet",
-    "payloadType": "str",
-    "topic": "",
-    "x": 200,
-    "y": 720,
-    "wires": [
-      [
-        "d54316a6.d2be98",
-        "77dfebb7.d6aa64"
-      ]
-    ]
-  },
-  {
-    "id": "d54316a6.d2be98",
-    "type": "exec",
-    "z": "7676309c.b164e",
-    "command": "sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y",
-    "addpay": false,
-    "append": "",
-    "useSpawn": "",
-    "timer": "",
-    "oldrc": false,
-    "name": "Update System",
-    "x": 460,
-    "y": 720,
-    "wires": [
-      [
-        "622dc4c7.c3e6dc"
-      ],
-      [
-        "2473c4ad.05a1ec"
-      ],
-      []
-    ]
-  },
-  {
-    "id": "6821d895.1d3af8",
-    "type": "inject",
-    "z": "7676309c.b164e",
-    "name": "",
-    "topic": "",
-    "payload": "",
-    "payloadType": "date",
-    "repeat": "1",
-    "crontab": "",
-    "once": false,
-    "onceDelay": 0.1,
-    "x": 250,
-    "y": 380,
-    "wires": [
-      [
-        "364d056.4db7ffa"
-      ]
-    ]
-  },
-  {
-    "id": "364d056.4db7ffa",
-    "type": "function",
-    "z": "7676309c.b164e",
-    "name": "Datum / Uhrzeit",
-    "func": "var now = new Date();\nvar year = now.getFullYear();\nvar month = now.getMonth()+1;\nvar day = now.getDate();\nvar hour = now.getHours();\nvar minute = now.getMinutes();\nvar second = now.getSeconds();\nif(month.toString().length == 1) {\nvar month = '0'+month;\n}\nif(day.toString().length == 1) {\nvar day = '0'+day;\n}\nif(hour.toString().length == 1) {\nvar hour = '0'+hour;\n}\nif(minute.toString().length == 1) {\nvar minute = '0'+minute;\n}\nif(second.toString().length == 1) {\nvar second = '0'+second;\n}\nmsg.payload = year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;\nreturn msg;",
-    "outputs": 1,
-    "noerr": 0,
-    "x": 460,
-    "y": 380,
-    "wires": [
-      [
-        "e573df65.04e1c"
-      ]
-    ]
-  },
-  {
-    "id": "e573df65.04e1c",
-    "type": "ui_text",
-    "z": "7676309c.b164e",
-    "group": "703dd755.a21938",
-    "order": 1,
-    "width": 0,
-    "height": 0,
-    "name": "Datum / Uhrzeit",
-    "label": "",
-    "format": "{{msg.payload}}",
-    "layout": "col-center",
-    "x": 680,
-    "y": 380,
-    "wires": []
-  },
+    {
+        "id": "7490308b.dc12",
+        "type": "tab",
+        "label": "Informatiker",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "37cf5942.513c86",
+        "type": "tab",
+        "label": "Laborant",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8d54ea0.1cceb18",
+        "type": "tab",
+        "label": "Konstrukteur",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1d9efcfb.065233",
+        "type": "tab",
+        "label": "Kaufmann / Kauffrau",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7676309c.b164e",
+        "type": "tab",
+        "label": "Einstellungen",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5aa3dc24.0bdef4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0066cc",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#0066cc",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Roche",
+                "default": "#4B7930",
+                "baseColor": "#0066cc",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0066cc",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Roche Berufsbildung",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "19b00c64.28f114",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Elektroniker",
+        "icon": "fa-microchip",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ac89c8d9.fc04f8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Informatiker",
+        "icon": "fa-code ",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "888d072a.b35c88",
+        "type": "ui_group",
+        "z": "",
+        "name": "-",
+        "tab": "ac89c8d9.fc04f8",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4e51695c.ed0528",
+        "type": "ui_link",
+        "z": "",
+        "name": "Roche Berufsbildung",
+        "link": "https://lehre.roche.com",
+        "icon": "fa-graduation-cap",
+        "target": "iframe",
+        "order": 6
+    },
+    {
+        "id": "37dbfa5c.9f3916",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Laborant",
+        "icon": "fa-thermometer-three-quarters",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d79b478a.0237a8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Konstrukteur",
+        "icon": "fa-pencil",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "cccf3ee5.fb3fd",
+        "type": "ui_group",
+        "z": "",
+        "name": "-",
+        "tab": "37dbfa5c.9f3916",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fdf747d0.4fc068",
+        "type": "ui_group",
+        "z": "",
+        "name": "-",
+        "tab": "d79b478a.0237a8",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "3a5e1164.aa1e7e",
+        "type": "ui_group",
+        "z": "",
+        "name": "-",
+        "tab": "19b00c64.28f114",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "950f1c2.33db2e",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Kaufmann / Kauffrau",
+        "icon": "fa-paperclip ",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d9e6e166.7a19d",
+        "type": "ui_group",
+        "z": "",
+        "name": "-",
+        "tab": "950f1c2.33db2e",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9b12b9e9.69c5a8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "3a5e1164.aa1e7e",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2edd9fac.2d57d",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "888d072a.b35c88",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a13223df.7c82d",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "cccf3ee5.fb3fd",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "78f9d5ee.b362ac",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "fdf747d0.4fc068",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a7fb66fc.b9fcf8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "d9e6e166.7a19d",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "220e217.eaaf1de",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Einstellungen",
+        "icon": "settings",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "703dd755.a21938",
+        "type": "ui_group",
+        "z": "",
+        "name": "System",
+        "tab": "220e217.eaaf1de",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "b9cdb163.22e3d",
+        "type": "ui_group",
+        "z": "",
+        "name": "WLAN",
+        "tab": "220e217.eaaf1de",
+        "order": 2,
+        "disp": true,
+        "width": "7",
+        "collapse": true
+    },
+    {
+        "id": "345b7ebe.a37a22",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "703dd755.a21938",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d0b9c4d3.de0438",
+        "type": "ui_button",
+        "z": "7676309c.b164e",
+        "name": "",
+        "group": "703dd755.a21938",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Neustart",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "autorenew",
+        "payload": "System wird neu gestartet",
+        "payloadType": "str",
+        "topic": "",
+        "x": 160,
+        "y": 500,
+        "wires": [
+            [
+                "1b57d16.7c1772f",
+                "f8046e38.edb7"
+            ]
+        ]
+    },
+    {
+        "id": "1b57d16.7c1772f",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "sudo reboot #",
+        "addpay": false,
+        "append": "now",
+        "useSpawn": "",
+        "timer": "1",
+        "oldrc": false,
+        "name": "Reboot",
+        "x": 400,
+        "y": 500,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "86759384.8e199",
+        "type": "ui_button",
+        "z": "7676309c.b164e",
+        "name": "",
+        "group": "703dd755.a21938",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Update System",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "system_update_alt",
+        "payload": "Gestartet",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "d54316a6.d2be98",
+                "77dfebb7.d6aa64"
+            ]
+        ]
+    },
+    {
+        "id": "d54316a6.d2be98",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "oldrc": false,
+        "name": "Update System",
+        "x": 380,
+        "y": 660,
+        "wires": [
+            [
+                "622dc4c7.c3e6dc"
+            ],
+            [
+                "2473c4ad.05a1ec"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6821d895.1d3af8",
+        "type": "inject",
+        "z": "7676309c.b164e",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "364d056.4db7ffa",
+                "e903f7d6.581418",
+                "b326f251.0df33",
+                "31d205c0.68825a",
+                "80ceb6ee.bce488"
+            ]
+        ]
+    },
+    {
+        "id": "364d056.4db7ffa",
+        "type": "function",
+        "z": "7676309c.b164e",
+        "name": "Datum / Uhrzeit",
+        "func": "var now = new Date();\nvar year = now.getFullYear();\nvar month = now.getMonth()+1;\nvar day = now.getDate();\nvar hour = now.getHours();\nvar minute = now.getMinutes();\nvar second = now.getSeconds();\nif(month.toString().length == 1) {\nvar month = '0'+month;\n}\nif(day.toString().length == 1) {\nvar day = '0'+day;\n}\nif(hour.toString().length == 1) {\nvar hour = '0'+hour;\n}\nif(minute.toString().length == 1) {\nvar minute = '0'+minute;\n}\nif(second.toString().length == 1) {\nvar second = '0'+second;\n}\nmsg.payload = year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "e573df65.04e1c"
+            ]
+        ]
+    },
+    {
+        "id": "e573df65.04e1c",
+        "type": "ui_text",
+        "z": "7676309c.b164e",
+        "group": "703dd755.a21938",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "Datum / Uhrzeit",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 580,
+        "y": 320,
+        "wires": []
+    },
   {
     "id": "d4ee0234.726e4",
     "type": "ui_button",
     "z": "7676309c.b164e",
     "name": "",
     "group": "703dd755.a21938",
-    "order": 2,
+    "order": 7,
     "width": 0,
     "height": 0,
     "passthru": false,
@@ -465,152 +510,600 @@
     "payload": "",
     "payloadType": "str",
     "topic": "",
-    "x": 240,
-    "y": 480,
+    "x": 160,
+    "y": 420,
     "wires": [
       [
         "ce122b8f.34df88"
       ]
     ]
   },
-  {
-    "id": "ce122b8f.34df88",
-    "type": "exec",
-    "z": "7676309c.b164e",
-    "command": "sudo date -s \"$(curl -s --head http://google.ch | grep ^Date: | sed 's/Date: //g')\"",
-    "addpay": false,
-    "append": "",
-    "useSpawn": "",
-    "timer": "",
-    "oldrc": false,
-    "name": "Synchronisiere Zeit",
-    "x": 490,
-    "y": 480,
-    "wires": [
-      [],
-      [],
-      []
-    ]
-  },
-  {
-    "id": "77dfebb7.d6aa64",
-    "type": "ui_toast",
-    "z": "7676309c.b164e",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "topic": "Update System",
-    "name": "",
-    "x": 450,
-    "y": 780,
-    "wires": []
-  },
-  {
-    "id": "195813.aa0eb7ed",
-    "type": "ui_toast",
-    "z": "7676309c.b164e",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "topic": "Update System",
-    "name": "",
-    "x": 810,
-    "y": 740,
-    "wires": []
-  },
-  {
-    "id": "c72fd3ac.114df",
-    "type": "ui_toast",
-    "z": "7676309c.b164e",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "topic": "Update System",
-    "name": "",
-    "x": 810,
-    "y": 700,
-    "wires": []
-  },
-  {
-    "id": "622dc4c7.c3e6dc",
-    "type": "function",
-    "z": "7676309c.b164e",
-    "name": "",
-    "func": "msg.payload = \"Abgeschlossen\"\nreturn msg;",
-    "outputs": 1,
-    "noerr": 0,
-    "x": 630,
-    "y": 700,
-    "wires": [
-      [
-        "c72fd3ac.114df"
-      ]
-    ]
-  },
-  {
-    "id": "2473c4ad.05a1ec",
-    "type": "function",
-    "z": "7676309c.b164e",
-    "name": "",
-    "func": "msg.payload = \"Fehler\"\nreturn msg;",
-    "outputs": 1,
-    "noerr": 0,
-    "x": 630,
-    "y": 740,
-    "wires": [
-      [
-        "195813.aa0eb7ed"
-      ]
-    ]
-  },
-  {
-    "id": "f8046e38.edb7",
-    "type": "ui_toast",
-    "z": "7676309c.b164e",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "topic": "Neustart",
-    "name": "",
-    "x": 490,
-    "y": 620,
-    "wires": []
-  },
-  {
-    "id": "703dd755.a21938",
-    "type": "ui_group",
-    "z": "",
-    "name": "System",
-    "tab": "220e217.eaaf1de",
-    "order": 1,
-    "disp": true,
-    "width": "6",
-    "collapse": true
-  },
-  {
-    "id": "220e217.eaaf1de",
-    "type": "ui_tab",
-    "z": "",
-    "name": "Einstellungen",
-    "icon": "settings",
-    "order": 7,
-    "disabled": false,
-    "hidden": false
-  }
+    {
+        "id": "ce122b8f.34df88",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "sudo date -s \"$(curl -s --head http://google.ch | grep ^Date: | sed 's/Date: //g')\"",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "oldrc": false,
+        "name": "Synchronisiere Zeit",
+        "x": 410,
+        "y": 420,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "77dfebb7.d6aa64",
+        "type": "ui_toast",
+        "z": "7676309c.b164e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "Update System",
+        "name": "",
+        "x": 370,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "195813.aa0eb7ed",
+        "type": "ui_toast",
+        "z": "7676309c.b164e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "Update System",
+        "name": "",
+        "x": 730,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "c72fd3ac.114df",
+        "type": "ui_toast",
+        "z": "7676309c.b164e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "Update System",
+        "name": "",
+        "x": 730,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "622dc4c7.c3e6dc",
+        "type": "function",
+        "z": "7676309c.b164e",
+        "name": "Done",
+        "func": "msg.payload = \"Abgeschlossen\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 550,
+        "y": 640,
+        "wires": [
+            [
+                "c72fd3ac.114df"
+            ]
+        ]
+    },
+    {
+        "id": "2473c4ad.05a1ec",
+        "type": "function",
+        "z": "7676309c.b164e",
+        "name": "Error",
+        "func": "msg.payload = \"Fehler\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 550,
+        "y": 680,
+        "wires": [
+            [
+                "195813.aa0eb7ed"
+            ]
+        ]
+    },
+    {
+        "id": "f8046e38.edb7",
+        "type": "ui_toast",
+        "z": "7676309c.b164e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "Neustart",
+        "name": "",
+        "x": 410,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e903f7d6.581418",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "vcgencmd measure_temp | egrep -o '[0-9]*\\.[0-9]*'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "oldrc": false,
+        "name": "CPU Temperatur",
+        "x": 370,
+        "y": 100,
+        "wires": [
+            [
+                "997013a.70e89f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "997013a.70e89f",
+        "type": "ui_text",
+        "z": "7676309c.b164e",
+        "group": "703dd755.a21938",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "CPU Temperatur",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "x": 590,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b326f251.0df33",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf \"%.2f\",usage}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "oldrc": false,
+        "name": "CPU Last",
+        "x": 340,
+        "y": 40,
+        "wires": [
+            [
+                "6ffe7416.1ed2cc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "31d205c0.68825a",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "(free | awk '/Mem/{printf(\"RAM Usage: %.2f\\n\"), $3/$2*100}'| awk '{print $3}')",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "oldrc": false,
+        "name": "RAM",
+        "x": 330,
+        "y": 160,
+        "wires": [
+            [
+                "154019fd.301216"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "80ceb6ee.bce488",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "awk '/MemFree/ { printf \"%.0f \\n\", $2/1024 }' /proc/meminfo",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "oldrc": false,
+        "name": "Freier Speicher",
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "3ef896b7.94a8ca"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3ef896b7.94a8ca",
+        "type": "ui_text",
+        "z": "7676309c.b164e",
+        "group": "703dd755.a21938",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Freier Speicher",
+        "format": "{{msg.payload}} MB",
+        "layout": "row-spread",
+        "x": 580,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1efebedd.2f6e71",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "wpa_cli scan",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "1",
+        "oldrc": false,
+        "name": "Scan Wifi",
+        "x": 300,
+        "y": 820,
+        "wires": [
+            [
+                "56bd2f91.31101"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "56bd2f91.31101",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "wpa_cli scan_results",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "1",
+        "oldrc": false,
+        "name": "List Wifi",
+        "x": 460,
+        "y": 820,
+        "wires": [
+            [
+                "eb89a7cf.f729b8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c5149faa.77c5d",
+        "type": "ui_template",
+        "z": "7676309c.b164e",
+        "group": "b9cdb163.22e3d",
+        "name": "WLANs",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "format": "<html>\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta charset=\"utf-8\">\n</head>\n\n<body>\n    <div id=\"renderList\" class=\"nr-dashboard-button ng-scope _md visible\"></div>\n\n</body>\n\n<script>\n    var list = document.getElementById('renderList');\n\n    (function(scope) {\n        scope.$watch('msg.payload', function(data) {\n            ssidList = data;\n            \n            if(Array.isArray(ssidList)){\n                list.innerHTML = '';\n                ssidList.forEach(renderSSIDList);\n            }\n        });\n        \n        function renderSSIDList(element, index, arr) {\n            var bttn = document.createElement('button');\n            bttn.onclick = function(){scope.send({payload: \"\\\"\" + element + \"\\\"\"})};\n            bttn.innerHTML=bttn.innerHTML + element;\n            bttn.classList.add(\"md-button\");\n            \n            list.appendChild(bttn);\n            p=document.createElement('p');\n            list.appendChild(p);\n        }\n        \n    })(scope);\n</script>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 800,
+        "y": 820,
+        "wires": [
+            [
+                "de54f0f.983691"
+            ]
+        ]
+    },
+    {
+        "id": "6ffe7416.1ed2cc",
+        "type": "ui_gauge",
+        "z": "7676309c.b164e",
+        "name": "",
+        "group": "703dd755.a21938",
+        "order": 1,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "CPU",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "154019fd.301216",
+        "type": "ui_gauge",
+        "z": "7676309c.b164e",
+        "name": "",
+        "group": "703dd755.a21938",
+        "order": 2,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "RAM",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "eb89a7cf.f729b8",
+        "type": "function",
+        "z": "7676309c.b164e",
+        "name": "Split SSID",
+        "func": "var wifi = msg.payload.split('\\n');\n\nssid = [];\n\nfor(var i = 2; i < wifi.length-1; i++){\n    ssid[i-2] = wifi[i].slice(wifi[i].lastIndexOf('\\t')+1,wifi[i].length);\n}\n\nssid = ssid.filter(function(elem, pos) {\n    return ssid.indexOf(elem) == pos;\n})\n\nmsg.payload = ssid;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 630,
+        "y": 820,
+        "wires": [
+            [
+                "c5149faa.77c5d"
+            ]
+        ]
+    },
+    {
+        "id": "a4af7acb.0de8e8",
+        "type": "function",
+        "z": "7676309c.b164e",
+        "name": "Split Wifi",
+        "func": "var wifis = msg.payload.split('\\n');\nvar wifi = wifis[0];\nwifi = wifi.split('\\t');\n\nif(wifi[3].includes(\"WPA2\")){\n    wifi[3] = \"WPA-PSK\";\n}\nelse{\n    wifi[3] = \"NONE\";\n}\n\n\nmsg.payload = wifi; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1120,
+        "y": 820,
+        "wires": [
+            [
+                "f2ab9d2f.dc9f"
+            ]
+        ]
+    },
+    {
+        "id": "de54f0f.983691",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "wpa_cli scan_results | grep ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "1",
+        "oldrc": false,
+        "name": "Wifi Detail",
+        "x": 960,
+        "y": 820,
+        "wires": [
+            [
+                "a4af7acb.0de8e8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f2ab9d2f.dc9f",
+        "type": "ui_template",
+        "z": "7676309c.b164e",
+        "group": "b9cdb163.22e3d",
+        "name": "Connect",
+        "order": 2,
+        "width": "7",
+        "height": "3",
+        "format": "<html>\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta charset=\"utf-8\">\n</head>\n\n<body>\n    <md-card class=\"nr-dashboard-form visible\">\n    <form class=\"ng-pristine \">\n    \n    <p id=\"ssid\" class=\"formlabel ng-binding ng-scope\"></p>\n    \n    <p id=\"pwfield\">\n    <md-input-container class=\"md-block flex md-input-invalid\"> \n    <label class=\"ng-binding ng-scope md-required\">Passwort</label>\n    <input type=\"password\" id=\"pwd\" class=\"ng-invalid\">\n    <div class=\"md-errors-spacer\"></div>\n    </md-input-container>\n    </p>\n    \n    <br>\n    \n    <md-button id=\"connect\">Verbinden</button>\n    \n    </form>\n    </md-card>\n\n</body>\n\n<script>\n    (function(scope) {\n        scope.$watch('msg.payload', function(data) {\n            var wifi = data; \n            \n            if(Array.isArray(wifi)){\n                document.getElementById(\"ssid\").innerHTML = wifi[4];\n                \n                if(wifi[3] == \"NONE\"){\n                    document.getElementById('pwfield').hidden = true;\n                    document.getElementById('pwfield').required = true;\n                }\n                else{\n                    document.getElementById('pwfield').hidden = false;\n                    document.getElementById('pwfield').required = true;\n                }\n                \n                var btn = document.getElementById('connect');\n                btn.classList.add(\"md-button\");\n                btn.onclick = function(){\n                    if(wifi[3] != \"NONE\"){\n                        scope.send({payload: wifi[4] + \"\\n\" + wifi[3] + \"\\n\" + document.getElementById(\"pwd\").value});\n                    }\n                    else{\n                        scope.send({payload: wifi[4] + \"\\n\" + wifi[3] + \"\\n\" + \"\"});\n                    }\n                };\n                btn.innerHTML = \"Verbinden\";\n            }\n        });\n    })(scope);\n</script>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 1280,
+        "y": 820,
+        "wires": [
+            [
+                "f69c09d7.204a28"
+            ]
+        ]
+    },
+    {
+        "id": "fbe06de2.e6fa1",
+        "type": "inject",
+        "z": "7676309c.b164e",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 820,
+        "wires": [
+            [
+                "1efebedd.2f6e71"
+            ]
+        ]
+    },
+    {
+        "id": "f69c09d7.204a28",
+        "type": "function",
+        "z": "7676309c.b164e",
+        "name": "Split Login",
+        "func": "var login = msg.payload.split(\"\\n\");\n\nvar ssid = {payload: \"'\\\"\" + login[0] + \"\\\"'\"};\nvar crypt = {payload: \"'\" + login[1] + \"'\"};\nvar key = {payload:\"'\\\"\" + login[2] + \"\\\"'\"};\n\nreturn [ssid,crypt,key];",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 1450,
+        "y": 820,
+        "wires": [
+            [
+                "c114cbf7.9f89a8"
+            ],
+            [
+                "3d6bf61.b92480a"
+            ],
+            [
+                "58030b0f.f49624"
+            ]
+        ]
+    },
+    {
+        "id": "c114cbf7.9f89a8",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "wpa_cli -i wlan0 set_network 1 ssid ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "1",
+        "oldrc": false,
+        "name": "Set SSID",
+        "x": 1620,
+        "y": 760,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "58030b0f.f49624",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "wpa_cli -i wlan0 set_network 1 psk ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "3",
+        "oldrc": false,
+        "name": "Set Key",
+        "x": 1620,
+        "y": 880,
+        "wires": [
+            [
+                "6e51b383.b8b54c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3d6bf61.b92480a",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "wpa_cli -i wlan0 set_network 1 key_mgmt ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "2",
+        "oldrc": false,
+        "name": "Set Crypt",
+        "x": 1620,
+        "y": 820,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "58305df8.0b4764",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "wpa_cli -i wlan0 save_config",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "1",
+        "oldrc": false,
+        "name": "Update Wifi",
+        "x": 1950,
+        "y": 820,
+        "wires": [
+            [
+                "96cd4234.614af"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6e51b383.b8b54c",
+        "type": "delay",
+        "z": "7676309c.b164e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1780,
+        "y": 820,
+        "wires": [
+            [
+                "58305df8.0b4764"
+            ]
+        ]
+    },
+    {
+        "id": "96cd4234.614af",
+        "type": "exec",
+        "z": "7676309c.b164e",
+        "command": "wpa_cli -i wlan0 reconfigure",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "1",
+        "oldrc": false,
+        "name": "Reinit Wifi",
+        "x": 2120,
+        "y": 820,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    }
 ]
