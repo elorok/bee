@@ -15,8 +15,8 @@ class Io(Module):
 				
 				try: 
 					i2c = smbus.SMBus(1)
-					state = i2c.read_word_data(super().getAddress(), 1)
-					state = state + i2c_rea_byte(supeer().getAddress)
+					state = i2c.read_byte(super().getAddress())
+					state = str(state) + " " + (i2c_read_byte(super().getAddress()))
 					file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
 					file.write(str(state))
 					file.close()
@@ -29,7 +29,7 @@ class Io(Module):
 				try:
 					i2c = smbus.SMBus(1)
 					file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
-					i2c.write_byte(super().getAddress(), state)
+					i2c.write_byte(super().getAddress(), int(state[1]))
 					file.close()
 
 				except IOError:
