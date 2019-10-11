@@ -3,6 +3,7 @@ from time import sleep
 from slave.module_button import Button
 from slave.module_proximity import Proximity
 from slave.module_led import Led
+from slave.module_io import Io
 from slave.module import Module
 
 
@@ -10,7 +11,7 @@ modules = []
 modules.append(Button())
 modules.append(Proximity())
 modules.append(Led())
-modules.append(io())
+modules.append(Io())
 
 
 while(True):
