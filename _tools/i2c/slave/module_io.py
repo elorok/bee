@@ -5,7 +5,7 @@ from .module import Module
 class Io(Module):
 		def __init__(self):
 			super().__init__()
-			super().setAddress(8)
+			super().setAddress(11)
 
 
 		def sync(self):
