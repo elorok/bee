@@ -5,7 +5,7 @@ from .module import Module
 class Io(Module):
 		def __init__(self):
 			super().__init__()
-			super().setAddress(11)
+			super().setAddress(8)
 
 
 		def sync(self):
@@ -15,7 +15,7 @@ class Io(Module):
 				
 				try: 
 					i2c = smbus.SMBus(1)
-					state = i2c.read_word_data(super().getAddress(), 1)
+					state = i2c.read_word_data(super().getAddress())
 					file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
 					file.write(str(state))
 					file.close()
@@ -27,7 +27,7 @@ class Io(Module):
 
 				try:
 					i2c = smbus.SMBus(1)
-					i2c.write_byte(super().getAddress(), state)
+					i2c.write_(super().getAddress(), state, )
 
 				except IOError:
 					super().setOnline(False)
