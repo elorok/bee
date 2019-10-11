@@ -15,7 +15,7 @@ class Io(Module):
 				
 				try: 
 					i2c = smbus.SMBus(1)
-					state = i2c.read_word_data(super().getAddress())
+					state = i2c.read_word_data(super().getAddress(), 1)
 					file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
 					file.write(str(state))
 					file.close()
@@ -27,7 +27,9 @@ class Io(Module):
 
 				try:
 					i2c = smbus.SMBus(1)
-					i2c.write_(super().getAddress(), state, )
+					file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
+					i2c.write_byte(super().getAddress(), state)
+					file.close()
 
 				except IOError:
 					super().setOnline(False)
