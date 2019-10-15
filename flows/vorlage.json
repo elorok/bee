@@ -1,41 +1,13 @@
 [
     {
-        "id": "179496b7.4615c9",
+        "id": "3b39b9b8.4f24a6",
         "type": "tab",
-        "label": "Elektroniker",
+        "label": "Flow 1",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "7490308b.dc12",
-        "type": "tab",
-        "label": "Informatiker",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "37cf5942.513c86",
-        "type": "tab",
-        "label": "Laborant",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "8d54ea0.1cceb18",
-        "type": "tab",
-        "label": "Konstrukteur",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "1d9efcfb.065233",
-        "type": "tab",
-        "label": "Kaufmann / Kauffrau",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "7676309c.b164e",
+        "id": "8126e207.74fc",
         "type": "tab",
         "label": "Einstellungen",
         "disabled": false,
@@ -140,31 +112,11 @@
         }
     },
     {
-        "id": "19b00c64.28f114",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Elektroniker",
-        "icon": "fa-microchip",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "ac89c8d9.fc04f8",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Informatiker",
-        "icon": "fa-code ",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "888d072a.b35c88",
         "type": "ui_group",
         "z": "",
         "name": "-",
-        "tab": "ac89c8d9.fc04f8",
+        "tab": "",
         "order": 1,
         "disp": false,
         "width": "6",
@@ -181,31 +133,11 @@
         "order": 6
     },
     {
-        "id": "37dbfa5c.9f3916",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Laborant",
-        "icon": "fa-thermometer-three-quarters",
-        "order": 3,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "d79b478a.0237a8",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Konstrukteur",
-        "icon": "fa-pencil",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "cccf3ee5.fb3fd",
         "type": "ui_group",
         "z": "",
         "name": "-",
-        "tab": "37dbfa5c.9f3916",
+        "tab": "",
         "order": 1,
         "disp": false,
         "width": "6",
@@ -216,7 +148,7 @@
         "type": "ui_group",
         "z": "",
         "name": "-",
-        "tab": "d79b478a.0237a8",
+        "tab": "",
         "order": 1,
         "disp": false,
         "width": "6",
@@ -227,28 +159,18 @@
         "type": "ui_group",
         "z": "",
         "name": "-",
-        "tab": "19b00c64.28f114",
+        "tab": "",
         "order": 1,
         "disp": false,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "950f1c2.33db2e",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Kaufmann / Kauffrau",
-        "icon": "fa-paperclip ",
-        "order": 5,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "d9e6e166.7a19d",
         "type": "ui_group",
         "z": "",
         "name": "-",
-        "tab": "950f1c2.33db2e",
+        "tab": "",
         "order": 1,
         "disp": false,
         "width": "6",
@@ -341,9 +263,27 @@
         "height": 1
     },
     {
-        "id": "d0b9c4d3.de0438",
+        "id": "233c656a.f0b29a",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "dc923ed2.bff9f",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "f5c5cee4.06aec",
         "type": "ui_button",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "",
         "group": "703dd755.a21938",
         "order": 9,
@@ -362,15 +302,15 @@
         "y": 500,
         "wires": [
             [
-                "1b57d16.7c1772f",
-                "f8046e38.edb7"
+                "6d01ee34.58ef4",
+                "9e7df96b.09b918"
             ]
         ]
     },
     {
-        "id": "1b57d16.7c1772f",
+        "id": "6d01ee34.58ef4",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "sudo reboot #",
         "addpay": false,
         "append": "now",
@@ -387,9 +327,9 @@
         ]
     },
     {
-        "id": "86759384.8e199",
+        "id": "6ccbb9e8.b2dec8",
         "type": "ui_button",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "",
         "group": "703dd755.a21938",
         "order": 8,
@@ -408,15 +348,15 @@
         "y": 660,
         "wires": [
             [
-                "d54316a6.d2be98",
-                "77dfebb7.d6aa64"
+                "587c04b4.142b1c",
+                "c693ed44.1c9ac"
             ]
         ]
     },
     {
-        "id": "d54316a6.d2be98",
+        "id": "587c04b4.142b1c",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y",
         "addpay": false,
         "append": "",
@@ -428,18 +368,18 @@
         "y": 660,
         "wires": [
             [
-                "622dc4c7.c3e6dc"
+                "dbcc76d9.190438"
             ],
             [
-                "2473c4ad.05a1ec"
+                "f0e58192.4f114"
             ],
             []
         ]
     },
     {
-        "id": "6821d895.1d3af8",
+        "id": "48d1a4f9.83362c",
         "type": "inject",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "",
         "topic": "",
         "payload": "",
@@ -452,18 +392,18 @@
         "y": 320,
         "wires": [
             [
-                "364d056.4db7ffa",
-                "e903f7d6.581418",
-                "b326f251.0df33",
-                "31d205c0.68825a",
-                "80ceb6ee.bce488"
+                "8cf6cf39.29d79",
+                "21b9749f.20bc9c",
+                "b5eea5e4.cbe358",
+                "cd69023d.54427",
+                "f71bed1f.41d17"
             ]
         ]
     },
     {
-        "id": "364d056.4db7ffa",
+        "id": "8cf6cf39.29d79",
         "type": "function",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "Datum / Uhrzeit",
         "func": "var now = new Date();\nvar year = now.getFullYear();\nvar month = now.getMonth()+1;\nvar day = now.getDate();\nvar hour = now.getHours();\nvar minute = now.getMinutes();\nvar second = now.getSeconds();\nif(month.toString().length == 1) {\nvar month = '0'+month;\n}\nif(day.toString().length == 1) {\nvar day = '0'+day;\n}\nif(hour.toString().length == 1) {\nvar hour = '0'+hour;\n}\nif(minute.toString().length == 1) {\nvar minute = '0'+minute;\n}\nif(second.toString().length == 1) {\nvar second = '0'+second;\n}\nmsg.payload = year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;\nreturn msg;",
         "outputs": 1,
@@ -472,14 +412,14 @@
         "y": 320,
         "wires": [
             [
-                "e573df65.04e1c"
+                "bb7f08fe.f48308"
             ]
         ]
     },
     {
-        "id": "e573df65.04e1c",
+        "id": "bb7f08fe.f48308",
         "type": "ui_text",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "group": "703dd755.a21938",
         "order": 6,
         "width": 0,
@@ -492,36 +432,36 @@
         "y": 320,
         "wires": []
     },
-  {
-    "id": "d4ee0234.726e4",
-    "type": "ui_button",
-    "z": "7676309c.b164e",
-    "name": "",
-    "group": "703dd755.a21938",
-    "order": 7,
-    "width": 0,
-    "height": 0,
-    "passthru": false,
-    "label": "Synchronisiere Datum / Zeit",
-    "tooltip": "",
-    "color": "",
-    "bgcolor": "",
-    "icon": "access_time",
-    "payload": "",
-    "payloadType": "str",
-    "topic": "",
-    "x": 160,
-    "y": 420,
-    "wires": [
-      [
-        "ce122b8f.34df88"
-      ]
-    ]
-  },
     {
-        "id": "ce122b8f.34df88",
+        "id": "34589008.6e3fc",
+        "type": "ui_button",
+        "z": "8126e207.74fc",
+        "name": "",
+        "group": "703dd755.a21938",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Synchronisiere Datum / Zeit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "access_time",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 160,
+        "y": 420,
+        "wires": [
+            [
+                "533ad9b8.e6d2d8"
+            ]
+        ]
+    },
+    {
+        "id": "533ad9b8.e6d2d8",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "sudo date -s \"$(curl -s --head http://google.ch | grep ^Date: | sed 's/Date: //g')\"",
         "addpay": false,
         "append": "",
@@ -538,9 +478,9 @@
         ]
     },
     {
-        "id": "77dfebb7.d6aa64",
+        "id": "c693ed44.1c9ac",
         "type": "ui_toast",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -555,9 +495,9 @@
         "wires": []
     },
     {
-        "id": "195813.aa0eb7ed",
+        "id": "55805580.fcd6dc",
         "type": "ui_toast",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -572,9 +512,9 @@
         "wires": []
     },
     {
-        "id": "c72fd3ac.114df",
+        "id": "e23610e2.698d6",
         "type": "ui_toast",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -589,9 +529,9 @@
         "wires": []
     },
     {
-        "id": "622dc4c7.c3e6dc",
+        "id": "dbcc76d9.190438",
         "type": "function",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "Done",
         "func": "msg.payload = \"Abgeschlossen\"\nreturn msg;",
         "outputs": 1,
@@ -600,14 +540,14 @@
         "y": 640,
         "wires": [
             [
-                "c72fd3ac.114df"
+                "e23610e2.698d6"
             ]
         ]
     },
     {
-        "id": "2473c4ad.05a1ec",
+        "id": "f0e58192.4f114",
         "type": "function",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "Error",
         "func": "msg.payload = \"Fehler\"\nreturn msg;",
         "outputs": 1,
@@ -616,14 +556,14 @@
         "y": 680,
         "wires": [
             [
-                "195813.aa0eb7ed"
+                "55805580.fcd6dc"
             ]
         ]
     },
     {
-        "id": "f8046e38.edb7",
+        "id": "9e7df96b.09b918",
         "type": "ui_toast",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -638,9 +578,9 @@
         "wires": []
     },
     {
-        "id": "e903f7d6.581418",
+        "id": "21b9749f.20bc9c",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "vcgencmd measure_temp | egrep -o '[0-9]*\\.[0-9]*'",
         "addpay": false,
         "append": "",
@@ -652,32 +592,32 @@
         "y": 100,
         "wires": [
             [
-                "997013a.70e89f"
+                "66171bb4.417c34"
             ],
             [],
             []
         ]
     },
+  {
+    "id": "66171bb4.417c34",
+    "type": "ui_text",
+    "z": "8126e207.74fc",
+    "group": "703dd755.a21938",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "name": "",
+    "label": "CPU Temperatur",
+    "format": "{{msg.payload}} °C",
+    "layout": "row-spread",
+    "x": 590,
+    "y": 100,
+    "wires": []
+  },
     {
-        "id": "997013a.70e89f",
-        "type": "ui_text",
-        "z": "7676309c.b164e",
-        "group": "703dd755.a21938",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "CPU Temperatur",
-        "format": "{{msg.payload}} °C",
-        "layout": "row-spread",
-        "x": 590,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "b326f251.0df33",
+        "id": "b5eea5e4.cbe358",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf \"%.2f\",usage}'",
         "addpay": false,
         "append": "",
@@ -689,16 +629,16 @@
         "y": 40,
         "wires": [
             [
-                "6ffe7416.1ed2cc"
+                "c717d2e8.aee88"
             ],
             [],
             []
         ]
     },
     {
-        "id": "31d205c0.68825a",
+        "id": "cd69023d.54427",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "(free | awk '/Mem/{printf(\"RAM Usage: %.2f\\n\"), $3/$2*100}'| awk '{print $3}')",
         "addpay": false,
         "append": "",
@@ -710,16 +650,16 @@
         "y": 160,
         "wires": [
             [
-                "154019fd.301216"
+                "86449883.398d08"
             ],
             [],
             []
         ]
     },
     {
-        "id": "80ceb6ee.bce488",
+        "id": "f71bed1f.41d17",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "awk '/MemFree/ { printf \"%.0f \\n\", $2/1024 }' /proc/meminfo",
         "addpay": false,
         "append": "",
@@ -731,16 +671,16 @@
         "y": 220,
         "wires": [
             [
-                "3ef896b7.94a8ca"
+                "aacba521.c7e258"
             ],
             [],
             []
         ]
     },
     {
-        "id": "3ef896b7.94a8ca",
+        "id": "aacba521.c7e258",
         "type": "ui_text",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "group": "703dd755.a21938",
         "order": 4,
         "width": 0,
@@ -754,9 +694,9 @@
         "wires": []
     },
     {
-        "id": "1efebedd.2f6e71",
+        "id": "30358cdc.9b9eb4",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "wpa_cli scan",
         "addpay": false,
         "append": "",
@@ -768,16 +708,16 @@
         "y": 820,
         "wires": [
             [
-                "56bd2f91.31101"
+                "b3204a54.093d68"
             ],
             [],
             []
         ]
     },
     {
-        "id": "56bd2f91.31101",
+        "id": "b3204a54.093d68",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "wpa_cli scan_results",
         "addpay": false,
         "append": "",
@@ -789,16 +729,16 @@
         "y": 820,
         "wires": [
             [
-                "eb89a7cf.f729b8"
+                "9834a9b3.3751f8"
             ],
             [],
             []
         ]
     },
     {
-        "id": "c5149faa.77c5d",
+        "id": "cc107.327f8efa",
         "type": "ui_template",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "group": "b9cdb163.22e3d",
         "name": "WLANs",
         "order": 1,
@@ -812,14 +752,14 @@
         "y": 820,
         "wires": [
             [
-                "de54f0f.983691"
+                "9e976332.036da"
             ]
         ]
     },
     {
-        "id": "6ffe7416.1ed2cc",
+        "id": "c717d2e8.aee88",
         "type": "ui_gauge",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "",
         "group": "703dd755.a21938",
         "order": 1,
@@ -843,9 +783,9 @@
         "wires": []
     },
     {
-        "id": "154019fd.301216",
+        "id": "86449883.398d08",
         "type": "ui_gauge",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "",
         "group": "703dd755.a21938",
         "order": 2,
@@ -869,9 +809,9 @@
         "wires": []
     },
     {
-        "id": "eb89a7cf.f729b8",
+        "id": "9834a9b3.3751f8",
         "type": "function",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "Split SSID",
         "func": "var wifi = msg.payload.split('\\n');\n\nssid = [];\n\nfor(var i = 2; i < wifi.length-1; i++){\n    ssid[i-2] = wifi[i].slice(wifi[i].lastIndexOf('\\t')+1,wifi[i].length);\n}\n\nssid = ssid.filter(function(elem, pos) {\n    return ssid.indexOf(elem) == pos;\n})\n\nmsg.payload = ssid;\n\nreturn msg;",
         "outputs": 1,
@@ -880,14 +820,14 @@
         "y": 820,
         "wires": [
             [
-                "c5149faa.77c5d"
+                "cc107.327f8efa"
             ]
         ]
     },
     {
-        "id": "a4af7acb.0de8e8",
+        "id": "9e72cb00.677788",
         "type": "function",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "Split Wifi",
         "func": "var wifis = msg.payload.split('\\n');\nvar wifi = wifis[0];\nwifi = wifi.split('\\t');\n\nif(wifi[3].includes(\"WPA2\")){\n    wifi[3] = \"WPA-PSK\";\n}\nelse{\n    wifi[3] = \"NONE\";\n}\n\n\nmsg.payload = wifi; \n\nreturn msg;",
         "outputs": 1,
@@ -896,14 +836,14 @@
         "y": 820,
         "wires": [
             [
-                "f2ab9d2f.dc9f"
+                "4f85ea9f.710004"
             ]
         ]
     },
     {
-        "id": "de54f0f.983691",
+        "id": "9e976332.036da",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "wpa_cli scan_results | grep ",
         "addpay": true,
         "append": "",
@@ -915,16 +855,16 @@
         "y": 820,
         "wires": [
             [
-                "a4af7acb.0de8e8"
+                "9e72cb00.677788"
             ],
             [],
             []
         ]
     },
     {
-        "id": "f2ab9d2f.dc9f",
+        "id": "4f85ea9f.710004",
         "type": "ui_template",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "group": "b9cdb163.22e3d",
         "name": "Connect",
         "order": 2,
@@ -938,14 +878,15 @@
         "y": 820,
         "wires": [
             [
-                "f69c09d7.204a28"
+                "7c3056b5.ec0ff8",
+                "71cb55e7.eeff6c"
             ]
         ]
     },
     {
-        "id": "fbe06de2.e6fa1",
+        "id": "62821167.bf5e9",
         "type": "inject",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "",
         "topic": "",
         "payload": "",
@@ -958,95 +899,100 @@
         "y": 820,
         "wires": [
             [
-                "1efebedd.2f6e71"
+                "30358cdc.9b9eb4"
             ]
         ]
     },
     {
-        "id": "f69c09d7.204a28",
+        "id": "88a6454b.baaa08",
         "type": "function",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "Split Login",
         "func": "var login = msg.payload.split(\"\\n\");\n\nvar ssid = {payload: \"'\\\"\" + login[0] + \"\\\"'\"};\nvar crypt = {payload: \"'\" + login[1] + \"'\"};\nvar key = {payload:\"'\\\"\" + login[2] + \"\\\"'\"};\n\nreturn [ssid,crypt,key];",
         "outputs": 3,
         "noerr": 0,
-        "x": 1450,
+        "x": 1690,
         "y": 820,
         "wires": [
             [
-                "c114cbf7.9f89a8"
+                "865b76d9.785408"
             ],
             [
-                "3d6bf61.b92480a"
+                "644ed510.1abaec"
             ],
             [
-                "58030b0f.f49624"
+                "65aa56d7.4919d8"
             ]
         ]
     },
     {
-        "id": "c114cbf7.9f89a8",
+        "id": "865b76d9.785408",
         "type": "exec",
-        "z": "7676309c.b164e",
-        "command": "wpa_cli -i wlan0 set_network 1 ssid ",
+        "z": "8126e207.74fc",
+        "command": "wpa_cli -i wlan0 set_network 0 ssid ",
         "addpay": true,
         "append": "",
         "useSpawn": "",
         "timer": "1",
         "oldrc": false,
         "name": "Set SSID",
-        "x": 1620,
+        "x": 1860,
         "y": 760,
         "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "58030b0f.f49624",
-        "type": "exec",
-        "z": "7676309c.b164e",
-        "command": "wpa_cli -i wlan0 set_network 1 psk ",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "",
-        "timer": "3",
-        "oldrc": false,
-        "name": "Set Key",
-        "x": 1620,
-        "y": 880,
-        "wires": [
             [
-                "6e51b383.b8b54c"
+                "185282cc.f5aa2d"
             ],
             [],
             []
         ]
     },
     {
-        "id": "3d6bf61.b92480a",
+        "id": "65aa56d7.4919d8",
         "type": "exec",
-        "z": "7676309c.b164e",
-        "command": "wpa_cli -i wlan0 set_network 1 key_mgmt ",
+        "z": "8126e207.74fc",
+        "command": "wpa_cli -i wlan0 set_network 0 psk ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "3",
+        "oldrc": false,
+        "name": "Set Key",
+        "x": 1860,
+        "y": 880,
+        "wires": [
+            [
+                "f61130ee.1a9c",
+                "185282cc.f5aa2d"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "644ed510.1abaec",
+        "type": "exec",
+        "z": "8126e207.74fc",
+        "command": "wpa_cli -i wlan0 set_network 0 key_mgmt ",
         "addpay": true,
         "append": "",
         "useSpawn": "",
         "timer": "2",
         "oldrc": false,
         "name": "Set Crypt",
-        "x": 1620,
+        "x": 1860,
         "y": 820,
         "wires": [
-            [],
+            [
+                "185282cc.f5aa2d"
+            ],
             [],
             []
         ]
     },
     {
-        "id": "58305df8.0b4764",
+        "id": "e557f3c9.818a",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "wpa_cli -i wlan0 save_config",
         "addpay": true,
         "append": "",
@@ -1054,20 +1000,18 @@
         "timer": "1",
         "oldrc": false,
         "name": "Update Wifi",
-        "x": 1950,
+        "x": 2190,
         "y": 820,
         "wires": [
-            [
-                "96cd4234.614af"
-            ],
+            [],
             [],
             []
         ]
     },
     {
-        "id": "6e51b383.b8b54c",
+        "id": "f61130ee.1a9c",
         "type": "delay",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -1079,18 +1023,18 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1780,
+        "x": 2020,
         "y": 820,
         "wires": [
             [
-                "58305df8.0b4764"
+                "e557f3c9.818a"
             ]
         ]
     },
     {
-        "id": "96cd4234.614af",
+        "id": "4082a4a8.48598c",
         "type": "exec",
-        "z": "7676309c.b164e",
+        "z": "8126e207.74fc",
         "command": "wpa_cli -i wlan0 reconfigure",
         "addpay": true,
         "append": "",
@@ -1098,12 +1042,105 @@
         "timer": "1",
         "oldrc": false,
         "name": "Reinit Wifi",
-        "x": 2120,
+        "x": 2360,
         "y": 820,
         "wires": [
             [],
             [],
             []
+        ]
+    },
+    {
+        "id": "3ed6e711.4b7918",
+        "type": "python3-function",
+        "z": "8126e207.74fc",
+        "name": "",
+        "func": "f = open(\"/etc/wpa_supplicant/wpa_supplicant.conf\", \"r\")\ncontent = f.read()\nhead = content.split(\"network\")[0]\n\nlogin = msg['payload'].split(\"\\n\");\nssid = login[0]\ncrypt = login[1]\nkey = login[2]\n\nmessage = head + \"\\n\\nnetwork={\\n\\tssid=\\\"\" + ssid + \"\\\"\\n\\tkey_mgmt=\" + crypt + \"\\n\\tpsk=\\\"\" + key + \"\\\"\\n}\"\n\nmsg['payload'] = \"sudo bash -c 'echo \\\"\" + message + \"\\\"' > /etc/wpa_supplicant/wpa_supplicant.conf\"\nos.system(msg['payload'])\n\nreturn msg\n",
+        "outputs": 1,
+        "x": 1670,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "185282cc.f5aa2d",
+        "type": "debug",
+        "z": "8126e207.74fc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1870,
+        "y": 1020,
+        "wires": []
+    },
+  {
+    "id": "7c3056b5.ec0ff8",
+    "type": "exec",
+    "z": "8126e207.74fc",
+    "command": "wpa_cli -i wlan0 remove_network 0",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "timer": "1",
+    "oldrc": false,
+    "name": "Remove Network",
+    "x": 1430,
+    "y": 960,
+    "wires": [
+      [
+        "fe4b2734.553798",
+        "185282cc.f5aa2d"
+      ],
+      [],
+      []
+    ]
+  },
+    {
+        "id": "fe4b2734.553798",
+        "type": "exec",
+        "z": "8126e207.74fc",
+        "command": "wpa_cli -i wlan0 add_network 0",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "1",
+        "oldrc": false,
+        "name": "Add Network",
+        "x": 1630,
+        "y": 960,
+        "wires": [
+            [
+                "185282cc.f5aa2d"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "71cb55e7.eeff6c",
+        "type": "delay",
+        "z": "8126e207.74fc",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1460,
+        "y": 820,
+        "wires": [
+            [
+                "88a6454b.baaa08"
+            ]
         ]
     }
 ]
