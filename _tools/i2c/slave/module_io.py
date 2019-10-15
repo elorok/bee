@@ -12,13 +12,13 @@ class Io(Module):
 			super().checkOnline()
 
 			if(super().getOnline()):
-				
+
 				try: 
-                    i2c = smbus.SMBus(1)
-                    state = i2c.read_word_data(super().getAddress(), 1)
-                    file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
-                    file.write(str(state))
-                    file.close()
+					i2c = smbus.SMBus(1)
+					state = i2c.read_word_data(super().getAddress(), 1)
+					file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
+					file.write(str(state))
+					file.close()
 
 				except IOError:
 					super().setOnline(False)
@@ -26,10 +26,10 @@ class Io(Module):
 					return
 
 				try:
-                    i2c = smbus.SMBus(1)
-                    file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
-                    i2c.write_byte(0x0b, state)
-                    file.close()
+					i2c = smbus.SMBus(1)
+					file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
+					i2c.write_byte(0x0b, state)
+					file.close()
 
 				except IOError:
 					super().setOnline(False)
