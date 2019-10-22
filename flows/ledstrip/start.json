@@ -1,0 +1,61 @@
+[
+    {
+        "id": "c26d1176.469af",
+        "type": "tab",
+        "label": "LED Strip",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2e8a9c60.9f2c74",
+        "type": "rpi-neopixels",
+        "z": "c26d1176.469af",
+        "name": "LED-Strip",
+        "pixels": "6",
+        "bgnd": "",
+        "fgnd": "",
+        "wipe": "1",
+        "mode": "pcent",
+        "rgb": "rgb",
+        "brightness": "100",
+        "gamma": true,
+        "x": 620,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "7673e335.b1bcdc",
+        "type": "python3-function",
+        "z": "c26d1176.469af",
+        "name": "Programm",
+        "func": "msg['payload'] = \"2,0,0,100\"\nnode.send(msg)",
+        "outputs": 1,
+        "x": 436.9999885559082,
+        "y": 260.99999618530273,
+        "wires": [
+            [
+                "2e8a9c60.9f2c74"
+            ]
+        ]
+    },
+  {
+    "id": "61e72e72.db13c",
+    "type": "inject",
+    "z": "c26d1176.469af",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "1",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 267.9999885559082,
+    "y": 260.99999618530273,
+    "wires": [
+      [
+        "7673e335.b1bcdc"
+      ]
+    ]
+  }
+]
