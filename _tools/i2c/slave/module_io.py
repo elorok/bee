@@ -15,10 +15,12 @@ class Io(Module):
 
 				try: 
                     i2c = smbus.SMBus(1)
-					file = open("tmp/i2c_" + str(super().getAddress()) + "_out", "r")
+					file = open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r")
 					register = file.read()
+					if(register == 0)
+						register == 1
 					file.close()
-                    state = i2c.read_word_data(super().getAddress(), register)
+                    state = i2c.read_word_data(super().getAddress(), int(register))
                     file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
                     file.write(str(state))
                     file.close()
