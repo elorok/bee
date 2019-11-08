@@ -1,0 +1,118 @@
+[
+  {
+    "id": "3b39b9b8.4f24a6",
+    "type": "tab",
+    "label": "Modul Proximity",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "5166e1c9.ce5cf",
+    "type": "inject",
+    "z": "3b39b9b8.4f24a6",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "0.1",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 290,
+    "y": 200,
+    "wires": [
+      [
+        "c3d4919.4f0e97"
+      ]
+    ]
+  },
+  {
+    "id": "c3d4919.4f0e97",
+    "type": "proximity",
+    "z": "3b39b9b8.4f24a6",
+    "name": "",
+    "x": 500,
+    "y": 200,
+    "wires": [
+      [
+        "89b6753d.a29da8"
+      ],
+      [
+        "aad7ad6.7f2ff5"
+      ]
+    ]
+  },
+  {
+    "id": "89b6753d.a29da8",
+    "type": "ui_gauge",
+    "z": "3b39b9b8.4f24a6",
+    "name": "",
+    "group": "fc3b0d60.1234e",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "gtype": "gage",
+    "title": "Proximity",
+    "label": "units",
+    "format": "{{value}}",
+    "min": 0,
+    "max": "65535",
+    "colors": [
+      "#00b500",
+      "#e6e600",
+      "#ca3838"
+    ],
+    "seg1": "",
+    "seg2": "",
+    "x": 720,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "aad7ad6.7f2ff5",
+    "type": "ui_gauge",
+    "z": "3b39b9b8.4f24a6",
+    "name": "",
+    "group": "fc3b0d60.1234e",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "gtype": "gage",
+    "title": "Ambilight",
+    "label": "units",
+    "format": "{{value}}",
+    "min": 0,
+    "max": "65535",
+    "colors": [
+      "#00b500",
+      "#e6e600",
+      "#ca3838"
+    ],
+    "seg1": "",
+    "seg2": "",
+    "x": 720,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "fc3b0d60.1234e",
+    "type": "ui_group",
+    "z": "",
+    "name": "Modul Proximity",
+    "tab": "ce07c994.b6fb48",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "ce07c994.b6fb48",
+    "type": "ui_tab",
+    "z": "",
+    "name": "Module",
+    "icon": "fa-puzzle-piece",
+    "order": 1,
+    "disabled": false,
+    "hidden": false
+  }
+]
