@@ -1,15 +1,15 @@
 [
     {
-        "id": "42a49c7f.ce9f34",
+        "id": "55a17376.dbbb4c",
         "type": "tab",
         "label": "Einparkampel",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "59fa09b3.fa2158",
+        "id": "28b38f71.883be",
         "type": "function",
-        "z": "42a49c7f.ce9f34",
+        "z": "55a17376.dbbb4c",
         "name": "Rot",
         "func": "msg.payload = \"ff0000\";\nreturn msg;",
         "outputs": 1,
@@ -21,9 +21,9 @@
         ]
     },
     {
-        "id": "3b686841.3277f8",
+        "id": "9ebe4bc7.ba5438",
         "type": "function",
-        "z": "42a49c7f.ce9f34",
+        "z": "55a17376.dbbb4c",
         "name": "Gelb",
         "func": "msg.payload = \"d5ff00\";\nreturn msg;",
         "outputs": 1,
@@ -35,9 +35,9 @@
         ]
     },
     {
-        "id": "e56d0d10.194e6",
+        "id": "6e78cdb1.7c2b74",
         "type": "function",
-        "z": "42a49c7f.ce9f34",
+        "z": "55a17376.dbbb4c",
         "name": "Gruen",
         "func": "msg.payload = \"00ff00\";\nreturn msg;",
         "outputs": 1,
@@ -49,9 +49,9 @@
         ]
     },
     {
-        "id": "7a6f9b49.5ab2d4",
+        "id": "744a7f09.a4b78",
         "type": "inject",
-        "z": "42a49c7f.ce9f34",
+        "z": "55a17376.dbbb4c",
         "name": "",
         "topic": "",
         "payload": "",
@@ -67,9 +67,9 @@
         ]
     },
     {
-        "id": "9fa51001.afeea",
+        "id": "13b4cc13.f93284",
         "type": "proximity",
-        "z": "42a49c7f.ce9f34",
+        "z": "55a17376.dbbb4c",
         "name": "",
         "x": 180,
         "y": 120,
@@ -79,25 +79,27 @@
         ]
     },
     {
-        "id": "333a21ae.ae761e",
+        "id": "b57a13a5.53ac7",
         "type": "switch",
-        "z": "42a49c7f.ce9f34",
+        "z": "55a17376.dbbb4c",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "lt",
+                "t": "btwn",
                 "v": "",
-                "vt": "num"
+                "vt": "num",
+                "v2": "",
+                "v2t": "num"
             },
-          {
-            "t": "btwn",
-            "v": "",
-            "vt": "num",
-            "v2": "",
-            "v2t": "num"
-          },
+            {
+                "t": "btwn",
+                "v": "",
+                "vt": "num",
+                "v2": "",
+                "v2t": "num"
+            },
             {
                 "t": "gt",
                 "v": "",
@@ -115,13 +117,13 @@
             []
         ]
     },
-    {
-        "id": "447d89d2.815ee8",
-        "type": "led",
-        "z": "42a49c7f.ce9f34",
-        "name": "",
-        "x": 190,
-        "y": 360,
-        "wires": []
-    }
+  {
+    "id": "14361166.dd051f",
+    "type": "led",
+    "z": "55a17376.dbbb4c",
+    "name": "",
+    "x": 190,
+    "y": 360,
+    "wires": []
+  }
 ]
