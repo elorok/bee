@@ -4,8 +4,8 @@ from slave.module_button import Button
 from slave.module_proximity import Proximity
 from slave.module_led import Led
 from slave.module_servo import Servo
-from slave.module import Module
 from slave.module_io import Io
+from slave.module import Module
 
 
 modules = []
