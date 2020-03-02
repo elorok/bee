@@ -2,7 +2,7 @@ module.exports = function (RED) {
     "use strict";
 
     function IONode(config) {
-        IO.nodes.createNode(this, config);
+        RED.nodes.createNode(this, config);
 
         var node = this;
 
