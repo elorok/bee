@@ -18,6 +18,7 @@ modules.append(Io())
 
 while(True):
 	for module in modules:
+
 		# Module is offline
 		if not module.getOnline():
 			module.checkOnline()
