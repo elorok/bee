@@ -44,5 +44,5 @@ module.exports = function (IO) {
             }
         });
     }
-    RED.nodes.registerType("IO", IONode)
+    RED.nodes.registerType("io", IONode)
 }
