@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('io',{
+        category: 'Bee',
+        color: '#bbbbff',
+        defaults: {
+            name: { value: "" }
+        },
+        inputs:1,
+        outputs:1,
+        icon: "io.png",
+        label: function() {
+            return this.name||"Io";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="io">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="io">
+    <p>Bee Module IO</p>
+</script>
