@@ -1,4 +1,4 @@
-module.exports = function (IO) {
+module.exports = function (RED) {
     "use strict";
 
     function IONode(config) {
@@ -44,5 +44,5 @@ module.exports = function (IO) {
             }
         });
     }
-    RED.nodes.registerType("io", IONode)
+    RED.nodes.registerType("io", IoNode)
 }
