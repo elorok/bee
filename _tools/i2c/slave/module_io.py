@@ -7,7 +7,8 @@ class Io(Module):
         super().__init__()
         super().setAddress(0x0b)
 
-    def sync(self):     
+    def sync(self):
+        
         # READ FILE
         try:
             file = open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r")
