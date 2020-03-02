@@ -3,39 +3,48 @@ import sys
 from .module import Module
 
 class Io(Module):
-		def __init__(self):
-			super().__init__()
-			super().setAddress(11)
+    def __init__(self):
+        super().__init__()
+        super().setAddress(0x0b)
+
+    def sync(self):     
+        # READ FILE
+        try:
+            file = open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r")
+
+            try:
+                output = int(file.read())
+                if output < 0 or output > 15:
+                    print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()) + "_out")
+                    return
+
+            except ValueError:
+                print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()) + "_out")
+                return
+
+            file.close()
+
+        except IOError:
+            print("File /tmp/i2c_" + str(super().getAddress()) + "_out not found.")
+            output = 0
 
 
-		def sync(self):
-			super().checkOnline()
+        # I2C SYNCHRONISATION
+        try:
+            i2c = smbus.SMBus(1)
+            state = i2c.read_word_data(super().getAddress(), output)           
+            digital = (state // 256) % 16
+            analog1 = state * 4
+            analog2 = state // 32736
+            analog = (analog1 + analog2) % 512
 
-			if(super().getOnline()):
+        except IOError:
+            super().setOnline(False)
+            super().setSetup(False)
+            return
 
-				try: 
-                    i2c = smbus.SMBus(1)
-					file = open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r")
-					register = file.read()
-					if(register == 0)
-						register == 1
-					file.close()
-                    state = i2c.read_word_data(super().getAddress(), int(register))
-                    file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
-                    file.write(str(state))
-                    file.close()
 
-				except IOError:
-					super().setOnline(False)
-					super().setSetup(False)
-					return
-
-				try:
-					i2c = smbus.SMBus(1)
-					file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
-					i2c.write_byte(0x0b, state)
-					file.close()
-
-				except IOError:
-					super().setOnline(False)
-					super().setSetup(False)
+        # WRITE FILE        
+        file = open("/tmp/i2c_" + str(super().getAddress()) + "_in", "w")
+        file.write(str(analog) + "\n" + str(digital))        
+        file.close()

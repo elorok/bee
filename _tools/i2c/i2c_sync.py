@@ -5,6 +5,7 @@ from slave.module_proximity import Proximity
 from slave.module_led import Led
 from slave.module_servo import Servo
 from slave.module import Module
+from slave.module_io import Io
 
 
 modules = []
@@ -12,6 +13,7 @@ modules.append(Button())
 modules.append(Proximity())
 modules.append(Led())
 modules.append(Servo())
+modules.append(Io())
 
 
 while(True):
