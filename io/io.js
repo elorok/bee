@@ -18,7 +18,7 @@ module.exports = function (RED) {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
                         } else {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
-                            msg.payload = contents;
+                            msg.payload = contents;                            
                             node.send(msg);
                         }
                     }
@@ -34,7 +34,7 @@ module.exports = function (RED) {
 
             // *** Write Data ***
             try {
-                var digital = parseInt(msg.payload, 16);
+                var digital = parseInt(msg.topic, 16);
 
                 fs.writeFile('/tmp/i2c_11_out', digital.toString(10), function (error) {
                     if (error) throw error;
