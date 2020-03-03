@@ -18,7 +18,7 @@ module.exports = function (RED) {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
                         } else {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
-                            msg.payload = contents;                            
+                            msg.payload = contents;
                             node.send(msg);
                         }
                     }
