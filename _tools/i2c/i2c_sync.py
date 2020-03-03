@@ -12,7 +12,7 @@ modules = []
 modules.append(Button())
 modules.append(Proximity())
 modules.append(Led())
-modules.append(Servo())
+# modules.append(Servo())
 modules.append(Io())
 
 
