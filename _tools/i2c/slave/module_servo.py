@@ -5,7 +5,7 @@ from .module import Module
 class Servo(Module):
 	def __init__(self):
 		super().__init__()
-		super().setAddress(11)
+		super().setAddress(12)
 
 	def sync(self):
 		super().checkOnline()
