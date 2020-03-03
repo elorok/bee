@@ -1,18 +1,17 @@
 <script type="text/javascript">
-    RED.nodes.registerType('io',{
+    RED.nodes.registerType('io', {
         category: 'Bee',
         color: '#97eaf5',
         defaults: {
             name: { value: "" }
         },
-        inputs:4,
-        outputs:5,
+        inputs: 4,
+        outputs: 5,
         icon: "io.png",
-        label: function() {
-            return this.name||"Io";
+        label: function () {
+            return this.name || ["Io", "DO0", "DO1", "DO2", "DO3"];
         },
         outputLabels: ["AI", "DI0", "DI1", "DI2", "DI3"],
-        label: ["DO0", "DO1", "DO2", "DO3"]
     });
 </script>
 
