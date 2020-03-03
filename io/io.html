@@ -5,12 +5,14 @@
         defaults: {
             name: { value: "" }
         },
-        inputs:1,
-        outputs:1,
+        inputs:4,
+        outputs:5,
         icon: "io.png",
         label: function() {
             return this.name||"Io";
-        }
+        },
+        outputLabels: ["AI", "DI0", "DI1", "DI2", "DI3"],
+        inputLabels: ["DO0", "DO1", "DO2", "DO3"]
     });
 </script>
 
