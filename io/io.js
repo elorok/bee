@@ -20,10 +20,10 @@ module.exports = function (RED) {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
                             var msgA = { payload: contents.split("\n")[0] };    // Analog
                             var msgD = contents.split("\n")[1];    // Digital
-                            var msgD0 = { payload: Math.round(msgD % 2) };
-                            var msgD1 = { payload: Math.round(msgD / 2 % 2) };
-                            var msgD2 = { payload: Math.round(msgD / 4 % 2) };
-                            var msgD3 = { payload: Math.round(msgD / 8 % 2) };
+                            var msgD0 = { payload: msgD % 2 };
+                            var msgD1 = { payload: msgD / 2 % 2 };
+                            var msgD2 = { payload: msgD / 4 % 2 };
+                            var msgD3 = { payload: msgD / 8 % 2 };
                             node.send([msgA, msgD0, msgD1, msgD2, msgD3]);
                         }
                     }
