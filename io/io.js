@@ -44,7 +44,7 @@ module.exports = function (RED) {
                                 
                 fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, output) {
                     if (error) throw error;
-                })
+                
 
 
                 switch(topic){
@@ -94,7 +94,8 @@ module.exports = function (RED) {
                         if (error) throw error;
                     })
                 }
-          
+
+                })
             } catch (error) {
                 node.error(error);
             }
