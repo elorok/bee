@@ -41,7 +41,7 @@ module.exports = function (RED) {
             try {
                 var digital = parseInt(msg.topic, 16);
 
-                if (digital != null || digital != "") {
+                if (digital != null && digital != "") {
                     fs.writeFile('/tmp/i2c_11_out', digital.toString(10), function (error) {
                         if (error) throw error;
                     })
