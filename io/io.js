@@ -19,7 +19,7 @@ module.exports = function (RED) {
                         } else {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
                             var msgA = { payload: contents.split("\n")[0] };    // Analog
-                            var msgD = contents.split("\n")[1];    // Digital
+                            var msgD = contents.split("\n")[1];    // payload
                             var msgD0 = { payload: Math.round(msgD % 2) };
                             var msgD1 = { payload: Math.round(msgD / 2 % 2) };
                             var msgD2 = { payload: Math.round(msgD / 4 % 2) };
@@ -39,13 +39,40 @@ module.exports = function (RED) {
 
             // *** Write Data ***
             try {
-                var digital = parseInt(msg.topic, 16);
+                var payload = msg.payload;
+                var topic = parseInt(msg.topic, 16);
 
-                if (digital != null && digital != "") {
-                    fs.writeFile('/tmp/i2c_11_out', digital.toString(10), function (error) {
+                if (payload != null && payload != "") {
+                    fs.writeFile('/tmp/i2c_11_out', payload.toString(10), function (error) {
                         if (error) throw error;
                     })
                 }
+            fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, output){
+                if (error) throw error;
+            })
+
+            switch(topic){
+                case 0:
+                    if (payload == true)
+                    {
+                        output = (output |1<<0);  
+                    }
+                    else if (payload == false)
+                    {
+                        output = (output & ~(1<<0));
+                    }
+                   break;
+                case 1:
+                    if (payload == true)
+                    {
+                        output = (output |1<<1);  
+                    }
+                    else if (payload == false)
+                    {
+                        output = (output & ~(1<<1));
+                    }
+                    break;
+}
             } catch (error) {
                 node.error(error);
             }
