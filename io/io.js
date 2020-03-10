@@ -42,7 +42,7 @@ module.exports = function (RED) {
                 var digital = parseInt(msg.topic, 16);
                 digitalString = digital.toString(10);
 
-                if (!digitalString.isNullOrEmpty) {
+                if (digitalString != String.isNullOrEmpty()) {
                     fs.writeFile('/tmp/i2c_11_out', digital.toString(10), function (error) {
                         if (error) throw error;
                     })
@@ -57,6 +57,7 @@ module.exports = function (RED) {
     RED.nodes.registerType("io", IoNode)
 }
 
+
 String.isNullOrEmpty = function (value) {
-    return !value
+    return (!value || value == undefined || value == "" || value.length == 0);
 }
