@@ -40,24 +40,16 @@ module.exports = function (RED) {
             // *** Write Data ***
             try {
                 var digital = parseInt(msg.topic, 16);
-                digitalString = digital.toString(10);
 
-                if (!String.isNullOrEmpty(digitalString)) {
+                if (digital != null || digital != "") {
                     fs.writeFile('/tmp/i2c_11_out', digital.toString(10), function (error) {
                         if (error) throw error;
                     })
                 }
-                
-                
             } catch (error) {
                 node.error(error);
             }
         });
     }
     RED.nodes.registerType("io", IoNode)
-}
-
-
-String.isNullOrEmpty = function (value) {
-    return (!value || value == undefined || value == "" || value.length == 0);
 }
