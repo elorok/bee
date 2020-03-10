@@ -41,38 +41,60 @@ module.exports = function (RED) {
             try {
                 var payload = msg.payload;
                 var topic = parseInt(msg.topic, 16);
+                                
+                fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, output) {
+                    if (error) throw error;
+                })
 
-                if (payload != null && payload != "") {
-                    fs.writeFile('/tmp/i2c_11_out', payload.toString(10), function (error) {
+
+                switch(topic){
+                    case 0:
+                        if (payload == true)
+                        {
+                            output = (output |1<<0);  
+                        }
+                        else if (payload == false)
+                        {
+                            output = (output & ~(1<<0));
+                        }
+                       break;
+                    case 1:
+                        if (payload == true)
+                        {
+                            output = (output |1<<1);  
+                        }
+                        else if (payload == false)
+                        {
+                            output = (output & ~(1<<1));
+                        }
+                        break;
+                    case 2:
+                        if (payload == true) {
+                            output = (output | 1 << 2);
+                        }
+                        else if (payload == false) {
+                            output = (output & ~(1 << 2));
+                        }
+                        break;
+                    case 3:
+                        if (payload == true) {
+                            output = (output | 1 << 3);
+                        }
+                        else if (payload == false) {
+                            output = (output & ~(1 << 3));
+                        }
+                        break;
+                    default:
+                        break;
+                }
+
+                output = output.toString(10);
+                if (output != null && output != "") {
+                    fs.writeFile('/tmp/i2c_11_out', output, function (error) {
                         if (error) throw error;
                     })
                 }
-            fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, output){
-                if (error) throw error;
-            })
-
-            switch(topic){
-                case 0:
-                    if (payload == true)
-                    {
-                        output = (output |1<<0);  
-                    }
-                    else if (payload == false)
-                    {
-                        output = (output & ~(1<<0));
-                    }
-                   break;
-                case 1:
-                    if (payload == true)
-                    {
-                        output = (output |1<<1);  
-                    }
-                    else if (payload == false)
-                    {
-                        output = (output & ~(1<<1));
-                    }
-                    break;
-}
+          
             } catch (error) {
                 node.error(error);
             }
