@@ -41,13 +41,13 @@ module.exports = function (RED) {
             try {
                 var payload = msg.payload;
                 var topic = parseInt(msg.topic, 16);
-                var output;
+                var output = 4;
                                 
-                fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, content) {
-                    output = parseInt(content);
-                    if (error) throw error;
+                //fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, content) {
+                //    output = parseInt(content);
+                //    if (error) throw error;
                     
-                })
+                //})
                     
                 switch(topic){
                     case 0:
