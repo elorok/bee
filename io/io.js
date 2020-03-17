@@ -45,6 +45,8 @@ module.exports = function (RED) {
                                 
                 fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, content) {
                     output = content
+                    if (error) throw error;
+                    
                 })
                     
                 switch(topic){
