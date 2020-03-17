@@ -49,58 +49,59 @@ module.exports = function (RED) {
                     
                 
                     
-                switch(topic){
-                    case 0:
-                        if (payload == true)
-                        {
-                            output = (output |1<<0);  
-                        }
-                        else if (payload == false)
-                        {
-                            output = (output & ~(1<<0));
-                        }
-                       break;
-                    case 1:
-                        if (payload == true)
-                        {
-                            output = (output |1<<1);  
-                        }
-                        else if (payload == false)
-                        {
-                            output = (output & ~(1<<1));
-                        }
-                        break;
-                    case 2:
-                        if (payload == true) {
-                            output = (output | 1 << 2);
-                        }
-                        else if (payload == false) {
-                            output = (output & ~(1 << 2));
-                        }
-                        break;
-                    case 3:
-                        if (payload == true) {
-                            output = (output | 1 << 3);
-                        }
-                        else if (payload == false) {
-                            output = (output & ~(1 << 3));
-                        }
-                        break;
-                    default:
-                        break;
-                }
+                    switch(topic){
+                        case 0:
+                            if (payload == true)
+                            {
+                                output = (output |1<<0);  
+                            }
+                            else if (payload == false)
+                            {
+                                output = (output & ~(1<<0));
+                            }
+                           break;
+                        case 1:
+                            if (payload == true)
+                            {
+                                output = (output |1<<1);  
+                            }
+                            else if (payload == false)
+                            {
+                                output = (output & ~(1<<1));
+                            }
+                            break;
+                        case 2:
+                            if (payload == true) {
+                                output = (output | 1 << 2);
+                            }
+                            else if (payload == false) {
+                                output = (output & ~(1 << 2));
+                            }
+                            break;
+                        case 3:
+                            if (payload == true) {
+                                output = (output | 1 << 3);
+                            }
+                            else if (payload == false) {
+                                output = (output & ~(1 << 3));
+                            }
+                            break;
+                        default:
+                            break;
+                    }
 
-                output = output.toString(10);
-                if (output != null && output != "") {
-                    fs.writeFile('/tmp/i2c_11_out', output, function (error) {
-                        if (error) throw error;
-                    })
-                }
+                    output = output.toString(10);
+                    if (output != null && output != "") {
+                        fs.writeFile('/tmp/i2c_11_out', output, function (error) {
+                            if (error) throw error;
+                        })
+                    }
                 })
               
-            } catch (error) {
+            }catch (error) {
                 node.error(error);
             }
+
         });
     }
     RED.nodes.registerType("io", IoNode)
