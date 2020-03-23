@@ -11,19 +11,19 @@ class Io(Module):
         
         # READ FILE
         try:
-            file = open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r")
+            with open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r") as file:
 
-            try:
-                output = int(file.read())
-                if output < 0 or output > 15:
+                try:
+                    output = int(file.read())
+                    if output < 0 or output > 15:
+                        print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()) + "_out")
+                        return
+
+                except ValueError:
                     print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()) + "_out")
                     return
 
-            except ValueError:
-                print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()) + "_out")
-                return
-
-            file.close()
+                file.close()
 
         except IOError:
             print("File /tmp/i2c_" + str(super().getAddress()) + "_out not found.")
