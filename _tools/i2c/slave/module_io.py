@@ -11,7 +11,7 @@ class Io(Module):
         
         # READ FILE
         try:
-            with open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r+") as file:
+            with open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r") as file:
 
                 try:
                     output = int(file.read())
