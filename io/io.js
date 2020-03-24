@@ -93,7 +93,7 @@ module.exports = function (RED) {
                         })
                     }
                 })
-                ü
+                
             } catch (error) {
                 node.error(error);
             }
