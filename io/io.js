@@ -43,7 +43,8 @@ module.exports = function (RED) {
                 var topic = parseInt(msg.topic, 16);
                 var output;
 
-                fs.readFile('/tmp/i2c_11_out', 'utf8', 'a+', function (error, content) {
+                fs.openSync('/tmp/i2c_11_out', 'a+');
+                fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, content) {
                     output = parseInt(content);
                     if (error) throw error;
 
