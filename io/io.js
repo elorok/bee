@@ -43,7 +43,7 @@ module.exports = function (RED) {
                 var topic = parseInt(msg.topic, 16);
                 var output;
 
-                fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, content) {
+                fs.readFile('/tmp/i2c_11_out', 'utf8', { flag: 'wx' }, function (error, content) {
                     output = parseInt(content);
                     if (error) throw error;
 
