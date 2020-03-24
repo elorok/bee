@@ -46,9 +46,7 @@ module.exports = function (RED) {
                 fs.openSync('/tmp/i2c_11_out', 'a+');
                 fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, content) {
                     output = parseInt(content);
-                    if (error) throw error;
-
-
+                    if (error) throw error;                    
 
                     switch (topic) {
                         case 0:
