@@ -42,32 +42,28 @@ module.exports = function (RED) {
                 var payload = msg.payload;
                 var topic = parseInt(msg.topic, 16);
                 var output;
-                                
+
                 fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, content) {
                     output = parseInt(content);
                     if (error) throw error;
-                    
-                
-                    
-                    switch(topic){
+
+
+
+                    switch (topic) {
                         case 0:
-                            if (payload == true)
-                            {
-                                output = (output |1<<0);  
+                            if (payload == true) {
+                                output = (output | 1 << 0);
                             }
-                            else if (payload == false)
-                            {
-                                output = (output & ~(1<<0));
+                            else if (payload == false) {
+                                output = (output & ~(1 << 0));
                             }
-                           break;
+                            break;
                         case 1:
-                            if (payload == true)
-                            {
-                                output = (output |1<<1);  
+                            if (payload == true) {
+                                output = (output | 1 << 1);
                             }
-                            else if (payload == false)
-                            {
-                                output = (output & ~(1<<1));
+                            else if (payload == false) {
+                                output = (output & ~(1 << 1));
                             }
                             break;
                         case 2:
@@ -97,8 +93,8 @@ module.exports = function (RED) {
                         })
                     }
                 })
-              
-            }catch (error) {
+                ü
+            } catch (error) {
                 node.error(error);
             }
 
