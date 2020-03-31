@@ -96,7 +96,6 @@ module.exports = function (RED) {
             } catch (error) {
                 node.error(error);
             }
-
         });
     }
     RED.nodes.registerType("io", IoNode)
