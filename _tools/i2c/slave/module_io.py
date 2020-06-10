@@ -1,4 +1,4 @@
-from smbus2 import SMBus, i2c_msg
+import smbus
 import sys
 from .module import Module
 
@@ -11,19 +11,19 @@ class Io(Module):
         
         # READ FILE
         try:
-            with open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r") as file:
+            file = open("/tmp/i2c_" + str(super().getAddress()) + "_out", "r")
 
-                try:
-                    output = int(file.read())
-                    if output < 0 or output > 15:
-                        print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()) + "_out")
-                        return
-
-                except ValueError:
+            try:
+                output = int(file.read())
+                if output < 0 or output > 15:
                     print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()) + "_out")
                     return
 
-                file.close()
+            except ValueError:
+                print("Invalid Values in File /tmp/i2c_" + str(super().getAddress()) + "_out")
+                return
+
+            file.close()
 
         except IOError:
             print("File /tmp/i2c_" + str(super().getAddress()) + "_out not found.")
@@ -32,7 +32,7 @@ class Io(Module):
 
         # I2C SYNCHRONISATION
         try:
-            i2c = SMBus(1)
+            i2c = smbus.SMBus(1)
             state = i2c.read_word_data(super().getAddress(), output)           
             digital = (state // 256) % 16
             analog1 = state * 4

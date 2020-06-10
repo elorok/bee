@@ -1,4 +1,4 @@
-from smbus2 import SMBus, i2c_msg
+import smbus
 
 class Module:
 	def __init__(self):
@@ -10,7 +10,7 @@ class Module:
 
 	def checkOnline(self):
 		try:
-			i2c = SMBus(1)
+			i2c = smbus.SMBus(1)
 			result = i2c.read_byte(self.getAddress())
 			self.setOnline(True)
 			file = open("/tmp/i2c_" + str(self.getAddress()) + "_in", "w")

@@ -1,4 +1,4 @@
-from smbus2 import SMBus, i2c_msg
+import smbus
 import sys
 from .module import Module
 
@@ -10,7 +10,7 @@ class Button(Module):
 
 		def sync(self):
 			try: 
-				i2c = SMBus(1)
+				i2c = smbus.SMBus(1)
 				state = i2c.read_byte(super().getAddress())
 
 			except IOError:
