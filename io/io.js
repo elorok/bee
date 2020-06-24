@@ -43,6 +43,14 @@ module.exports = function (RED) {
                 var topic = parseInt(msg.topic, 16);
                 var output;
 
+                const lockFilePath = "/tmp/.i2c_11_out.lock";
+                while (fs.existsSync(lockFilePath)) {
+                    setTimeout(100);
+                }
+                fs.open(lockFilePath, 'w', function (err, file) {
+                    if (err) throw err;
+                });
+                
                 fs.openSync('/tmp/i2c_11_out', 'a+');
                 fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, content) {
                     output = parseInt(content);
@@ -92,6 +100,9 @@ module.exports = function (RED) {
                         })
                     }
                 })
+                fs.unlink(lockFilePath, function (err) {
+                    if (err) throw err;
+                });
                 
             } catch (error) {
                 node.error(error);
