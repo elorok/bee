@@ -45,7 +45,7 @@ module.exports = function (RED) {
 
                 const lockFilePath = "/tmp/.i2c_11_out.lock";
                 while (fs.existsSync(lockFilePath)) {
-                    setTimeout(100);
+                    await sleep(100);
                 }
                 fs.open(lockFilePath, 'w', function (err, file) {
                     if (err) throw err;
@@ -110,4 +110,10 @@ module.exports = function (RED) {
         });
     }
     RED.nodes.registerType("io", IoNode)
+
+    function sleep(ms) {
+        return new Promise((resolve) => {
+            setTimeout(resolve, ms);
+        });
+    }   
 }
