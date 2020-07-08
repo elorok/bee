@@ -1,4 +1,4 @@
-import smbus
+from smbus2 import SMBus, i2c_msg
 import sys
 from .module import Module
 
@@ -31,8 +31,8 @@ class Led(Module):
 
 			
 				try:
-					i2c = smbus.SMBus(1)
-					i2c.write_word_data(super().getAddress(), red, (green + blue * 256))
+					with SMBus(1) as bus:
+						bus.write_word_data(super().getAddress(), red, (green + blue * 256))
 
 				except IOError:
 					super().setOnline(False)

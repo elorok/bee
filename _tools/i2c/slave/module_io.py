@@ -1,4 +1,4 @@
-import smbus
+from smbus2 import SMBus, i2c_msg
 import sys
 from .module import Module
 
@@ -32,12 +32,12 @@ class Io(Module):
 
         # I2C SYNCHRONISATION
         try:
-            i2c = smbus.SMBus(1)
-            state = i2c.read_word_data(super().getAddress(), output)           
-            digital = (state // 256) % 16
-            analog1 = state * 4
-            analog2 = state // 32736
-            analog = (analog1 + analog2) % 512
+            with SMBus(1) as bus:
+                state = bus.read_word_data(super().getAddress(), output)           
+                digital = (state // 256) % 16
+                analog1 = state * 4
+                analog2 = state // 32736
+                analog = (analog1 + analog2) % 512
 
         except IOError:
             super().setOnline(False)

@@ -1,4 +1,4 @@
-import smbus
+from smbus2 import SMBus, i2c_msg
 import sys
 from .module import Module
 
@@ -10,11 +10,11 @@ class Proximity(Module):
 
 		def setup(self):
 			try:
-				i2c = smbus.SMBus(1)
-				i2c.write_word_data(super().getAddress(), 0, 0)		# Enable Ambilight Sensor
-				i2c.write_word_data(super().getAddress(), 3, 2250)	# Setup Proximity Sensor
-				i2c.write_word_data(super().getAddress(), 4, 1888)	#
-				super().setSetup(True)
+				with SMBus(1) as bus:
+					bus.write_word_data(super().getAddress(), 0, 0)		# Enable Ambilight Sensor
+					bus.write_word_data(super().getAddress(), 3, 2250)	# Setup Proximity Sensor
+					bus.write_word_data(super().getAddress(), 4, 1888)	#
+					super().setSetup(True)
 			except:
 				super().setSetup(False)
 				raise
@@ -22,9 +22,9 @@ class Proximity(Module):
 
 		def sync(self):
 			try:
-				i2c = smbus.SMBus(1)
-				proxy = i2c.read_word_data(super().getAddress(), 8)
-				ambi = i2c.read_word_data(super().getAddress(), 9)
+				with SMBus(1) as bus:
+					proxy = bus.read_word_data(super().getAddress(), 8)
+					ambi = bus.read_word_data(super().getAddress(), 9)
 
 			except IOError:
 				super().setOnline(False)
