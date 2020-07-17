@@ -11,12 +11,10 @@ wifis = []
 
 def main():
     if len(sys.argv)>= 2:
-        if sys.argv[1] == "-SSID":
-            stream = os.popen('sudo iwlist wlan0 scan | grep SSID:')
-            output = stream.read()
-            print (output)
+        if sys.argv[1] == "--ssid" or sys.argv[1] == "-s":
+            listWifi()
 
-        if sys.argv[1] == "-Connect" and isinstance(sys.argv[2], str) == True and isinstance(sys.argv[3], str) == True:
+        elif (sys.argv[1] == "--connect" or sys.argv[1] == "-c") and len(sys.argv) == 4:
             ssid = sys.argv[2]
             psk = sys.argv[3]
             wifi = Wifi()
@@ -36,13 +34,19 @@ def main():
 
             else:
                 print("SSID not found.")
+        else:
+                print("Wrong command.")
 
-#def checkConnection():
 
+def listWifi():
+        stream = os.popen("sudo iwlist wlan0 scan | grep ESSID: | sed 's/.*ESSID:\"//' | sed 's/.$//' | sort | uniq").read().split()
+        for line in stream:
+                if("\\x00\\x00\\x00" not in line):
+	                print(line)
+#        print(stream)
 
 
 def scanWifi():
-    
     content = iw_parse.scan(interface='wlan0')
     cells = iw_parse.parse(content)
 
