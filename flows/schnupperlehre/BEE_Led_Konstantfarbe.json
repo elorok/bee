@@ -1,0 +1,53 @@
+[
+    {
+        "id": "222fe1f5.9dcaae",
+        "type": "tab",
+        "label": "BEE_RGB_Konstantfarbe",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "17138eff.a7e651",
+        "type": "inject",
+        "z": "222fe1f5.9dcaae",
+        "name": "",
+        "repeat": "0.1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "f63f648e.4730a8"
+            ]
+        ]
+    },
+    {
+        "id": "c3af0f3d.fb625",
+        "type": "led",
+        "z": "222fe1f5.9dcaae",
+        "name": "",
+        "x": 590,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f63f648e.4730a8",
+        "type": "python3-function",
+        "z": "222fe1f5.9dcaae",
+        "name": "RGB_Konstant",
+        "func": "msg['payload'] = \"f00060\"\nreturn msg",
+        "outputs": 1,
+        "x": 400,
+        "y": 80,
+        "wires": [
+            [
+                "c3af0f3d.fb625"
+            ]
+        ]
+    }
+]

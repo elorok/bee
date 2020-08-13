@@ -1,0 +1,61 @@
+[
+    {
+        "id": "1c269661.1ab44a",
+        "type": "tab",
+        "label": "LED Strip",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fddf54c3.fe7d28",
+        "type": "rpi-neopixels",
+        "z": "1c269661.1ab44a",
+        "name": "LED-Strip",
+        "pixels": "6",
+        "bgnd": "",
+        "fgnd": "",
+        "wipe": "1",
+        "mode": "pcent",
+        "rgb": "rgb",
+        "brightness": "100",
+        "gamma": true,
+        "x": 680,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "187353bd.5cb55c",
+        "type": "python3-function",
+        "z": "1c269661.1ab44a",
+        "name": "Programm",
+        "func": "msg['payload'] = \"4,0,0,150\"\nnode.send(msg)",
+        "outputs": 1,
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "fddf54c3.fe7d28"
+            ]
+        ]
+    },
+    {
+        "id": "bf77c1c1.9945e",
+        "type": "inject",
+        "z": "1c269661.1ab44a",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 250,
+        "y": 260,
+        "wires": [
+            [
+                "187353bd.5cb55c"
+            ]
+        ]
+    }
+]
