@@ -1,0 +1,170 @@
+[
+    {
+        "id": "bf73c9bc.56bbd8",
+        "type": "tab",
+        "label": "logikaufgabe",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a7b32992.0a8798",
+        "type": "led",
+        "z": "bf73c9bc.56bbd8",
+        "name": "",
+        "x": 110,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "fdffc714.ac3f98",
+        "type": "function",
+        "z": "bf73c9bc.56bbd8",
+        "name": "MotorRein",
+        "func": "msg.payload = \"0000ff\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 130,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f525eab.2de8018",
+        "type": "function",
+        "z": "bf73c9bc.56bbd8",
+        "name": "MotorRaus",
+        "func": "msg.payload = \"00ff00\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a6e5352.2cf91c",
+        "type": "switch",
+        "z": "bf73c9bc.56bbd8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "jsonata"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "jsonata"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f9f49f59.977bb",
+        "type": "BooleanLogic",
+        "z": "bf73c9bc.56bbd8",
+        "name": "",
+        "operation": "AND",
+        "inputCount": 2,
+        "topic": "i",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7633b4a.ebea24c",
+        "type": "ui_switch",
+        "z": "bf73c9bc.56bbd8",
+        "name": "snsSonne",
+        "label": "snsSonne",
+        "tooltip": "",
+        "group": "d019cacc.590578",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "Sonne",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1f2743e.e96c48",
+        "type": "inject",
+        "z": "bf73c9bc.56bbd8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d019cacc.590578",
+        "type": "ui_group",
+        "z": "",
+        "name": "LogicInput",
+        "tab": "13f5c0c5.697b1f",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "13f5c0c5.697b1f",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Bee",
+        "icon": "forumbee",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
