@@ -59,6 +59,11 @@
                 "t": "eq",
                 "v": "1",
                 "vt": "jsonata"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "jsonata"
             }
         ],
         "checkall": "true",
