@@ -31,9 +31,9 @@ module.exports = function (RED) {
 
             // *** Write Data ***
             try {
-                var pwm1 = parseInt(msg.payload.substring(0,2), 16);
-                var pwm2 = parseInt(msg.payload.substring(2,4), 16);
-
+                var pwm1 = parseInt(msg.payload.substring(0, 2), 16);
+                var pwm2 = parseInt(msg.payload.substring(2, 4), 16);
+                
 
                 fs.writeFile('/tmp/i2c_12_out', pwm1.toString(10) + "\n" + pwm2.toString(10), function (error) {
                     if (error) throw error;
