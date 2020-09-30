@@ -31,11 +31,10 @@ module.exports = function (RED) {
 
             // *** Write Data ***
             try {
-                var pwm1 = parseInt(msg.payload.substring(0, 2), 16);
-                var pwm2 = parseInt(msg.payload.substring(2, 4), 16);
-                
+                var pwm = parseInt(msg.payload); 
 
-                fs.writeFile('/tmp/i2c_12_out', pwm1.toString(10) + "\n" + pwm2.toString(10), function (error) {
+
+                fs.writeFile('/tmp/i2c_12_out', pwm.toString(10), function (error) {
                     if (error) throw error;
                 })
             } catch (error) {
