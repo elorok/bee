@@ -33,10 +33,16 @@ module.exports = function (RED) {
             try {
                 var pwm = parseInt(msg.payload); 
 
-
                 fs.writeFile('/tmp/i2c_12_out', pwm.toString(10), function (error) {
                     if (error) throw error;
                 })
+                
+                //Test Gianni 30-SEP-2020
+                var parts = msg.payload.split(",");
+                fs.writeFile('/tmp/testing', parts[0].toString(10) + "\n" + parts[1].toString(10), function (error) {
+                    if (error) throw error;
+                })
+                
             } catch (error) {
                 node.error(error);
             }
