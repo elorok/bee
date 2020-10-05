@@ -39,7 +39,7 @@ module.exports = function (RED) {
                 
                 var pwm = parseInt(msg.payload); 
 
-                fs.writeFile('/tmp/i2c_12_out', pwm.toString(10), function (error) {
+                fs.writeFile('/tmp/testing', pwm.toString(10), function (error) {
                     if (error) throw error;
                 })
                 
