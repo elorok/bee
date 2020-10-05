@@ -32,8 +32,8 @@ module.exports = function (RED) {
             // *** Write Data ***
             try {
                 //if file is empty --> write 0 in each line
-                if os.stat('tmp/testing'.st_size == 0:
-                    fs.writeFile('tmp/testing', "0\n0\n0\n0\n0\n0", function (error){
+                if os.stat('tmp/i2c_12_out'.st_size == 0:
+                    fs.writeFile('/tmp/testing', "0\n0\n0\n0\n0\n0", function (error){
                         if (error) throw error;
                 })
                 
@@ -47,7 +47,7 @@ module.exports = function (RED) {
                 var parts = msg.payload.split(","); //split at comma
                 parts[1] = parseInt(parts[1], 16);
 
-                fs.writeFile('/tmp/testing', parts[0].toString(10) + "\n" + parts[1].toString(10), function (error) {
+                fs.writeFile('/tmp/i2c_12_out', parts[0].toString(10) + "\n" + parts[1].toString(10), function (error) {
                     if (error) throw error;
                 })
                 
