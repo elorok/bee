@@ -41,7 +41,7 @@ module.exports = function (RED) {
                 var parts = msg.payload.split(","); //split at comma
                 parts[1] = parseInt(parts[1], 16);
                 
-                a_file = open('/tmp/testing', 'r');
+                /*a_file = open('/tmp/testing', 'r');
                 lines = a_file.readlines();
                 a_file.close();
                 
@@ -64,7 +64,7 @@ module.exports = function (RED) {
                     char = file.read(1);
                     if char == '\n':
                         line = line + 1;
-                
+                */
                 //for Testing
                 fs.writeFile('/tmp/i2c_12_out', parts[0].toString(10) + "\n" + parts[1].toString(10), function (error) {
                     if (error) throw error;
