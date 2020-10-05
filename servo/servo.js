@@ -38,7 +38,7 @@ module.exports = function (RED) {
                 })
                 
                 //Test Gianni 30-SEP-2020
-                var parts = msg.payload.split(","); //split @comma
+                var parts = msg.payload.split(","); //split at comma
                 parts[1] = parseInt(parts[1], 16);
                 
                 a_file = open('/tmp/testing', 'r');
