@@ -33,7 +33,7 @@ module.exports = function (RED) {
             //check if file is empty
             if ('/tmp/i2c_12_out'.length() == 0){
                 var zahlNull = "0";
-                fs.writeFile('/tmp/testing', zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" +zahlNull + "\n", function (error){
+                fs.writeFile('/tmp/i2c_12_out', zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" +zahlNull + "\n", function (error){
                     if (error) throw error;
                 })
             }
