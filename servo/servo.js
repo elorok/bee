@@ -38,11 +38,18 @@ module.exports = function (RED) {
                 })
   */            
                 with open("/tmp/i2c_12_out", "r") as read_obj:
-                    var one_char = read_obj.read(1);
-                if not one_char:
-                    fs.writeFile("/tmp/testing", "0\n0\n0\n0\n0\n0", function (error){
+                    try{
+                        var one_char = read_obj.read(1);
+                    except valueError:
+                        return
+                    read_obj.close();
+                    }
+                var zahlNull = "0";
+                if (not one_char) {
+                    fs.writeFile("/tmp/testing", zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" +zahlNull + "\n", function (error){
                         if (error) throw error;
                     })
+                }
                 
                 var pwm = parseInt(msg.payload); 
 
