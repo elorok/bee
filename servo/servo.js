@@ -37,16 +37,16 @@ module.exports = function (RED) {
                         if (error) throw error;
                 })
   */            
-                with open('/tmp/i2c_12_out', 'r') as read_obj:
+                with open("/tmp/i2c_12_out", "r") as read_obj:
                     var one_char = read_obj.read(1);
                 if not one_char:
-                    fs.writeFile('/tmp/testing', "0\n0\n0\n0\n0\n0", function (error){
+                    fs.writeFile("/tmp/testing", "0\n0\n0\n0\n0\n0", function (error){
                         if (error) throw error;
                     })
                 
                 var pwm = parseInt(msg.payload); 
 
-                fs.writeFile('/tmp/testing', pwm.toString(10), function (error) {
+                fs.writeFile("/tmp/testing", pwm.toString(10), function (error) {
                     if (error) throw error;
                 })
                 
@@ -54,7 +54,7 @@ module.exports = function (RED) {
                 var parts = msg.payload.split(","); //split at comma
                 parts[1] = parseInt(parts[1], 16);
 
-                fs.writeFile('/tmp/i2c_12_out', parts[0].toString(10) + "\n" + parts[1].toString(10), function (error) {
+                fs.writeFile("/tmp/i2c_12_out", parts[0].toString(10) + "\n" + parts[1].toString(10), function (error) {
                     if (error) throw error;
                 })
                 
