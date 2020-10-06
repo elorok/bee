@@ -31,11 +31,18 @@ module.exports = function (RED) {
 
             // *** Write Data ***
             try {
-                //if file is empty --> write 0 in each line
+/*                //if file is empty --> write 0 in each line
                 if os.stat('tmp/i2c_12_out'.st_size == 0:
                     fs.writeFile('/tmp/testing', "0\n0\n0\n0\n0\n0", function (error){
                         if (error) throw error;
                 })
+  */            
+                with open('/tmp/i2c_12_out', 'r') as read_obj:
+                    var one_char = read_obj.read(1);
+                if not one_char:
+                    fs.writeFile('/tmp/testing', "0\n0\n0\n0\n0\n0", function (error){
+                        if (error) throw error;
+                    })
                 
                 var pwm = parseInt(msg.payload); 
 
