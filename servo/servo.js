@@ -31,7 +31,6 @@ module.exports = function (RED) {
 
             // *** Write Data ***
             //check if file is empty
-            outFile = 
             if ('/tmp/i2c_12_out'.length() == 0){
                 var zahlNull = "0";
                 fs.writeFile('/tmp/testing', zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" +zahlNull + "\n", function (error){
