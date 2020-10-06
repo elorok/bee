@@ -32,14 +32,14 @@ module.exports = function (RED) {
             // *** Write Data ***
             try {
                 //check if file is empty
-                outFile = '/tmp/i2c_12_out';
+/*                outFile = '/tmp/i2c_12_out';
                 if (outFile.length() == 0){
                     var zahlNull = "0";
                     fs.writeFile('/tmp/i2c_12_out', zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" +zahlNull + "\n", function (error){
                         if (error) throw error;
                     })
                 }
-                var pwm = parseInt(msg.payload); 
+*/                var pwm = parseInt(msg.payload); 
 
                 fs.writeFile('/tmp/testing', pwm.toString(10), function (error) {
                     if (error) throw error;
@@ -51,8 +51,7 @@ module.exports = function (RED) {
                 fs.writeFile('/tmp/i2c_12_out', parts[0].toString(10) + "\n" + parts[1].toString(10), function (error) {
                     if (error) throw error;
                 })
-            }
-            catch (error){
+            } catch (error){
                 node.error(error);
             }
         });
