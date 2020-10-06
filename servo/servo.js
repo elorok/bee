@@ -30,25 +30,25 @@ module.exports = function (RED) {
 
 
             // *** Write Data ***
-            try {
-/*                //if file is empty --> write 0 in each line
-                if os.stat('tmp/i2c_12_out'.st_size == 0:
-                    fs.writeFile('/tmp/testing', "0\n0\n0\n0\n0\n0", function (error){
-                        if (error) throw error;
-                })
-  */            
+            try {            
                 with open("/tmp/i2c_12_out", "r") as read_obj:
                     try{
                         var one_char = read_obj.read(1);
-                    except valueError:
-                        return
                     read_obj.close();
+                    }
+                    catch (error) {
+                        node.status({ fill: "red", shape: "dot", text: "disconnected" });
+                        node.error(error);
                     }
                 var zahlNull = "0";
                 if (not one_char) {
                     fs.writeFile("/tmp/testing", zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" +zahlNull + "\n", function (error){
                         if (error) throw error;
                     })
+                }
+                catch (error) {
+                    node.status({ fill: "red", shape: "dot", text: "disconnected" });
+                    node.error(error);
                 }
                 
                 var pwm = parseInt(msg.payload); 
