@@ -31,17 +31,23 @@ module.exports = function (RED) {
 
             // *** Write Data ***
             try {
-                //check if file is empty
-/*                outFile = '/tmp/i2c_12_out';
-                if (outFile.length() == 0){
-                    var zahlNull = "0";
-                    fs.writeFile('/tmp/i2c_12_out', zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" + zahlNull + "\n" +zahlNull + "\n", function (error){
-                        if (error) throw error;
-                    })
+                //check if there are 6 lines (6 PWMs)
+                import java.util.Scanner;
+                
+                int linesCount = 0;
+                Scanner fileScanner = null;
+                file selectedFile = '/tmp/i2c_12_out';
+                fileScanner = new Scanner(selectedFile);
+                
+                while (fileScanner.hasNextLine()){
+                    linesCount++;
+                    String line = fileScanner.nextLine();
                 }
-*/                var pwm = parseInt(msg.payload); 
+                
+                
+                var pwm = parseInt(msg.payload); 
 
-                fs.writeFile('/tmp/testing', pwm.toString(10), function (error) {
+                fs.writeFile('/tmp/testing', linesCount.toString(10), function (error) {
                     if (error) throw error;
                 })
 
