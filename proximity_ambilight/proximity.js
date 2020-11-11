@@ -10,7 +10,9 @@ module.exports = function (RED) {
             var fs = require('fs');
 
             try {
-                fs.readFile('/tmp/i2c_81_in', 'utf8', function (error, contents) {
+                var fd_in;  //filedescripter inputFile
+                fd_in = fs.open('/tmp/i2c_81_in', 'r');
+                fs.readFile(fd_in, 'utf8', function (error, contents) {
                     if (error == null) {
                         if (contents == "<offline>") {
                             node.status({ fill: "red", shape: "dot", text: "disconnected" });
@@ -31,6 +33,10 @@ module.exports = function (RED) {
             } catch (error) {
                 node.status({ fill: "red", shape: "dot", text: "disconnected" });
                 node.error(error);
+            } finally{
+                if(fd_in){
+                    fs.closeSync(fd_in);
+                }
             }
         });
     }
