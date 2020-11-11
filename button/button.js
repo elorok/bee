@@ -11,7 +11,7 @@ module.exports = function (RED) {
 
             try {
                 var fd_in;  //filedescripter InputFile
-                fd_in = fs.openSync('/tmp/i2c_12_out', 'r');
+                fd_in = fs.openSync('/tmp/i2c_10_in', 'r');
                 fs.readFile(fd_in, 'utf8', function (error, contents) {
                     if (error == null) {
                         if (contents == "<offline>") {
