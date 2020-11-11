@@ -8,9 +8,12 @@ module.exports = function (RED) {
 
         node.on('input', function (msg) {
             var fs = require('fs');
-
+            
+            // *** Read Data ***
             try {
-                fs.readFile('/tmp/i2c_11_in', 'utf8', function (error, contents) {
+                var fd_in;  //filedescripter inputFile
+                fd_in = fs.openSync('/tmp/i2c_11_in', 'r');
+                fs.readFile(fd_in, 'utf8', function (error, contents) {
                     if (error == null) {
                         if (contents == "<offline>") {
                             node.status({ fill: "red", shape: "dot", text: "disconnected" });
@@ -19,7 +22,7 @@ module.exports = function (RED) {
                         } else {
                             node.status({ fill: "green", shape: "dot", text: "connected" });
                             var msgA = { payload: contents.split("\n")[0] };    // Analog
-                            var msgD = contents.split("\n")[1];    // payload
+                            var msgD = contents.split("\n")[1];                 // digital
                             var msgD0 = { payload: Math.round(msgD % 2) };
                             var msgD1 = { payload: Math.round(msgD / 2 % 2) };
                             var msgD2 = { payload: Math.round(msgD / 4 % 2) };
@@ -35,10 +38,15 @@ module.exports = function (RED) {
             } catch (error) {
                 node.status({ fill: "red", shape: "dot", text: "disconnected" });
                 node.error(error);
+            } finally {
+                if(fd_in){
+                    fs.closeSync(fd_in);
+                }
             }
 
             // *** Write Data ***
             try {
+                var fd_out;  //filedescripter outputFile
                 var payload = msg.payload;
                 var topic = parseInt(msg.topic, 16);
                 var output;
@@ -51,8 +59,8 @@ module.exports = function (RED) {
                     if (err) throw err;
                 });
                 
-                fs.openSync('/tmp/i2c_11_out', 'a+');
-                fs.readFile('/tmp/i2c_11_out', 'utf8', function (error, content) {
+                fd_out = fs.openSync('/tmp/i2c_11_out', 'a+');
+                fs.readFile(fd_out, 'utf8', function (error, content) {
                     output = parseInt(content);
                     if (error) throw error;                    
 
@@ -106,6 +114,10 @@ module.exports = function (RED) {
                 
             } catch (error) {
                 node.error(error);
+            } finally {
+                if(fd_out){
+                    fs.closeSync(fd_out);
+                }
             }
         });
     }
