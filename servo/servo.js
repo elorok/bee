@@ -29,14 +29,15 @@ module.exports = function (RED) { "use strict";
 
 
 		        // *** Write Data ***
-			//count lines in file
 			try {
 				var fd_out;	//filedescripter i2c_12_out
+				//create Lockfile
 				var isError = lockFile('/tmp/i2c_12_out.LOCKED', 1000, 10000);
 				if(!isError){
 					node.log("Error aufgetreten. isError: " + isError);
 					throw isError;
 				}
+				//read input-Data
 				var tokens = msg.payload.split(',');	//split Number of Servo and PWM-Value
 				var numberServo = parseInt(tokens[0], 10);	//number 1...6
 				var pwm = parseInt(tokens[1], 16);		//value 0...255
@@ -99,6 +100,7 @@ module.exports = function (RED) { "use strict";
 					fd_out = fs.openSync('/tmp/i2c_12_out', 'w');
 					fs.writeSync(fd_out, content_new);
 					fs.closeSync(fd_out);
+					//delete Lockfile
 					var error = unlockingFile('/tmp/i2c_12_out.LOCKED');
 					if (error) throw error;
 				}
