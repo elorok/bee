@@ -30,21 +30,22 @@ module.exports = function (RED) { "use strict";
 
 		        // *** Write Data ***
 			try {
-				var fd_out;	//filedescripter i2c_12_out
-				//create Lockfile
-				var isError = lockFile('/tmp/i2c_12_out.LOCKED', 1000, 10000);
-				if(!isError){
-					node.log("Error aufgetreten. isError: " + isError);
-					throw isError;
-				}
 				//read input-Data
 				var tokens = msg.payload.split(',');	//split Number of Servo and PWM-Value
 				var numberServo = parseInt(tokens[0], 10);	//number 1...6
 				var pwm = parseInt(tokens[1], 16);		//value 0...255
 
-				//legal Number of Servo?
-				if((numberServo >= 1)&&(numberServo <= 6))
-				{
+					//legal Number of Servo?
+					if((numberServo >= 1)&&(numberServo <= 6))
+					{
+						var fd_out;	//filedescripter i2c_12_out
+					//create Lockfile
+					var isError = lockFile('/tmp/i2c_12_out.LOCKED', 1000, 10000);
+					if(!isError){
+						node.log("Error aufgetreten. isError: " + isError);
+						throw isError;
+					}
+					
 					var content_old;	//data from File
 					var content_new = '';	//data for file
 					var index = 0;		//for parsing
