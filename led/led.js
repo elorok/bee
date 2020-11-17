@@ -36,7 +36,7 @@ module.exports = function (RED) {
 				var blue = parseInt(msg.payload.substring(4, 6), 16);
 
 				fd_out = fs.openSync('/tmp/i2c_9_out', 'w');
-				fs.writeFile(fd_out, red.toString(10) + "\n" + green.toString(10) + "\n" + blue.toString(10));
+				fs.writeFileSync(fd_out, red.toString(10) + "\n" + green.toString(10) + "\n" + blue.toString(10));
 			} catch (error) {
 				node.error(error);
 			}finally{
