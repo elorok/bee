@@ -37,7 +37,6 @@ class Servo(Module):
 
 			try:
 				with SMBus(1) as bus:
-					#bus.write_word_data(super().getAddress(), servo0, servo1)
 					msg = i2c_msg.write(super().getAddress(),[servo0,servo1,servo2,servo3,servo4,servo5])
 					bus.i2c_rdwr(msg)
 
