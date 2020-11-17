@@ -29,8 +29,8 @@ module.exports = function (RED) {
 			}
 
 			// *** Write Data ***
+			var fd_out;  //filedescripter outputFile
 			try {
-				var fd_out;  //filedescripter outputFile
 				var red = parseInt(msg.payload.substring(0, 2), 16);
 				var green = parseInt(msg.payload.substring(2, 4), 16);
 				var blue = parseInt(msg.payload.substring(4, 6), 16);
