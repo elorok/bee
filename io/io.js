@@ -31,7 +31,7 @@ module.exports = function (RED) {
 			} catch (error) {
 				node.status({ fill: "red", shape: "dot", text: "disconnected" });
 				node.error(error);
-            } finally {
+			} finally {
 				if(fd_in){
 					fs.closeSync(fd_in);
 				}
