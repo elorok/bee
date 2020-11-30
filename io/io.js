@@ -93,7 +93,7 @@ module.exports = function (RED) {
 
 				output = output.toString(10);
 				if (output != null && output != "") {
-					fs.writeFileSync('/tmp/i2c_11_out', output);
+					fs.writeFileSync(fd_out, output);
 				}
 				fs.unlinkSync(lockFilePath);                
 			} catch (error) {
