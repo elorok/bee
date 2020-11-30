@@ -20,7 +20,7 @@ module.exports = function (RED) {
 					node.status({ fill: "green", shape: "dot", text: "connected" });
 				} else {
 					node.status({ fill: "green", shape: "dot", text: "connected" });
-					var msgA = { payload: contents.split("\n")[0] };    // Analog
+					var msgA = { payload: contents.split("\n")[0] };    // analog
 					var msgD = contents.split("\n")[1];                 // digital
 					var msgD0 = { payload: Math.round(msgD % 2) };
 					var msgD1 = { payload: Math.round(msgD / 2 % 2) };
@@ -46,7 +46,7 @@ module.exports = function (RED) {
 
 				const lockFilePath = "/tmp/.i2c_11_out.lock";
 				while (fs.existsSync(lockFilePath)) {
-                    ;
+					;
 				}
 				var fd_lock = fs.openSync(lockFilePath, 'w');
                 
