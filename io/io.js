@@ -8,12 +8,12 @@ module.exports = function (RED) {
 
 		node.on('input', function (msg) {
 			var fs = require('fs');
-            
+
 			// *** Read State and Data ***
 			var fd_in;  //filedescripter inputFile
 			try {
 				fd_in = fs.openSync('/tmp/i2c_11_in', 'r');
-				var contents = fs.readFileSync(fd_in, 'utf8');                  
+				var contents = fs.readFileSync(fd_in, 'utf8');
 				if (contents == "<offline>") {
 					node.status({ fill: "red", shape: "dot", text: "disconnected" });
 				} else if (contents == "<online>") {
@@ -50,8 +50,9 @@ module.exports = function (RED) {
 				}
 				var fd_lock = fs.openSync(lockFilePath, 'w');
                 
-				fd_out = fs.openSync('/tmp/i2c_11_out', 'a+');
+				fd_out = fs.openSync('/tmp/i2c_11_out', 'r');
 				var content = fs.readFileSync(fd_out, 'utf8');
+				fs.closeSync(fd_out);
 				output = parseInt(content);
 
 				switch (topic) {
@@ -93,9 +94,10 @@ module.exports = function (RED) {
 
 				output = output.toString(10);
 				if (output != null && output != "") {
+					fd_out = fs.openSync('/tmp/i2c_11_out', 'w');
 					fs.writeFileSync(fd_out, output);
 				}
-				fs.unlinkSync(lockFilePath);                
+				fs.unlinkSync(lockFilePath);
 			} catch (error) {
 				node.error(error);
 			} finally {
