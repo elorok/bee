@@ -22,10 +22,10 @@ module.exports = function (RED) {
 					node.status({ fill: "green", shape: "dot", text: "connected" });
 					var msgA = { payload: contents.split("\n")[0] };    // analog
 					var msgD = contents.split("\n")[1];                 // digital
-					var msgD0 = { payload: Math.round(msgD % 2) };
-					var msgD1 = { payload: Math.round(msgD / 2 % 2) };
-					var msgD2 = { payload: Math.round(msgD / 4 % 2) };
-					var msgD3 = { payload: Math.round(msgD / 8 % 2) };
+					var msgD0 = { payload: Math.floor(msgD % 2) };
+					var msgD1 = { payload: Math.floor(msgD / 2 % 2) };
+					var msgD2 = { payload: Math.floor(msgD / 4 % 2) };
+					var msgD3 = { payload: Math.floor(msgD / 8 % 2) };
 					node.send([msgA, msgD0, msgD1, msgD2, msgD3]);
 				}
 			} catch (error) {
@@ -44,16 +44,20 @@ module.exports = function (RED) {
 				var topic = parseInt(msg.topic, 16);
 				var output;
 
-				const lockFilePath = "/tmp/.i2c_11_out.lock";
+				//create lockfile
+				const lockFilePath = "/tmp/i2c_11_out.lock";
 				while (fs.existsSync(lockFilePath)) {
 					;
 				}
 				var fd_lock = fs.openSync(lockFilePath, 'w');
-                
-				fd_out = fs.openSync('/tmp/i2c_11_out', 'r');
-				var content = fs.readFileSync(fd_out, 'utf8');
-				fs.closeSync(fd_out);
-				output = parseInt(content);
+
+				//read data
+				if(fs.existSync('/tmp/i2c_11_out')){
+					fd_out = fs.openSync('/tmp/i2c_11_out', 'r');
+					var content = fs.readFileSync(fd_out, 'utf8');
+					fs.closeSync(fd_out);
+					output = parseInt(content);
+				}
 
 				switch (topic) {
 					case 0:
