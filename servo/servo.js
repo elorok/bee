@@ -12,7 +12,7 @@ module.exports = function (RED) { "use strict";
 			try {
 				var fd_in;	//filedescripter inputFile
 				fd_in = fs.openSync('/tmp/i2c_12_in', 'r');
-				fs.readFile(fd_in, 'utf8')
+				var contents = fs.readFileSync(fd_in, 'utf8')
 				if (contents != "<offline>") {
 					node.status({ fill: "green", shape: "dot", text: "connected" });
 				} else {
@@ -33,38 +33,38 @@ module.exports = function (RED) { "use strict";
 				//read input-Data
 				var tokens = msg.payload.split(',');		//split Number of Servo and PWM-Value
 				var numberServo = parseInt(tokens[0], 10);	//number 1...6
-				var pwm = parseInt(tokens[1], 16);			//value 0...255 (0%..100%)
-				var fd_out;									//filedescripter i2c_12_out
-				
+				var pwm = parseInt(tokens[1], 16);		//value 0...255 (0%..100%)
+				var fd_out;					//filedescripter i2c_12_out
+
 				//legal Number of Servo?
 				if((numberServo >= 1)&&(numberServo <= 6))
-				{					
+				{
 					//create Lockfile
 					var isError = lockFile('/tmp/i2c_12_out.LOCKED', 1000, 10000);
 					if(!isError){
 						node.log("Error aufgetreten. isError: " + isError);
 						throw isError;
 					}
-				
+
 					var content_old;		//data from File
-					var content_new = '';	//data for file
+					var content_new = '';		//data for file
 					var index = 0;			//for parsing
 					var numberNewLines;		//number of new Lines
 					var position = 1;		//linenumber
 					var beginnWriteSpace = 0;	//here beginns the new Data
-					var endWriteSpace;			//here ends the new Data
+					var endWriteSpace;		//here ends the new Data
 					//check (and repair) pwm-valiues
 					if(pwm > 255) pwm = 255;
 					if(pwm < 0) pwm = 0;
 
 					//check if File exists, read/create content
 					if(fs.existsSync('/tmp/i2c_12_out')){
-						fd_out = fs.openSync('/tmp/i2c_12_out', 'w+');
+						fd_out = fs.openSync('/tmp/i2c_12_out', 'r');
 						content_old = fs.readFileSync(fd_out, 'utf8');
+						fs.closeSync(fd_out);
 					}
 					else{
 						content_old = '0\n0\n0\n0\n0\n0\n';
-						fd_out = fs.openSync('/tmp/i2c_12_out', 'w');
 					}
 
 					//get beginn/endWriteSpace
@@ -75,7 +75,7 @@ module.exports = function (RED) { "use strict";
 					}
 					if(numberServo != 1) beginnWriteSpace += 1;	//character after \n
 					endWriteSpace = content_old.indexOf('\n', index);
-					
+
 					//write old part
 					for(index = 0; index < beginnWriteSpace; index += 1){
 						var c = content_old[index];
@@ -93,6 +93,7 @@ module.exports = function (RED) { "use strict";
 							}
 					}
 					//write to file
+					fd_out = fs.openSync('/tmp/i2c_12_out', 'w');
 					fs.writeSync(fd_out, content_new);
 					//delete Lockfile
 					var error = unlockingFile('/tmp/i2c_12_out.LOCKED');
@@ -146,6 +147,7 @@ module.exports = function (RED) { "use strict";
 				}
 			}
 		}
+		fs.closeSync(fd_lock);
 		return isLocked;
 	}
 
