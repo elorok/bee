@@ -53,7 +53,7 @@ module.exports = function (RED) { "use strict";
 					var position = 1;		//linenumber
 					var beginnWriteSpace = 0;	//here beginns the new Data
 					var endWriteSpace;		//here ends the new Data
-					//check (and repair) pwm-valiues
+					//check (and repair) pwm-values
 					if(pwm > 255) pwm = 255;
 					if(pwm < 0) pwm = 0;
 
