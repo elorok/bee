@@ -52,9 +52,10 @@ module.exports = function (RED) {
 				var fd_lock = fs.openSync(lockFilePath, 'w');
 
 				//read data
-				if(fs.existSync('/tmp/i2c_11_out')){
+				var content
+				if(fs.existsSync('/tmp/i2c_11_out')){
 					fd_out = fs.openSync('/tmp/i2c_11_out', 'r');
-					var content = fs.readFileSync(fd_out, 'utf8');
+					content = fs.readFileSync(fd_out, 'utf8');
 					fs.closeSync(fd_out);
 					output = parseInt(content);
 				}
