@@ -40,7 +40,7 @@
         "type": "python3-function",
         "z": "222fe1f5.9dcaae",
         "name": "RGB_Konstant",
-        "func": "msg['payload'] = \"f00060\"\nreturn msg",
+        "func": "msg['payload'] = \"f00060\"\nnode.send(msg)",
         "outputs": 1,
         "x": 400,
         "y": 80,
