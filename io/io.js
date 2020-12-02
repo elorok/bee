@@ -42,7 +42,7 @@ module.exports = function (RED) {
 			try {
 				var payload = msg.payload;
 				var topic = parseInt(msg.topic, 16);
-				var output;
+				var output = 0;
 
 				//create lockfile
 				const lockFilePath = "/tmp/i2c_11_out.lock";
@@ -52,7 +52,7 @@ module.exports = function (RED) {
 				var fd_lock = fs.openSync(lockFilePath, 'w');
 
 				//read data
-				var content
+				var content;
 				if(fs.existsSync('/tmp/i2c_11_out')){
 					fd_out = fs.openSync('/tmp/i2c_11_out', 'r');
 					content = fs.readFileSync(fd_out, 'utf8');
