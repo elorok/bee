@@ -1,13 +1,6 @@
-﻿[
+[
     {
-        "id": "3b39b9b8.4f24a6",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "8126e207.74fc",
+        "id": "5e23fc23.6e4944",
         "type": "tab",
         "label": "Einstellungen",
         "disabled": false,
@@ -114,7 +107,6 @@
     {
         "id": "4e51695c.ed0528",
         "type": "ui_link",
-        "z": "",
         "name": "Roche Berufsbildung",
         "link": "https://lehre.roche.com",
         "icon": "fa-graduation-cap",
@@ -169,7 +161,6 @@
     {
         "id": "220e217.eaaf1de",
         "type": "ui_tab",
-        "z": "",
         "name": "Einstellungen",
         "icon": "settings",
         "order": 3,
@@ -188,7 +179,6 @@
     {
         "id": "13f5c0c5.697b1f",
         "type": "ui_tab",
-        "z": "",
         "name": "Bee",
         "icon": "forumbee",
         "order": 1,
@@ -198,7 +188,6 @@
     {
         "id": "dcf6f66a.e5fd78",
         "type": "ui_group",
-        "z": "",
         "name": "Willkommen",
         "tab": "13f5c0c5.697b1f",
         "order": 1,
@@ -218,21 +207,39 @@
     {
         "id": "b67e7428.ee9648",
         "type": "ui_group",
-        "z": "",
         "name": "System",
         "tab": "220e217.eaaf1de",
         "order": 1,
         "disp": true,
-        "width": "6",
+        "width": 6,
         "collapse": false
     },
     {
-        "id": "f5c5cee4.06aec",
+        "id": "12518539.2fcbcb",
+        "type": "ui_group",
+        "name": "Wifi",
+        "tab": "220e217.eaaf1de",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "ae924545.4a6518",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "12518539.2fcbcb",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6eaede46.4a53e",
         "type": "ui_button",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "name": "",
         "group": "b67e7428.ee9648",
-        "order": 9,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -244,19 +251,19 @@
         "payload": "System wird neu gestartet",
         "payloadType": "str",
         "topic": "",
-        "x": 160,
-        "y": 500,
+        "x": 200,
+        "y": 240,
         "wires": [
             [
-                "6d01ee34.58ef4",
-                "9e7df96b.09b918"
+                "ce857765.259f78",
+                "d21bcb64.a8c5a8"
             ]
         ]
     },
     {
-        "id": "6d01ee34.58ef4",
+        "id": "ce857765.259f78",
         "type": "exec",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "command": "sudo reboot #",
         "addpay": false,
         "append": "now",
@@ -264,8 +271,8 @@
         "timer": "1",
         "oldrc": false,
         "name": "Reboot",
-        "x": 400,
-        "y": 500,
+        "x": 440,
+        "y": 240,
         "wires": [
             [],
             [],
@@ -273,12 +280,12 @@
         ]
     },
     {
-        "id": "6ccbb9e8.b2dec8",
+        "id": "383e8530.f2b9da",
         "type": "ui_button",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "name": "",
         "group": "b67e7428.ee9648",
-        "order": 8,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -290,19 +297,19 @@
         "payload": "Gestartet",
         "payloadType": "str",
         "topic": "",
-        "x": 120,
-        "y": 660,
+        "x": 160,
+        "y": 400,
         "wires": [
             [
-                "587c04b4.142b1c",
-                "c693ed44.1c9ac"
+                "e19a362e.61e418",
+                "c58a068b.9919d8"
             ]
         ]
     },
     {
-        "id": "587c04b4.142b1c",
+        "id": "e19a362e.61e418",
         "type": "exec",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "command": "sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y && sudo /home/pi/bee_update.sh",
         "addpay": false,
         "append": "",
@@ -310,81 +317,77 @@
         "timer": "",
         "oldrc": false,
         "name": "Update System",
-        "x": 380,
-        "y": 660,
+        "x": 420,
+        "y": 400,
         "wires": [
             [
-                "dbcc76d9.190438"
+                "f3e86ef0.1abe2"
             ],
             [
-                "f0e58192.4f114"
+                "93cee51b.b441e8"
             ],
             []
         ]
     },
     {
-        "id": "48d1a4f9.83362c",
+        "id": "4258e738.b61898",
         "type": "inject",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "1",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 170,
-        "y": 320,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 60,
         "wires": [
             [
-                "8cf6cf39.29d79",
-                "21b9749f.20bc9c",
-                "b5eea5e4.cbe358",
-                "cd69023d.54427",
-                "f71bed1f.41d17"
+                "5c44e1ff.b07d4"
             ]
         ]
     },
     {
-        "id": "8cf6cf39.29d79",
+        "id": "5c44e1ff.b07d4",
         "type": "function",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "name": "Datum / Uhrzeit",
         "func": "var now = new Date();\nvar year = now.getFullYear();\nvar month = now.getMonth()+1;\nvar day = now.getDate();\nvar hour = now.getHours();\nvar minute = now.getMinutes();\nvar second = now.getSeconds();\nif(month.toString().length == 1) {\nvar month = '0'+month;\n}\nif(day.toString().length == 1) {\nvar day = '0'+day;\n}\nif(hour.toString().length == 1) {\nvar hour = '0'+hour;\n}\nif(minute.toString().length == 1) {\nvar minute = '0'+minute;\n}\nif(second.toString().length == 1) {\nvar second = '0'+second;\n}\nmsg.payload = year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 360,
-        "y": 320,
+        "x": 400,
+        "y": 60,
         "wires": [
             [
-                "bb7f08fe.f48308"
+                "3f4cb843.621668"
             ]
         ]
     },
     {
-        "id": "bb7f08fe.f48308",
+        "id": "3f4cb843.621668",
         "type": "ui_text",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "group": "b67e7428.ee9648",
-        "order": 6,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "Datum / Uhrzeit",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 580,
-        "y": 320,
+        "x": 620,
+        "y": 60,
         "wires": []
     },
     {
-        "id": "34589008.6e3fc",
+        "id": "77456229.22cecc",
         "type": "ui_button",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "name": "",
         "group": "b67e7428.ee9648",
-        "order": 7,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -396,18 +399,18 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 160,
-        "y": 420,
+        "x": 200,
+        "y": 160,
         "wires": [
             [
-                "533ad9b8.e6d2d8"
+                "f760757e.dbb598"
             ]
         ]
     },
     {
-        "id": "533ad9b8.e6d2d8",
+        "id": "f760757e.dbb598",
         "type": "exec",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "command": "sudo date -s \"$(curl -s --head http://google.ch | grep ^Date: | sed 's/Date: //g')\"",
         "addpay": false,
         "append": "",
@@ -415,8 +418,8 @@
         "timer": "",
         "oldrc": false,
         "name": "Synchronisiere Zeit",
-        "x": 410,
-        "y": 420,
+        "x": 450,
+        "y": 160,
         "wires": [
             [],
             [],
@@ -424,9 +427,27 @@
         ]
     },
     {
-        "id": "c693ed44.1c9ac",
+        "id": "c58a068b.9919d8",
         "type": "ui_toast",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "Update System",
+        "name": "",
+        "x": 430,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "462e1cea.42be94",
+        "type": "ui_toast",
+        "z": "5e23fc23.6e4944",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -436,14 +457,14 @@
         "cancel": "",
         "topic": "Update System",
         "name": "",
-        "x": 370,
-        "y": 720,
+        "x": 770,
+        "y": 420,
         "wires": []
     },
     {
-        "id": "55805580.fcd6dc",
+        "id": "ed828c8d.2a152",
         "type": "ui_toast",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -453,63 +474,46 @@
         "cancel": "",
         "topic": "Update System",
         "name": "",
-        "x": 730,
-        "y": 680,
+        "x": 770,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "e23610e2.698d6",
-        "type": "ui_toast",
-        "z": "8126e207.74fc",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "topic": "Update System",
-        "name": "",
-        "x": 730,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "dbcc76d9.190438",
+        "id": "f3e86ef0.1abe2",
         "type": "function",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "name": "Done",
         "func": "msg.payload = \"Abgeschlossen\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 550,
-        "y": 640,
+        "x": 590,
+        "y": 380,
         "wires": [
             [
-                "e23610e2.698d6"
+                "ed828c8d.2a152"
             ]
         ]
     },
     {
-        "id": "f0e58192.4f114",
+        "id": "93cee51b.b441e8",
         "type": "function",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "name": "Error",
         "func": "msg.payload = \"Fehler\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 550,
-        "y": 680,
+        "x": 590,
+        "y": 420,
         "wires": [
             [
-                "55805580.fcd6dc"
+                "462e1cea.42be94"
             ]
         ]
     },
     {
-        "id": "9e7df96b.09b918",
+        "id": "d21bcb64.a8c5a8",
         "type": "ui_toast",
-        "z": "8126e207.74fc",
+        "z": "5e23fc23.6e4944",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -519,176 +523,212 @@
         "cancel": "",
         "topic": "Neustart",
         "name": "",
-        "x": 410,
-        "y": 560,
+        "x": 450,
+        "y": 300,
         "wires": []
     },
     {
-        "id": "21b9749f.20bc9c",
-        "type": "exec",
-        "z": "8126e207.74fc",
-        "command": "vcgencmd measure_temp | egrep -o '[0-9]*\\.[0-9]*'",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "",
-        "timer": "",
-        "oldrc": false,
-        "name": "CPU Temperatur",
-        "x": 370,
-        "y": 100,
+        "id": "b51b465.61960b8",
+        "type": "ui_form",
+        "z": "5e23fc23.6e4944",
+        "name": "Wifi",
+        "label": "",
+        "group": "12518539.2fcbcb",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "options": [
+            {
+                "label": "SSID",
+                "value": "ssid",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Passwort",
+                "value": "password",
+                "type": "password",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "ssid": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "Verbinden",
+        "cancel": "Abbrechen",
+        "topic": "Wifi",
+        "x": 170,
+        "y": 780,
         "wires": [
             [
-                "66171bb4.417c34"
+                "a8e6a7ec.43a418"
+            ]
+        ]
+    },
+    {
+        "id": "a8e6a7ec.43a418",
+        "type": "function",
+        "z": "5e23fc23.6e4944",
+        "name": "Set SSID and PW",
+        "func": "ssid = msg.payload.ssid;\npassword = msg.payload.password;\nmsg.payload = ssid + \" \" + password;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 780,
+        "wires": [
+            [
+                "9ae42283.8d388"
+            ]
+        ]
+    },
+    {
+        "id": "9ae42283.8d388",
+        "type": "exec",
+        "z": "5e23fc23.6e4944",
+        "command": "/home/pi/bee_wifi.sh -c ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Change wpa_supplicant",
+        "x": 630,
+        "y": 780,
+        "wires": [
+            [
+                "41d1c0e8.64e79"
             ],
             [],
             []
         ]
     },
     {
-        "id": "66171bb4.417c34",
+        "id": "41d1c0e8.64e79",
+        "type": "exec",
+        "z": "5e23fc23.6e4944",
+        "command": "sudo wpa_cli -i wlan0 reconfigure",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Restart Network Service",
+        "x": 890,
+        "y": 780,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "edb79158.1c359",
+        "type": "exec",
+        "z": "5e23fc23.6e4944",
+        "command": "iwgetid -r",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Get SSID",
+        "x": 400,
+        "y": 580,
+        "wires": [
+            [
+                "ae0293d2.b5041"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ae0293d2.b5041",
         "type": "ui_text",
-        "z": "8126e207.74fc",
-        "group": "b67e7428.ee9648",
+        "z": "5e23fc23.6e4944",
+        "group": "12518539.2fcbcb",
         "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "CPU Temperatur",
-        "format": "{{msg.payload}} C",
-        "layout": "row-spread",
-        "x": 590,
-        "y": 100,
+        "label": "Wifi",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 610,
+        "y": 580,
         "wires": []
     },
-  {
-    "id": "b5eea5e4.cbe358",
-    "type": "exec",
-    "z": "8126e207.74fc",
-    "command": "grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf \"%.2f\",usage}'",
-    "addpay": false,
-    "append": "",
-    "useSpawn": "",
-    "timer": "",
-    "oldrc": false,
-    "name": "CPU Last",
-    "x": 340,
-    "y": 40,
-    "wires": [
-      [
-        "c717d2e8.aee88"
-      ],
-      [],
-      []
-    ]
-  },
     {
-        "id": "cd69023d.54427",
-        "type": "exec",
-        "z": "8126e207.74fc",
-        "command": "(free | awk '/Mem/{printf(\"RAM Usage: %.2f\\n\"), $3/$2*100}'| awk '{print $3}')",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "",
-        "timer": "",
-        "oldrc": false,
-        "name": "RAM",
-        "x": 330,
-        "y": 160,
+        "id": "5e2e6524.f6774c",
+        "type": "inject",
+        "z": "5e23fc23.6e4944",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "20",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "10",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 640,
         "wires": [
             [
-                "86449883.398d08"
+                "edb79158.1c359",
+                "d00943dc.55923"
+            ]
+        ]
+    },
+    {
+        "id": "d00943dc.55923",
+        "type": "exec",
+        "z": "5e23fc23.6e4944",
+        "command": "ifconfig wlan0 | grep \"inet \" | awk '{print $2}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Get IP",
+        "x": 390,
+        "y": 640,
+        "wires": [
+            [
+                "b1b45000.d00d2"
             ],
             [],
             []
         ]
     },
     {
-        "id": "f71bed1f.41d17",
-        "type": "exec",
-        "z": "8126e207.74fc",
-        "command": "awk '/MemFree/ { printf \"%.0f \\n\", $2/1024 }' /proc/meminfo",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "",
-        "timer": "",
-        "oldrc": false,
-        "name": "Freier Speicher",
-        "x": 360,
-        "y": 220,
-        "wires": [
-            [
-                "aacba521.c7e258"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "aacba521.c7e258",
+        "id": "b1b45000.d00d2",
         "type": "ui_text",
-        "z": "8126e207.74fc",
-        "group": "b67e7428.ee9648",
-        "order": 4,
+        "z": "5e23fc23.6e4944",
+        "group": "12518539.2fcbcb",
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Freier Speicher",
-        "format": "{{msg.payload}} MB",
-        "layout": "row-spread",
-        "x": 580,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "c717d2e8.aee88",
-        "type": "ui_gauge",
-        "z": "8126e207.74fc",
-        "name": "",
-        "group": "b67e7428.ee9648",
-        "order": 1,
-        "width": "3",
-        "height": "3",
-        "gtype": "gage",
-        "title": "CPU",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 550,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "86449883.398d08",
-        "type": "ui_gauge",
-        "z": "8126e207.74fc",
-        "name": "",
-        "group": "b67e7428.ee9648",
-        "order": 2,
-        "width": "3",
-        "height": "3",
-        "gtype": "gage",
-        "title": "RAM",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 550,
-        "y": 160,
+        "label": "IP-Adresse",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 630,
+        "y": 640,
         "wires": []
     }
 ]
