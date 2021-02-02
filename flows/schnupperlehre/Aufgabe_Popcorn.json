@@ -1,0 +1,137 @@
+[
+    {
+        "id": "f2596975.dbf328",
+        "type": "tab",
+        "label": "Aufgabe Popcorn",
+        "disabled": false,
+        "info": "Die Schnupperlehrlinge sollen sich ein Znüni erarbeiten.\n# Ausgangslage\nLeider wurde das Programm nicht korrekt gespeichert. Einige Nodes, Verbindungen etc. wurden nicht gespeichet.\nAlles was gespeichet wurde, wurde korrekt gespeichert.\n# Ziel\nMacht euch euer Znüni - Popcorn.\nDenkt an eure Sicherheit. Wenn sich die Türe öffnet, soll die Mikrowelle innerhalb von 0.2 s ausschalten.\n## Das dürft ihr\n- Ihr dürft alle Nodes anschauen (auch den Inhalt)\n- Ihr dürft Nodes kopieren und bearbeiten\n- Die Nodes neu anorden\n\n# Hinweise\n- Wenn die Türe geschlossen ist, sendet die Popcornmaschine eine \"1\", sonst eine \"0\".\n- Ihr müsst Nodes hinzufügen (kopieren) sowie diese Anpassen. Anschliessend müsst ihr sie korrekt verbinden\n- Bitte zeigt euer Programm dem Betreuer **bevor** ihr auf \"deploy\" klickt"
+    },
+    {
+        "id": "febfa643.990328",
+        "type": "io",
+        "z": "f2596975.dbf328",
+        "name": "Popcorn-Maschine",
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [],
+            [
+                "2c585c63.225f14"
+            ],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a6f44818.a56a58",
+        "type": "python3-function",
+        "z": "f2596975.dbf328",
+        "name": "Motoren_start",
+        "func": "msg['payload'] = True #einschalten\nmsg['topic'] = 0\nnode.send(msg)",
+        "outputs": 1,
+        "x": 160,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a8ac5758.d60f28",
+        "type": "inject",
+        "z": "f2596975.dbf328",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Start",
+        "payloadType": "msg",
+        "x": 150,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79ffb717.b211c8",
+        "type": "python3-function",
+        "z": "f2596975.dbf328",
+        "name": "Heizung stopp",
+        "func": "msg['payload'] = False\nmsg['topic'] = 1    #Heizung\nnode.send(msg)",
+        "outputs": 1,
+        "x": 160,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c585c63.225f14",
+        "type": "switch",
+        "z": "f2596975.dbf328",
+        "name": "Tür-Sensor",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 260,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fd1472a4.51766",
+        "type": "inject",
+        "z": "f2596975.dbf328",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "febfa643.990328"
+            ]
+        ]
+    }
+]
