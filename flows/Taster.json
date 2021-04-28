@@ -1,0 +1,77 @@
+[
+    {
+        "id": "2ec48126.8be35e",
+        "type": "tab",
+        "label": "Taster",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5805c783.c557a8",
+        "type": "inject",
+        "z": "2ec48126.8be35e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "e7bbc8fb.4be8c8"
+            ]
+        ]
+    },
+    {
+        "id": "e7bbc8fb.4be8c8",
+        "type": "button",
+        "z": "2ec48126.8be35e",
+        "name": "",
+        "x": 350,
+        "y": 120,
+        "wires": [
+            [
+                "d89b32ce.72297"
+            ]
+        ]
+    },
+    {
+        "id": "d89b32ce.72297",
+        "type": "rising-edge",
+        "z": "2ec48126.8be35e",
+        "name": "TasterAuswertung",
+        "threshold": "0.5",
+        "x": 550,
+        "y": 120,
+        "wires": [
+            [
+                "721fb433.45291c"
+            ]
+        ]
+    },
+    {
+        "id": "721fb433.45291c",
+        "type": "link out",
+        "z": "2ec48126.8be35e",
+        "name": "Button",
+        "links": [
+            "d6abc0ca.36ee6"
+        ],
+        "x": 695,
+        "y": 120,
+        "wires": []
+    }
+]

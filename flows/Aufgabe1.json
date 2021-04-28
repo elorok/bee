@@ -1,0 +1,179 @@
+[
+    {
+        "id": "205593a3.713a2c",
+        "type": "tab",
+        "label": "Aufgabe1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d951fac3.bbca28",
+        "type": "io",
+        "z": "205593a3.713a2c",
+        "name": "Popcorn-Maschine",
+        "x": 870,
+        "y": 260,
+        "wires": [
+            [],
+            [
+                "641f196.665f3e8"
+            ],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ec39162a.8dced8",
+        "type": "python3-function",
+        "z": "205593a3.713a2c",
+        "name": "Mikrowelle_Start",
+        "func": "import time\n\nisClosed = msg['payload'] <= 0\n\n\nif(isClosed):\n    msg['payload'] = True #Einschalten\n    msg['topic'] = 0 #Lüftung\n    node.send(msg)\n    \n    time.sleep(1)\n\n    msg['payload'] = False #Einschalten\n    msg['topic'] = 1 #Heizung\n    node.send(msg)",
+        "outputs": 1,
+        "x": 580,
+        "y": 100,
+        "wires": [
+            [
+                "d951fac3.bbca28"
+            ]
+        ]
+    },
+    {
+        "id": "434a80ed.01a29",
+        "type": "python3-function",
+        "z": "205593a3.713a2c",
+        "name": "Mikrowelle_Stop",
+        "func": "import time\n\nmsg['payload'] = False #ausschalten\nmsg['topic'] = 1 #Heizung\nnode.send(msg)\n\ntime.sleep(1)\n\nmsg['payload'] = False #ausschalten\nmsg['topic'] = 0 #Lüftung\nnode.send(msg)",
+        "outputs": 1,
+        "x": 580,
+        "y": 260,
+        "wires": [
+            [
+                "d951fac3.bbca28"
+            ]
+        ]
+    },
+    {
+        "id": "4d513fc4.f8ac1",
+        "type": "led",
+        "z": "205593a3.713a2c",
+        "name": "",
+        "x": 1210,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "28f81a4e.9e4cd6",
+        "type": "inject",
+        "z": "205593a3.713a2c",
+        "name": "Intervall",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "d951fac3.bbca28"
+            ]
+        ]
+    },
+    {
+        "id": "e40fdd03.6984c",
+        "type": "delay",
+        "z": "205593a3.713a2c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "434a80ed.01a29"
+            ]
+        ]
+    },
+    {
+        "id": "641f196.665f3e8",
+        "type": "function",
+        "z": "205593a3.713a2c",
+        "name": "Türe",
+        "func": "if(msg.payload != 1){   //1 = Türe zu\n    //türe zu, Zähler seit offen erhöhen\n    var locCounterRed = global.get(\"CounterRed\") + 1;\n    global.set(\"CounterRed\",locCounterRed);\n}\nelse{\n    //zähler zurücksetzten\n    global.set(\"CounterRed\", 0)\n}\n\n\nif(locCounterRed > 2){\n    //seit mehr als 5 Aufrufen geschlossen\n    msg.payload = 'ff0000'\n}\nelse{\n    msg.payload = '00ff00'\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is deployed.\n\nglobal.set(\"CounterRed\",0);",
+        "finalize": "",
+        "x": 1070,
+        "y": 240,
+        "wires": [
+            [
+                "4d513fc4.f8ac1"
+            ]
+        ]
+    },
+    {
+        "id": "56029569.438f1c",
+        "type": "change",
+        "z": "205593a3.713a2c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "CounterRed",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "ec39162a.8dced8"
+            ]
+        ]
+    },
+    {
+        "id": "78c4b451.972c7c",
+        "type": "link in",
+        "z": "205593a3.713a2c",
+        "name": " Button",
+        "links": [
+            "721fb433.45291c"
+        ],
+        "x": 195,
+        "y": 100,
+        "wires": [
+            [
+                "56029569.438f1c",
+                "e40fdd03.6984c"
+            ]
+        ]
+    }
+]
