@@ -5,6 +5,7 @@ from slave.module_proximity import Proximity
 from slave.module_led import Led
 from slave.module_servo import Servo
 from slave.module_io import Io
+from slave.module_temperature import Temperature
 from slave.module import Module
 
 
@@ -14,6 +15,7 @@ modules.append(Proximity())
 modules.append(Led())
 modules.append(Servo())
 modules.append(Io())
+modules.append(Temperature())
 
 
 while(True):
@@ -28,7 +30,7 @@ while(True):
 		if module.getOnline() and not module.getSetup():
 			try:
 				module.setup()
-			except: 
+			except:
 				pass
 
 		# Module is ready

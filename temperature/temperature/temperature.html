@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    RED.nodes.registerType('temperature',{
+        category: 'Bee',
+        color: '#bbffbb',
+        defaults: {
+            name: { value: "" }
+        },
+        inputs:1,
+        outputs:3,
+        icon: "fa-thermometer-half.png",
+        label: function() {
+            return this.name||"Temperature / Humidity / Pressure";
+        },
+        outputLabels:["Temperature", "Humidity", "Pressure"]
+    });
+</script>
+
+<script type="text/x-red" data-template-name="temperature">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="temperature">
+    <p>Bee Module Temperature, Humidity and Pressure</p>
+    <p>Input e.g. timestamp<br>Output 1: Temperature [°C]<br>Output 2: Humidity [%]<br>Output 3: Pressure [Pa]</p>
+</script>
