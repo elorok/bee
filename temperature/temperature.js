@@ -12,7 +12,7 @@ module.exports = function (RED) {
 			//***Read State and Data***
 			var fd_in;  //filedescripter inputFile
 			try {
-				fd_in = fs.openSync('/tmp/i2c_77_in', 'r');
+				fd_in = fs.openSync('/tmp/i2c_119_in', 'r');
 				var contents = fs.readFileSync(fd_in, 'utf8');
 				if (contents == "<offline>") {
 					node.status({ fill: "red", shape: "dot", text: "disconnected" });
