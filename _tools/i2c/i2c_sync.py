@@ -15,7 +15,8 @@ modules.append(Proximity())
 modules.append(Led())
 modules.append(Servo())
 modules.append(Io())
-modules.append(Temperature())
+modules.append(Temperature(119))
+modules.append(Temperature(120))
 
 
 while(True):

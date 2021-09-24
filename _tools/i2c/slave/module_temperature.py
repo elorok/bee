@@ -25,9 +25,9 @@ class Temperature(Module):
 		_hum = 0
 		_pres = 0
 
-		def __init__(self):
+		def __init__(self, addr):
 			super().__init__()
-			super().setAddress(119)
+			super().setAddress(addr)
 
 		@staticmethod
 		def __toSigned(v, n):

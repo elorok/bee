@@ -3,7 +3,8 @@
         category: 'Bee',
         color: '#bbffbb',
         defaults: {
-            name: { value: "" }
+            name: {value: "" },
+	    address: {value:""}
         },
         inputs:1,
         outputs:3,
@@ -19,6 +20,10 @@
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">    
+        <label for="node-input-address"><i class="icon-tag"></i>I<sup>2</sup>C Address</label>
+	<input type="number" id="node-input-address" value="119" min="119" max="120">
     </div>
 </script>
 
