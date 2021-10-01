@@ -1,2 +1,2 @@
 # bee
-MINT-Project
+MINT-Project for education
