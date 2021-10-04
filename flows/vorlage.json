@@ -82,7 +82,8 @@
                 "primary": "indigo",
                 "accents": "blue",
                 "warn": "red",
-                "background": "grey"
+                "background": "grey",
+                "palette": "light"
             }
         },
         "site": {
@@ -103,15 +104,6 @@
                 "py": 0
             }
         }
-    },
-    {
-        "id": "4e51695c.ed0528",
-        "type": "ui_link",
-        "name": "Roche Berufsbildung",
-        "link": "https://lehre.roche.com",
-        "icon": "fa-graduation-cap",
-        "target": "iframe",
-        "order": 2
     },
     {
         "id": "9b12b9e9.69c5a8",
@@ -234,6 +226,16 @@
         "height": 1
     },
     {
+        "id": "fe21a84987ecc6d3",
+        "type": "ui_group",
+        "name": "LogicInput",
+        "tab": "13f5c0c5.697b1f",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
         "id": "6eaede46.4a53e",
         "type": "ui_button",
         "z": "5e23fc23.6e4944",
@@ -252,7 +254,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 200,
-        "y": 240,
+        "y": 320,
         "wires": [
             [
                 "ce857765.259f78",
@@ -272,7 +274,7 @@
         "oldrc": false,
         "name": "Reboot",
         "x": 440,
-        "y": 240,
+        "y": 320,
         "wires": [
             [],
             [],
@@ -298,7 +300,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 160,
-        "y": 400,
+        "y": 480,
         "wires": [
             [
                 "e19a362e.61e418",
@@ -318,7 +320,7 @@
         "oldrc": false,
         "name": "Update System",
         "x": 420,
-        "y": 400,
+        "y": 480,
         "wires": [
             [
                 "f3e86ef0.1abe2"
@@ -441,7 +443,7 @@
         "topic": "Update System",
         "name": "",
         "x": 430,
-        "y": 460,
+        "y": 540,
         "wires": []
     },
     {
@@ -458,7 +460,7 @@
         "topic": "Update System",
         "name": "",
         "x": 770,
-        "y": 420,
+        "y": 500,
         "wires": []
     },
     {
@@ -475,7 +477,7 @@
         "topic": "Update System",
         "name": "",
         "x": 770,
-        "y": 380,
+        "y": 460,
         "wires": []
     },
     {
@@ -487,7 +489,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 590,
-        "y": 380,
+        "y": 460,
         "wires": [
             [
                 "ed828c8d.2a152"
@@ -503,7 +505,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 590,
-        "y": 420,
+        "y": 500,
         "wires": [
             [
                 "462e1cea.42be94"
@@ -524,7 +526,7 @@
         "topic": "Neustart",
         "name": "",
         "x": 450,
-        "y": 300,
+        "y": 380,
         "wires": []
     },
     {
@@ -562,7 +564,7 @@
         "cancel": "Abbrechen",
         "topic": "Wifi",
         "x": 170,
-        "y": 780,
+        "y": 860,
         "wires": [
             [
                 "a8e6a7ec.43a418"
@@ -580,7 +582,7 @@
         "initialize": "",
         "finalize": "",
         "x": 410,
-        "y": 780,
+        "y": 860,
         "wires": [
             [
                 "9ae42283.8d388"
@@ -599,7 +601,7 @@
         "oldrc": false,
         "name": "Change wpa_supplicant",
         "x": 630,
-        "y": 780,
+        "y": 860,
         "wires": [
             [
                 "41d1c0e8.64e79"
@@ -620,7 +622,7 @@
         "oldrc": false,
         "name": "Restart Network Service",
         "x": 890,
-        "y": 780,
+        "y": 860,
         "wires": [
             [],
             [],
@@ -639,7 +641,7 @@
         "oldrc": false,
         "name": "Get SSID",
         "x": 400,
-        "y": 580,
+        "y": 660,
         "wires": [
             [
                 "ae0293d2.b5041"
@@ -661,7 +663,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 610,
-        "y": 580,
+        "y": 660,
         "wires": []
     },
     {
@@ -686,7 +688,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 640,
+        "y": 720,
         "wires": [
             [
                 "edb79158.1c359",
@@ -706,7 +708,7 @@
         "oldrc": false,
         "name": "Get IP",
         "x": 390,
-        "y": 640,
+        "y": 720,
         "wires": [
             [
                 "b1b45000.d00d2"
@@ -728,7 +730,35 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 630,
-        "y": 640,
+        "y": 720,
         "wires": []
+    },
+    {
+        "id": "22a9e9c8b1ed4bed",
+        "type": "inject",
+        "z": "5e23fc23.6e4944",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "10",
+        "topic": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "f760757e.dbb598"
+            ]
+        ]
     }
 ]
